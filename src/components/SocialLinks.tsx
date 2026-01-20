@@ -10,11 +10,11 @@ import React from "react";
 
 export default function SocialLinks() {
   const socials = [
-    { icon: FaFacebookF, link: "https://facebook.com" },
-    { icon: FaInstagram, link: "https://instagram.com" },
-    { icon: FaLinkedinIn, link: "https://linkedin.com" },
-    { icon: FaYoutube, link: "https://youtube.com" },
-    { icon: FaTiktok, link: "https://tiktok.com" },
+    { icon: FaFacebookF, link: "https://www.facebook.com/bestiasi" },
+    { icon: FaInstagram, link: "https://www.instagram.com/bestiasi" },
+    { icon: FaLinkedinIn, link: "https://www.linkedin.com/company/best-iasi" },
+    { icon: FaYoutube, link: "https://www.youtube.com/@BESTIasi" },
+    { icon: FaTiktok, link: "https://www.tiktok.com/@best.iasi" },
   ];
 
   return (
