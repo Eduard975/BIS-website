@@ -117,7 +117,7 @@ export default function Footer() {
                 <ContactItem Icon={HiOutlineMail}>
                   <a
                     href={`mailto:${CONTACT_INFO.email}`}
-                    className="hover:underline transition-colors hover:text-secondary"
+                    className="hover:underline transition-colors"
                   >
                     {CONTACT_INFO.email}
                   </a>
@@ -126,7 +126,7 @@ export default function Footer() {
                 <ContactItem Icon={HiOutlinePhone}>
                   <a
                     href={`tel:${CONTACT_INFO.phoneLink}`}
-                    className="hover:underline transition-colors hover:text-secondary"
+                    className="hover:underline transition-colors"
                   >
                     {CONTACT_INFO.phone}
                   </a>
@@ -141,7 +141,7 @@ export default function Footer() {
                   <NavLink
                     key={link.name}
                     to={link.to}
-                    className="hover:underline hover:text-secondary w-fit"
+                    className="hover:underline w-fit"
                   >
                     {link.name}
                   </NavLink>
@@ -159,12 +159,12 @@ export default function Footer() {
         {/* --- Right Column (Site Map) - HIDDEN ON MOBILE --- */}
         <section className="hidden md:block min-w-[150px] w-full md:w-auto">
           <FooterHeading>Site Map</FooterHeading>
-          <nav className="flex flex-col gap-3 text-sm md:text-base text-lightTxt">
+          <nav className="flex flex-col gap-1 text-sm md:text-base text-lightTxt">
             {SITE_MAP.map((link) => (
               <NavLink
                 key={link.to}
                 to={link.to}
-                className="hover:underline hover:text-secondary transition-colors w-fit"
+                className="hover:underline transition-colors w-fit"
               >
                 {link.name}
               </NavLink>

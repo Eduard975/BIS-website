@@ -1,11 +1,12 @@
 import { HeroHeader } from "./HeroHeader";
+import partnersHeader from "../../assets/images/partnersHeader.jpg";
 
 export const PartnersPageHeader = () => {
   const PartnersPageContent = () => <> </>;
 
   return (
     <HeroHeader
-      backgroundImageSrc="src/assets/images/partnersHeader.jpg"
+      backgroundImageSrc={partnersHeader}
       heightClass="min-h-[300px]"
       overlayOpacityClass="opacity-0"
     >

@@ -1,5 +1,6 @@
 import { HeroHeader } from "./HeroHeader";
-import { PrimaryButton } from "../PrimaryButton"; // Update path as needed
+import { PrimaryButton } from "../PrimaryButton";
+import homeHeader from "../../assets/images/homeHeader.jpg";
 
 export const HomePageHeader = () => {
   // This is the component we pass into the slot
@@ -35,7 +36,7 @@ export const HomePageHeader = () => {
 
   return (
     <HeroHeader
-      backgroundImageSrc="src/assets/images/homeHeader.jpg"
+      backgroundImageSrc={homeHeader}
       alignContent="left"
       overlayOpacityClass="opacity-60"
       heightClass="min-h-[500px]"

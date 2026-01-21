@@ -1,15 +1,21 @@
-import { Outlet } from "react-router";
+// MainLayout.tsx
+import { Outlet } from "react-router"; // or react-router-dom
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export default function MainLayout() {
   return (
-    <div className="flex flex-col min-h-screen">
-      <div className="fixed top-0 left-0 right-0 z-50 h-[var(--navbar-height)]">
+    // FIX: Added 'w-full relative overflow-x-hidden'
+    // 'overflow-x-hidden': Cuts off any rogue elements trying to push width > 100%
+    // 'w-full': Ensures the layout itself is constrained
+    <div className="flex flex-col min-h-screen w-full relative overflow-x-hidden">
+      {/* Navbar Spacer */}
+      <div className="h-[var(--navbar-height)] w-full">
         <Navbar />
       </div>
 
-      <main className="flex-grow pt-[var(--navbar-height)]">
+      {/* Main Content */}
+      <main className="flex-grow flex flex-col w-full">
         <Outlet />
       </main>
 
