@@ -1,7 +1,30 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "LemonMilk-regular";
+  src: url("./assets/fonts/LEMONMILK-Regular.otf") format("opentype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LemonMilk-medium";
+  src: url("./assets/fonts/LEMONMILK-Medium.otf") format("opentype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "LemonMilk-bold";
+  src: url("./assets/fonts/LEMONMILK-Bold.otf") format("opentype");
+  font-style: normal;
+}
+
 @theme {
   --color-primary: #16A296;
   --color-secondary: #00AEEF;
   --color-lightTxt: #FFFDFD;
+  --color-darkTxt: #1E1E1E;
+  --navbar-height: 70px;
+
+  --font-title: "LemonMilk-medium", sans-serif;
+  --font-subtitle: "LemonMilk-regular", sans-serif;
 }

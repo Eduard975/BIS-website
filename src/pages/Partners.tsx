@@ -1,8 +1,13 @@
+import { PartnersPageHeader } from "../components/Headers/PartnersHeader";
+
 function Partners() {
   return (
-    <div style={{ padding: "20px", border: "2px solid green" }}>
-      <h1>Pagina Partners</h1>
-    </div>
+    <>
+      <PartnersPageHeader />
+      <div style={{ padding: "20px", border: "2px solid green" }}>
+        <h1>Pagina Partners</h1>
+      </div>
+    </>
   );
 }
 
