@@ -90,7 +90,6 @@ export default function Navbar() {
           </div>
 
           {/* BURGER BUTTON */}
-          {/* BURGER BUTTON */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden p-2 text-gray-800 focus:outline-none"
