@@ -4,10 +4,10 @@ import homeHeader from "../../assets/images/homeHeader.jpg";
 
 export const HomePageHeader = () => {
   // This is the component we pass into the slot
-  const HomePageContent = () => (
+  const HeaderContent = () => (
     <div className="space-y-6 text-white">
       <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">
-        BEST Iasi <br /> Symposium
+        BEST Iași <br /> Symposium
       </h1>
 
       <p className="text-lg md:text-xl text-gray-200 max-w-sm text-justify">
@@ -41,7 +41,7 @@ export const HomePageHeader = () => {
       overlayOpacityClass="opacity-60"
       heightClass="min-h-[500px]"
     >
-      <HomePageContent />
+      <HeaderContent />
     </HeroHeader>
   );
 };

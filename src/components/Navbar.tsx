@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { NavLink } from "react-router";
 import CustomContainer from "./CustomContainer";
 import bisLogo from "../assets/logos/bis_logo.png";
-import { useWindowSize } from "../hooks/useWindowSize"; // Adjust path as needed
+import { useWindowSize } from "../hooks/useWindowSize";
 
 const NAV_ITEMS = [
   { name: "Home", path: "/" },
@@ -50,14 +50,12 @@ export default function Navbar() {
     }`;
 
   // Calculate background classes
-  // If Open: Solid white (so menu isn't transparent over text)
-  // If Scrolled: Translucent + Blur
-  // Default: Solid white (or transparent if you prefer that at top)
+  // default state now includes 'shadow-sm'
   const navBackgroundClass = isOpen
     ? "bg-white shadow-lg border-gray-200"
     : isScrolled
       ? "bg-white/70 backdrop-blur-md border-gray-200/50 shadow-sm"
-      : "bg-white border-transparent";
+      : "bg-white border-transparent shadow-sm";
 
   return (
     <nav
@@ -67,7 +65,8 @@ export default function Navbar() {
         <CustomContainer
           width="wide"
           paddingX="none"
-          className="flex justify-between items-center h-[60px] px-4 md:px-8"
+          // Updated height to 70px here
+          className="flex justify-between items-center h-[70px] px-4 md:px-8"
         >
           {/* LOGO */}
           <img
@@ -96,23 +95,17 @@ export default function Navbar() {
             aria-label="Toggle Menu"
             aria-expanded={isOpen}
           >
-            {/* Container: w-6 (24px) x h-5 (20px) */}
             <div className="relative w-6 h-5">
-              {/* Top Line: Moves from top-0 to center (top-2.5) and rotates */}
               <span
                 className={`absolute left-0 block w-full h-0.5 bg-current transition-all duration-300 ease-in-out transform ${
                   isOpen ? "top-2.5 rotate-45" : "top-0"
                 }`}
               />
-
-              {/* Middle Line: Fades out */}
               <span
                 className={`absolute left-0 block w-full h-0.5 bg-current transition-all duration-300 ease-in-out top-2.5 ${
                   isOpen ? "opacity-0" : "opacity-100"
                 }`}
               />
-
-              {/* Bottom Line: Moves from top-5 to center (top-2.5) and rotates */}
               <span
                 className={`absolute left-0 block w-full h-0.5 bg-current transition-all duration-300 ease-in-out transform ${
                   isOpen ? "top-2.5 -rotate-45" : "top-5"
@@ -123,7 +116,7 @@ export default function Navbar() {
         </CustomContainer>
       </div>
 
-      {/* MOBILE MENU (Unified Wrapper) */}
+      {/* MOBILE MENU */}
       <div
         className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
           isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"

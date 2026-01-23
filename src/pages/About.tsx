@@ -1,8 +1,15 @@
+import { AboutPageHeader } from "../components/Headers/AboutHeader";
+// You might have other sections later, but for now it's just the header unit.
+
 function About() {
   return (
-    <div style={{ padding: "20px", border: "2px solid green" }}>
-      <h1>Pagina About</h1>
-    </div>
+    <>
+      <AboutPageHeader />
+
+      {/* Add future About page sections here 
+          (e.g., Timeline, Team, Values, etc.)
+      */}
+    </>
   );
 }
 
