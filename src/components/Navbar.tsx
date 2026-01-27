@@ -43,14 +43,13 @@ export default function Navbar() {
   }, [isOpen]);
 
   const getNavLinkClass = ({ isActive }: { isActive: boolean }) =>
-    `transition-colors duration-200 ${
+    `transition-colors duration-200 text-[1.1vw] tracking-wide ${
       isActive
         ? "text-secondary font-semibold"
         : "text-gray-800 hover:text-secondary active:text-secondary"
     }`;
 
   // Calculate background classes
-  // default state now includes 'shadow-sm'
   const navBackgroundClass = isOpen
     ? "bg-white shadow-lg border-gray-200"
     : isScrolled
@@ -65,18 +64,21 @@ export default function Navbar() {
         <CustomContainer
           width="wide"
           paddingX="none"
-          // Updated height to 70px here
-          className="flex justify-between items-center h-[70px] px-4 md:px-8"
+          // UPDATED: Now uses the consistent CSS variable for height
+          className="flex justify-between items-center h-[--navbar-height] px-[2vw]"
         >
           {/* LOGO */}
           <img
             src={bisLogo}
             alt="Logo"
-            className="h-8 md:h-10 w-auto max-w-[120px] md:max-w-[200px] object-contain select-none"
+            className="
+            w-[25vw] md:w-[8vw] max-w-[150px] 
+            md:max-w-none p-[2vh] object-contain 
+            select-none transition-all duration-300"
           />
 
           {/* DESKTOP LINKS */}
-          <div className="hidden md:flex gap-8">
+          <div className="hidden md:flex gap-[2.5vw]">
             {NAV_ITEMS.map((item) => (
               <NavLink
                 key={item.path}
@@ -91,24 +93,24 @@ export default function Navbar() {
           {/* BURGER BUTTON */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 text-gray-800 focus:outline-none"
+            className="md:hidden p-[1vh] text-gray-800 focus:outline-none"
             aria-label="Toggle Menu"
             aria-expanded={isOpen}
           >
-            <div className="relative w-6 h-5">
+            <div className="relative w-[6vw] h-[5vw] max-w-[30px] max-h-[24px]">
               <span
-                className={`absolute left-0 block w-full h-0.5 bg-current transition-all duration-300 ease-in-out transform ${
-                  isOpen ? "top-2.5 rotate-45" : "top-0"
+                className={`absolute left-0 block w-full h-[0.5vh] max-h-[3px] bg-current rounded-full transition-all duration-300 ease-in-out transform ${
+                  isOpen ? "top-[2.2vw] rotate-45" : "top-0"
                 }`}
               />
               <span
-                className={`absolute left-0 block w-full h-0.5 bg-current transition-all duration-300 ease-in-out top-2.5 ${
+                className={`absolute left-0 block w-full h-[0.5vh] max-h-[3px] bg-current rounded-full transition-all duration-300 ease-in-out top-[2.2vw] ${
                   isOpen ? "opacity-0" : "opacity-100"
                 }`}
               />
               <span
-                className={`absolute left-0 block w-full h-0.5 bg-current transition-all duration-300 ease-in-out transform ${
-                  isOpen ? "top-2.5 -rotate-45" : "top-5"
+                className={`absolute left-0 block w-full h-[0.5vh] max-h-[3px] bg-current rounded-full transition-all duration-300 ease-in-out transform ${
+                  isOpen ? "top-[2.2vw] -rotate-45" : "top-[4.4vw]"
                 }`}
               />
             </div>
@@ -124,18 +126,18 @@ export default function Navbar() {
       >
         <CustomContainer
           paddingX="none"
-          className="px-4 border-t border-gray-100"
+          className="px-[4vw] border-t border-gray-100"
         >
-          <div className="flex flex-col py-6 gap-6">
+          <div className="flex flex-col py-[3vh] gap-[3vh]">
             {NAV_ITEMS.map((item) => (
               <NavLink
                 key={item.path}
                 to={item.path}
                 onClick={() => setIsOpen(false)}
                 className={({ isActive }) =>
-                  `text-lg py-2 ${
+                  `text-[4.5vw] py-[1vh] ${
                     isActive
-                      ? "text-secondary font-semibold pl-2 border-l-4 border-secondary"
+                      ? "text-secondary font-semibold pl-[2vw] border-l-[1vw] border-secondary"
                       : "text-gray-600 hover:text-gray-900"
                   }`
                 }

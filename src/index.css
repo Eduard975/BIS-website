@@ -21,13 +21,18 @@
 @theme {
   --color-primary: #16A296;
   --color-secondary: #00AEEF;
-  --color-secondary: #00AEEF;
 
   --color-lightTxt: #FFFDFD;
   --color-darkTxt: #1E1E1E;
   --color-colorBG: #FFF5E6;
-  --color-whiteBG:#FFFCF7;
-  --navbar-height: 70px;
+  --color-whiteBG: #FFFCF7;
+
+  /* UPDATED: Dynamic Height with constraints.
+     - Preferred: 8vh (scales with screen height)
+     - Minimum: 60px (so it doesn't vanish on short screens/landscape mobile)
+     - Maximum: 90px (so it doesn't look like a banner on 4k vertical screens)
+  */
+  --navbar-height: clamp(60px, 10vh, 90px);
 
   --font-title: "LemonMilk-medium", sans-serif;
   --font-subtitle: "LemonMilk-regular", sans-serif;

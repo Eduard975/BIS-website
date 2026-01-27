@@ -1,11 +1,11 @@
 import { CustomSection } from "../components/CustomSection";
 import { HomePageHeader } from "../components/Headers/HomeHeader";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router"; // or "react-router-dom"
 import atomSvg from "../assets/svgs/atom.svg";
 import { SectionContent } from "../components/SectionContent";
 import SwiperCarousel from "../components/SwiperCarousel";
 import { PARTNER_CAROUSEL_ITEMS } from "../data/CarouselData";
-import { PrimaryButton } from "../components/PrimaryButton"; // Make sure to import this
+import { PrimaryButton } from "../components/PrimaryButton";
 
 function Home() {
   const YOUTUBE_VIDEO_ID = "dQw4w9WgXcQ";
@@ -32,7 +32,6 @@ function Home() {
           </div>
         </div>
 
-        {/* Standard usage: Text + Button included */}
         <SectionContent
           title="BEST Iași Symposium"
           subtitle="Student Mobility"
@@ -56,17 +55,36 @@ function Home() {
       <CustomSection
         bg="bg-colorBG"
         className="overflow-hidden"
-        contentClassName="relative z-10 flex flex-col md:flex-row items-center gap-12"
+        // Increased gap on desktop to ensure text doesn't overlap the decoration
+        contentClassName="relative z-10 flex flex-col md:flex-row items-center gap-[5vw] md:gap-[4vw]"
         decoration={
           <img
             src={atomSvg}
             alt=""
             className="
               absolute pointer-events-none select-none transition-transform duration-500
-              right-0 top-0
-              w-full origin-bottom-right scale-65 opacity-20
-              md:w-auto md:h-full md:origin-right md:scale-90 md:opacity-100
-              object-cover
+              
+              /* --- UNIVERSAL --- */
+              right-0
+              -translate-y-1/2
+              origin-center
+              object-contain
+
+              /* --- MOBILE STYLING --- */
+              /* 1. Position: 60% down (Slightly lower than center to avoid title) */
+              top-[60%] 
+              /* 2. Size Constraints: Max height 60% ensures it shrinks before cutting off or hitting title */
+              max-h-[60%] 
+              w-[50vw] 
+              opacity-20
+
+              /* --- DESKTOP STYLING --- */
+              md:opacity-100
+              /* Reset position to perfect center */
+              md:top-1/2 
+              /* Reset constraints for larger screens */
+              md:w-auto md:h-auto
+              md:max-h-[90%] md:max-w-[45vw]
             "
           />
         }
@@ -87,6 +105,7 @@ function Home() {
         </SectionContent>
       </CustomSection>
 
+      {/* SECTION 3: Partners */}
       <CustomSection bg="bg-whiteBG" contentClassName="flex flex-col gap-6">
         <SectionContent title="Our Partners" subtitle="Meet" className="w-full">
           <p>

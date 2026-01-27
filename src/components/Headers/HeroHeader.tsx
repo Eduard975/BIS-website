@@ -44,12 +44,18 @@ export const HeroHeader: React.FC<HeroHeaderProps> = ({
       <img
         src={backgroundImageSrc}
         alt={imageAlt}
-        className="absolute inset-0 w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105"
+        className="absolute inset-0 w-full h-full 
+        object-cover object-center 
+        transition-transform duration-700 group-hover:scale-105"
+        loading="eager"
+        fetchPriority="high"
+        decoding="sync"
       />
 
       {/* 2. The Overlay */}
       <div
-        className={`absolute inset-0 pointer-events-none ${overlayColorClass} ${overlayOpacityClass}`}
+        className={`absolute inset-0
+           pointer-events-none ${overlayColorClass} ${overlayOpacityClass}`}
         aria-hidden="true"
       />
 

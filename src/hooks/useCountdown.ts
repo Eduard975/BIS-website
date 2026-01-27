@@ -1,0 +1,36 @@
+import { useState, useEffect } from "react";
+
+export const formatTime = (time: number) => {
+  return String(time).padStart(2, "0");
+};
+
+export const useCountdown = (targetDate: string) => {
+  const countDownDate = new Date(targetDate).getTime();
+
+  const [countDown, setCountDown] = useState(
+    countDownDate - new Date().getTime(),
+  );
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCountDown(countDownDate - new Date().getTime());
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [countDownDate]);
+
+  return getReturnValues(countDown);
+};
+
+const getReturnValues = (countDown: number) => {
+  const displayTime = Math.max(0, countDown);
+
+  const days = Math.floor(displayTime / (1000 * 60 * 60 * 24));
+  const hours = Math.floor(
+    (displayTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+  );
+  const minutes = Math.floor((displayTime % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((displayTime % (1000 * 60)) / 1000);
+
+  return { days, hours, minutes, seconds, isFinished: displayTime <= 0 };
+};
