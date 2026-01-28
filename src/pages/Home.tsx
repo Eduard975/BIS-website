@@ -1,6 +1,6 @@
 import { CustomSection } from "../components/CustomSection";
 import { HomePageHeader } from "../components/Headers/HomeHeader";
-import { useNavigate } from "react-router"; // or "react-router-dom"
+import { useNavigate } from "react-router";
 import atomSvg from "../assets/svgs/atom.svg";
 import { SectionContent } from "../components/SectionContent";
 import SwiperCarousel from "../components/SwiperCarousel";
@@ -56,7 +56,8 @@ function Home() {
         bg="bg-colorBG"
         className="overflow-hidden"
         // Increased gap on desktop to ensure text doesn't overlap the decoration
-        contentClassName="relative z-10 flex flex-col md:flex-row items-center gap-[5vw] md:gap-[4vw]"
+        contentClassName="relative z-10 flex flex-col md:flex-row 
+        items-center gap-[5vw] md:gap-[4vw]"
         decoration={
           <img
             src={atomSvg}
@@ -97,10 +98,14 @@ function Home() {
           className="md:w-[60%]"
         >
           <p>
-            Join us for an international opening conference that brings together
-            multicultural perspectives and forward-thinking ideas. Connect with
-            talented students, experts, mentors, and industry leaders from
-            across Europe.
+            Join an international community where multiculturalism drives
+            progress. Connect with talented students, experts, mentors, and
+            industry leaders from across Europe to explore innovative ideas,
+            share experiences, and unlock new career and academic opportunities.
+          </p>
+          <p>
+            Engage in inspiring discussions and collaborative activities that
+            prepare you for a global future.
           </p>
         </SectionContent>
       </CustomSection>

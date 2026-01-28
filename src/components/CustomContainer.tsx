@@ -3,11 +3,6 @@ import React from "react";
 interface ContainerProps {
   children: React.ReactNode;
   paddingX?: "normal" | "tight" | "none";
-  /**
-   * "standard" = Standard layout (~1280px)
-   * "wide"     = Wide layout (90% of screen)
-   * "full"     = Edge to edge
-   */
   width?: "standard" | "wide" | "full";
   className?: string;
   id?: string;
@@ -20,17 +15,16 @@ export default function CustomContainer({
   className = "",
   id,
 }: ContainerProps) {
-  // UPDATED: Using vw units ensures padding scales with the device size
+  // Now using CSS variables for easy global editing
   const paddingClasses = {
-    normal: "px-[5vw] md:px-[2vw]",
-    tight: "px-[3vw] md:px-[1.5vw]",
-    none: "",
+    normal: "px-[var(--container-padding)]",
+    tight: "px-[var(--container-padding-tight)]",
+    none: "px-0",
   };
 
-  // UPDATED: Replaced fixed pixels with responsive max-widths
   const widthClasses = {
-    standard: "max-w-7xl", // Standard Tailwind max-width (~1280px)
-    wide: "max-w-[95vw] 2xl:max-w-[90vw]", // Wide but with safety margins
+    standard: "max-w-7xl",
+    wide: "max-w-[95vw] 2xl:max-w-[90vw]",
     full: "max-w-full",
   };
 

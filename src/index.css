@@ -27,12 +27,10 @@
   --color-colorBG: #FFF5E6;
   --color-whiteBG: #FFFCF7;
 
-  /* UPDATED: Dynamic Height with constraints.
-     - Preferred: 8vh (scales with screen height)
-     - Minimum: 60px (so it doesn't vanish on short screens/landscape mobile)
-     - Maximum: 90px (so it doesn't look like a banner on 4k vertical screens)
-  */
-  --navbar-height: clamp(60px, 10vh, 90px);
+
+  --container-padding: 10vw;
+  --container-padding-tight: 5vw;
+  --navbar-height: 10vh;
 
   --font-title: "LemonMilk-medium", sans-serif;
   --font-subtitle: "LemonMilk-regular", sans-serif;

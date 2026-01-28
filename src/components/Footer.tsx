@@ -7,10 +7,9 @@ import { BiCopyright } from "react-icons/bi";
 import { NavLink } from "react-router";
 import SocialLinks from "./SocialLinks";
 import CustomContainer from "./CustomContainer";
-import gyroscopImg from "../assets/images/gyroscop.png";
+import gyroscopImg from "../assets/svgs/gyroscop.svg";
 import sigla_best_alba from "../assets/logos/Sigla_BEST_alba.png";
 
-// --- 1. Centralized Data (Easy to update) ---
 const SITE_MAP = [
   { name: "Home", to: "/" },
   { name: "About", to: "/about" },
@@ -19,7 +18,7 @@ const SITE_MAP = [
 ];
 
 const LEGAL_LINKS = [
-  { name: "GDPR BIS 2026", to: "/gdpr" }, // Use real paths if possible
+  { name: "GDPR BIS 2026", to: "/gdpr" },
   { name: "Cookies Policy", to: "/cookies" },
 ];
 
@@ -35,7 +34,7 @@ const CONTACT_INFO = {
   ),
   email: "contact@bestis.ro",
   phone: "+40 754 665 038",
-  phoneLink: "+40754665038", // Clean version for tel: links
+  phoneLink: "+40754665038",
   redirectLink: "https://redirectioneaza.ro/best-iasi/",
 };
 
