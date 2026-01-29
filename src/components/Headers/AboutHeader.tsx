@@ -76,7 +76,10 @@ export const AboutPageHeader = () => {
       </section>
 
       {/* ======================= BOTTOM SECTION ======================= */}
-      <section className="relative w-full min-h-[500px] md:min-h-[600px] flex items-center bg-gray-900 overflow-hidden z-0 -mt-24">
+      <section
+        className="relative w-full min-h-[500px] 
+        md:min-h-[600px] flex items-center bg-gray-900 overflow-hidden z-0 -mt-24"
+      >
         <img
           src={groupPhotoImg}
           alt="Students group"
@@ -110,8 +113,10 @@ export const AboutPageHeader = () => {
         <CustomContainer className="relative z-30 pt-40 pb-24 text-white">
           <div className="flex flex-col text-left gap-8 max-w-3xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold">How do I join?</h2>
-
-            <article className="text-lg md:text-xl text-gray-100 flex flex-col gap-6 text-justify">
+            <article
+              id="how-to-join"
+              className="text-lg md:text-xl text-gray-100 flex flex-col gap-6 text-justify"
+            >
               <p>
                 Join the BEST Iași Symposium! You can apply through two simple
                 methods:

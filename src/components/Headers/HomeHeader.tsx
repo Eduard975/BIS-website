@@ -1,9 +1,11 @@
 import { HeroHeader } from "./HeroHeader";
 import { PrimaryButton } from "../Universal/PrimaryButton";
 import homeHeader from "../../assets/images/homeHeader.jpg";
+import { useNavigate } from "react-router";
 
 export const HomePageHeader = () => {
-  // This is the component we pass into the slot
+  const navigate = useNavigate();
+
   const HeaderContent = () => (
     <div className="space-y-6 text-white">
       <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight">
@@ -19,9 +21,7 @@ export const HomePageHeader = () => {
       <div className="pt-4">
         <PrimaryButton
           size="large"
-          onClick={() =>
-            window.open("https://docs.google.com/forms/...", "_blank")
-          }
+          onClick={() => navigate("/about#how-to-join")}
         >
           Join Us
         </PrimaryButton>

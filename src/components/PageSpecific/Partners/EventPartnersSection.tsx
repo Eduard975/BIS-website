@@ -32,12 +32,18 @@ export const EventPartnersSection = () => {
             <p>
               INGENIUM embodies the heterogeneity of European higher education,
               representing diversity in geography, cultural background,
-              organization, and academic activities.
+              organization, and academic activities. By connecting a wide range
+              of universities and institutions, INGENIUM fosters collaboration,
+              knowledge exchange, and cross-cultural understanding across
+              Europe.
             </p>
             <p>
-              As a strategic partner of TUIASI, INGENIUM strengthens the
+              As a strategic partner of TUIAȘI, INGENIUM strengthens the
               academic network and brings an international perspective to the
-              symposium.
+              BEST Iași Symposium. Their involvement provides participants with
+              opportunities to explore innovative ideas, share experiences, and
+              engage with a diverse STEM community, enhancing both the academic
+              and cultural impact of the event.
             </p>
           </SectionContent>
         </div>
@@ -55,13 +61,17 @@ export const EventPartnersSection = () => {
             className="w-full md:w-1/2 text-justify"
           >
             <p>
-              "Gheorghe Asachi" Technical University of Iași is a historic
-              institution and our main academic partner, fostering engineering
-              excellence and student innovation.
+              TUIAȘI, a local BEST partner, plays a key role in supporting
+              student development and promoting multilateral education. The
+              university actively contributes to initiatives that enhance
+              international experiences and mobility opportunities for students.
             </p>
             <p>
-              Their support is fundamental to creating a multicultural STEM
-              environment during the BEST Iași Symposium.
+              As a strategic partner of INGENIUM, TUIAȘI supports the BEST Iași
+              Symposium by providing essential logistical resources and
+              organizational support, ensuring a successful and well-coordinated
+              event that enables participants to fully engage, connect, and
+              explore new ideas.
             </p>
           </SectionContent>
 
