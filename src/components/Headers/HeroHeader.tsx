@@ -1,5 +1,5 @@
 import React from "react";
-import CustomContainer from "../CustomContainer"; // Ensure this path matches where you saved the file
+import CustomContainer from "../Universal/CustomContainer"; // Ensure this path matches where you saved the file
 
 type ContentAlignment = "center" | "left" | "bottom-left";
 

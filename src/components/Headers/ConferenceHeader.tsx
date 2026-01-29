@@ -1,7 +1,7 @@
 import { HeroHeader } from "./HeroHeader";
-import { PrimaryButton } from "../PrimaryButton";
+import { PrimaryButton } from "../Universal/PrimaryButton";
 import conferenceHeader from "../../assets/images/conferenceHeader.jpg";
-import { TimerDisplay } from "../TimerDisplay";
+import { TimerDisplay } from "../PageSpecific/Conference/TimerDisplay";
 
 export const ConferencePageHeader = () => {
   const HeaderContent = () => (

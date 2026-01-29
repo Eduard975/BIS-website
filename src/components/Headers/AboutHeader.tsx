@@ -1,5 +1,5 @@
 import { memo, type CSSProperties } from "react";
-import CustomContainer from "../CustomContainer";
+import CustomContainer from "../Universal/CustomContainer";
 import lightbulbSvg from "../../assets/svgs/bec.svg";
 import groupPhotoImg from "../../assets/images/GroupPhotoStatue.jpg";
 

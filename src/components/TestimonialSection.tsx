@@ -1,8 +1,8 @@
-import { CustomSection } from "../components/CustomSection";
-import { SectionContent } from "../components/SectionContent";
+import { CustomSection } from "./Universal/CustomSection";
+import { SectionContent } from "./Universal/SectionContent";
 import TestimonialCarousel, {
   type TestimonialItem,
-} from "./TestimonialCarousel";
+} from "./PageSpecific/About/TestimonialCarousel";
 
 interface TestimonialsSectionProps {
   data: TestimonialItem[];
@@ -20,7 +20,7 @@ export const TestimonialsSection = ({ data }: TestimonialsSectionProps) => {
         subtitle="HERE ARE SOME"
         className="w-full"
       >
-        <p className="text-lg md:text-xl text-darkTxt">
+        <p className="text-lg md:text-xl text-darkTxt text-justify">
           Read through the experiences of our participants and see, from their
           perspectives, the meaningful connections, unforgettable moments, and
           lasting impact this event created.

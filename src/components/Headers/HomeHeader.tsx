@@ -1,5 +1,5 @@
 import { HeroHeader } from "./HeroHeader";
-import { PrimaryButton } from "../PrimaryButton";
+import { PrimaryButton } from "../Universal/PrimaryButton";
 import homeHeader from "../../assets/images/homeHeader.jpg";
 
 export const HomePageHeader = () => {

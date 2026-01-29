@@ -21,9 +21,11 @@
 @theme {
   --color-primary: #16A296;
   --color-secondary: #00AEEF;
+  --color-accent:#BF1E2E;
 
   --color-lightTxt: #FFFDFD;
   --color-darkTxt: #1E1E1E;
+  
   --color-colorBG: #FFF5E6;
   --color-whiteBG: #FFFCF7;
 

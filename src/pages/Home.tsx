@@ -1,11 +1,11 @@
-import { CustomSection } from "../components/CustomSection";
+import { CustomSection } from "../components/Universal/CustomSection";
 import { HomePageHeader } from "../components/Headers/HomeHeader";
 import { useNavigate } from "react-router";
 import atomSvg from "../assets/svgs/atom.svg";
-import { SectionContent } from "../components/SectionContent";
-import SwiperCarousel from "../components/SwiperCarousel";
+import { SectionContent } from "../components/Universal/SectionContent";
+import SwiperCarousel from "../components/Universal/SwiperCarousel";
 import { PARTNER_CAROUSEL_ITEMS } from "../data/CarouselData";
-import { PrimaryButton } from "../components/PrimaryButton";
+import { PrimaryButton } from "../components/Universal/PrimaryButton";
 
 function Home() {
   const YOUTUBE_VIDEO_ID = "dQw4w9WgXcQ";
@@ -119,7 +119,10 @@ function Home() {
           </p>
         </SectionContent>
 
-        <SwiperCarousel data={PARTNER_CAROUSEL_ITEMS} />
+        <SwiperCarousel
+          data={PARTNER_CAROUSEL_ITEMS}
+          aspect="aspect-[4/3] md:aspect-video"
+        />
 
         <div className="w-full flex justify-start">
           <PrimaryButton size="normal" onClick={() => navigate("/partners")}>
