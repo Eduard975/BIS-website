@@ -6,7 +6,6 @@ import { TimerDisplay } from "../PageSpecific/Conference/TimerDisplay";
 export const ConferencePageHeader = () => {
   const HeaderContent = () => (
     <div className="flex flex-col gap-[3vh] text-white h-full justify-center">
-      {/* Headline */}
       <div>
         <h1 className="text-[8vw] md:text-[4vw] font-extrabold tracking-tight leading-[1.1]">
           Empower STEM:

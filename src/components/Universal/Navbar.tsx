@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { NavLink } from "react-router";
 import CustomContainer from "./CustomContainer";
-import bisLogo from "../../assets/logos/bis_logo.png";
+import bisLogo from "../../assets/logos/bis.svg";
 import { useWindowSize } from "../../hooks/useWindowSize";
 
 const NAV_ITEMS = [

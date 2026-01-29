@@ -4,23 +4,38 @@ import { PrimaryButton } from "../../Universal/PrimaryButton";
 import { useCountdown } from "../../../hooks/useCountdown";
 import handsIllustration from "../../../assets/svgs/hands-compass.svg";
 import { CONFERENCE_DATE } from "../Conference/TimerDisplay";
-// Ensure this matches the date in your TimerDisplay
+import { OOD_JOIN_FORM_URL } from "../../../data/Links";
 
 export const ParticipateSection = () => {
   const { isFinished } = useCountdown(CONFERENCE_DATE);
 
   const handleJoinClick = () => {
-    window.open("YOUR_REGISTRATION_LINK", "_blank");
+    window.open(OOD_JOIN_FORM_URL, "_blank");
   };
 
   return (
     <CustomSection
-      bg="bg-colorBG" // Matching the beige/off-white background
+      bg="bg-colorBG"
+      id="participate"
       className="overflow-hidden"
-      contentClassName="relative flex flex-col md:flex-row items-center gap-12"
+      /* Pass the image as a decoration to sit behind the content */
+      decoration={
+        <img
+          src={handsIllustration}
+          alt=""
+          className="
+            absolute bottom-0 right-0 
+            w-[70vw] md:w-[45vw] max-w-[600px] 
+            /* Constraint: Ensures the illustration height never exceeds the section background */
+            max-h-[90%]
+            object-contain pointer-events-none 
+            z-0 select-none
+          "
+        />
+      }
+      contentClassName="relative z-10"
     >
-      {/* Content Area */}
-      <div className="flex-1 z-10">
+      <div className="max-w-2xl">
         <SectionContent title="HOW TO PARTICIPATE" subtitle="LET'S FIND OUT">
           <div className="flex flex-col gap-6 text-lg">
             <p>
@@ -30,37 +45,24 @@ export const ParticipateSection = () => {
               following the link below to join us!
             </p>
 
-            {/* DYNAMIC CTA: Automatically switches based on countdown */}
             <div className="pt-4">
+              {/* Dynamic CTA that switches automatically when isFinished is true */}
               {!isFinished ? (
                 <p className="text-darkTxt font-medium">
                   The{" "}
-                  <span className="text-accent font-semibold">
+                  <span className="text-[#E63946] font-semibold">
                     joining period
                   </span>{" "}
-                  hasn't started yet.
+                  hasn't started yet
                 </p>
               ) : (
-                <PrimaryButton
-                  size="normal"
-                  onClick={handleJoinClick}
-                  className="animate-fade-in"
-                >
+                <PrimaryButton size="normal" onClick={handleJoinClick}>
                   Join Now
                 </PrimaryButton>
               )}
             </div>
           </div>
         </SectionContent>
-      </div>
-
-      {/* Right Side Decoration: Hands and Compass */}
-      <div className="flex-1 flex justify-center md:justify-end">
-        <img
-          src={handsIllustration}
-          alt="Hands holding a star decoration"
-          className="w-[70vw] max-w-[500px] md:w-full object-contain"
-        />
       </div>
     </CustomSection>
   );

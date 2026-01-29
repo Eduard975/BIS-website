@@ -8,7 +8,8 @@ import { NavLink } from "react-router";
 import SocialLinks from "./SocialLinks";
 import CustomContainer from "./CustomContainer";
 import gyroscopImg from "../../assets/svgs/gyroscop.svg";
-import sigla_best_alba from "../../assets/logos/Sigla_BEST_alba.png";
+import sigla_best_alba from "../../assets/logos/best.svg";
+import { VOLUNTEER_FORM_URL } from "../../data/Links";
 
 const SITE_MAP = [
   { name: "Home", to: "/" },
@@ -35,10 +36,8 @@ const CONTACT_INFO = {
   email: "contact@bestis.ro",
   phone: "+40 754 665 038",
   phoneLink: "+40754665038",
-  redirectLink: "https://redirectioneaza.ro/best-iasi/",
+  redirectLink: VOLUNTEER_FORM_URL,
 };
-
-// --- 2. Sub-components with Proper Types ---
 
 const FooterHeading = ({ children }: { children: React.ReactNode }) => (
   <h3 className="text-2xl font-semibold mb-4 text-lightTxt text-left">
@@ -72,12 +71,12 @@ export default function Footer() {
         className="flex flex-col md:flex-row justify-between items-center md:items-stretch gap-12 relative z-10"
       >
         {/* --- Left Column (Logo, CTA) --- */}
-        <div className="w-full max-w-70 flex flex-col justify-between items-center md:items-start">
-          <div className="flex flex-col gap-6 items-center md:items-start">
+        <div className="w-full max-w-[220px] md:max-w-[280px] flex flex-col justify-between items-center md:items-start">
+          <div className="flex flex-col gap-6 items-center md:items-start w-full">
             <img
               src={sigla_best_alba}
               alt="BEST Iași Logo"
-              className="w-full h-auto " // Added max-width safety
+              className="w-full h-auto"
               loading="lazy"
             />
             <SocialLinks />
@@ -90,7 +89,6 @@ export default function Footer() {
               engineering talent.
             </p>
 
-            {/* FIX: Changed button to <a> for SEO and Accessibility */}
             <a
               href={CONTACT_INFO.redirectLink}
               target="_blank"

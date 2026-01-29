@@ -17,11 +17,6 @@ export const HomePageHeader = () => {
       </p>
 
       <div className="pt-4">
-        {/* USAGE EXAMPLES:
-           1. Header Version (Used here): size="large"
-           2. Custom Color: className="bg-orange-500 hover:bg-orange-600"
-           3. Interaction: onClick={() => console.log('Joined!')}
-        */}
         <PrimaryButton
           size="large"
           onClick={() =>

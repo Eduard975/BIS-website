@@ -5,16 +5,25 @@ import {
   FaYoutube,
   FaTiktok,
 } from "react-icons/fa";
+
+import {
+  FACEBOOK_LINK,
+  INSTAGRAM_LINK,
+  LINKEDIN_LINK,
+  TIKTOK_LINK,
+  YOUTUBE_LINK,
+} from "../../data/Links";
+
 import SocialIcon from "./SocialIcon";
 import React from "react";
 
 export default function SocialLinks() {
   const socials = [
-    { icon: FaFacebookF, link: "https://www.facebook.com/bestiasi" },
-    { icon: FaInstagram, link: "https://www.instagram.com/bestiasi" },
-    { icon: FaLinkedinIn, link: "https://www.linkedin.com/company/best-iasi" },
-    { icon: FaYoutube, link: "https://www.youtube.com/@BESTIasi" },
-    { icon: FaTiktok, link: "https://www.tiktok.com/@best.iasi" },
+    { icon: FaFacebookF, link: FACEBOOK_LINK },
+    { icon: FaInstagram, link: INSTAGRAM_LINK },
+    { icon: FaLinkedinIn, link: LINKEDIN_LINK },
+    { icon: FaYoutube, link: YOUTUBE_LINK },
+    { icon: FaTiktok, link: TIKTOK_LINK },
   ];
 
   return (
