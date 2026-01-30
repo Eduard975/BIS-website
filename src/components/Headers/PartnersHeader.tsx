@@ -1,5 +1,5 @@
 import { HeroHeader } from "./HeroHeader";
-import partnersHeader from "../../assets/images/partnersHeader.jpg";
+import partnersHeader from "../../assets/images/partnersHeader.webp";
 
 export const PartnersPageHeader = () => {
   return (

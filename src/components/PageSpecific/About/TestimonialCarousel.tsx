@@ -3,17 +3,29 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation, EffectFade } from "swiper/modules";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 
+// Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
-import "flag-icons/css/flag-icons.min.css";
+
+// ✅ 1. Import only the flags you need
+import siFlag from "flag-icons/flags/4x3/si.svg";
+import trFlag from "flag-icons/flags/4x3/tr.svg";
+import esFlag from "flag-icons/flags/4x3/es.svg";
+
+// ✅ 2. Create a lookup map for the flags
+const flagMap: Record<string, string> = {
+  si: siFlag,
+  tr: trFlag,
+  es: esFlag,
+};
 
 export interface TestimonialItem {
   id: string | number;
   name: string;
   location: string;
-  countryCode?: string;
+  countryCode?: string; // e.g., "si", "tr", "es"
   paragraphs: string[];
 }
 
@@ -39,8 +51,8 @@ const TestimonialCarousel = memo(({ data }: TestimonialCarouselProps) => {
 
       <button
         className="custom-next-btn absolute right-0 top-[45%]
-         -translate-y-1/2 z-30 hover:scale-110 active:scale-95
-          transition-all hidden md:block cursor-pointer"
+          -translate-y-1/2 z-30 hover:scale-110 active:scale-95
+           transition-all hidden md:block cursor-pointer"
         style={{ color: "var(--color-primary)" }}
         aria-label="Next testimonial"
       >
@@ -89,9 +101,12 @@ const TestimonialCarousel = memo(({ data }: TestimonialCarouselProps) => {
                     <h3 className="text-xl md:text-3xl font-[--font-title] text-[--color-darkTxt] uppercase tracking-wide">
                       {item.name}
                     </h3>
-                    {item.countryCode && (
-                      <span
-                        className={`fi fi-${item.countryCode} text-2xl md:text-3xl rounded-sm shadow-sm`} //
+
+                    {item.countryCode && flagMap[item.countryCode] && (
+                      <img
+                        src={flagMap[item.countryCode]}
+                        alt={`${item.countryCode} flag`}
+                        className="w-8 h-auto shadow-sm rounded-sm object-cover"
                       />
                     )}
                   </div>

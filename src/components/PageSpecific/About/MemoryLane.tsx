@@ -3,10 +3,10 @@ import { SectionContent } from "../../Universal/SectionContent";
 import floralSvg from "../../../assets/svgs/floral-red.svg";
 
 // Import images
-import nightGathering from "../../../assets/images/night-gathering.jpg";
-import lectureHall from "../../../assets/images/lecture-hall.jpg";
-import groupPose from "../../../assets/images/group-pose.jpg";
-import outdoorActivity from "../../../assets/images/outdoor-activity.jpg";
+import nightGathering from "../../../assets/images/night-gathering.webp";
+import lectureHall from "../../../assets/images/lecture-hall.webp";
+import groupPose from "../../../assets/images/group-pose.webp";
+import outdoorActivity from "../../../assets/images/outdoor-activity.webp";
 
 export function MemoryLane() {
   return (

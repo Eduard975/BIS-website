@@ -1,3 +1,5 @@
+/* src/components/Universal/PrimaryButton.tsx */
+
 import React from "react";
 import ReactGA from "react-ga4";
 
@@ -10,10 +12,12 @@ interface PrimaryButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   className?: string;
   /** Label for GA4 event tracking */
   analyticsLabel?: string;
-  /** The URL to navigate to (could be internal path or external link) */
+  /** The URL to navigate to. If present, renders an <a> tag. */
   href?: string;
-  /** If true, uses React Router navigate. Default: false (opens in new tab) */
+  /** Optional target for the link (e.g., "_blank") */
+  target?: string;
 }
+
 export const PrimaryButton: React.FC<PrimaryButtonProps> = ({
   children,
   size = "normal",
@@ -21,6 +25,7 @@ export const PrimaryButton: React.FC<PrimaryButtonProps> = ({
   className = "",
   analyticsLabel,
   href,
+  target,
   onClick,
   ...props
 }) => {
@@ -31,13 +36,25 @@ export const PrimaryButton: React.FC<PrimaryButtonProps> = ({
     mobile: "px-6 py-3.5 text-lg font-semibold",
   };
 
-  // 1. Logic: Only use default colors if the user hasn't provided their own bg- class
   const hasCustomBg = className.includes("bg-");
   const baseColor = hasCustomBg
     ? ""
     : "bg-primary hover:bg-primary-dark text-white";
 
-  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+  // Shared logic for classes
+  const classes = `
+    rounded-full transition-all duration-300 shadow-md 
+    hover:shadow-lg active:scale-95 disabled:opacity-50 
+    disabled:cursor-not-allowed
+    inline-flex items-center justify-center
+    ${sizeClasses[size]}
+    ${fullWidth ? "w-full" : "w-fit"}
+    ${baseColor} 
+    ${className} 
+  `;
+
+  // Combined Click Handler (Handles both Analytics + optional onClick prop)
+  const handleClick = (e: React.MouseEvent<HTMLElement>) => {
     if (analyticsLabel) {
       const pagePath =
         window.location.pathname === "/"
@@ -52,23 +69,27 @@ export const PrimaryButton: React.FC<PrimaryButtonProps> = ({
       });
     }
 
-    if (onClick) onClick(e);
+    if (onClick) {
+      onClick(e as React.MouseEvent<HTMLButtonElement>);
+    }
   };
 
+  if (href) {
+    return (
+      <a
+        href={href}
+        onClick={handleClick}
+        className={classes}
+        target={target || (href.startsWith("http") ? "_blank" : undefined)}
+        rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+      >
+        {children}
+      </a>
+    );
+  }
+
   return (
-    <button
-      onClick={handleClick}
-      className={`
-        rounded-full transition-all duration-300 shadow-md 
-        hover:shadow-lg active:scale-95 disabled:opacity-50 
-        disabled:cursor-not-allowed
-        ${sizeClasses[size]}
-        ${fullWidth ? "w-full" : "w-fit"}
-        ${baseColor} 
-        ${className} 
-      `}
-      {...props}
-    >
+    <button onClick={handleClick} className={classes} {...props}>
       {children}
     </button>
   );

@@ -1,7 +1,7 @@
 import { lazy, memo, Suspense, useState, type CSSProperties } from "react";
 import CustomContainer from "../Universal/CustomContainer";
 import lightbulbSvg from "../../assets/svgs/bec.svg";
-import groupPhotoImg from "../../assets/images/group-statue.jpg";
+import groupPhotoImg from "../../assets/images/group-statue.webp";
 import ReactGA from "react-ga4";
 
 const LAYOUT = {

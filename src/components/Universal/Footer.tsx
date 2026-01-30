@@ -87,9 +87,7 @@ export default function Footer() {
             <PrimaryButton
               analyticsLabel="Invest 3.5% Tax"
               className="bg-secondary hover:bg-secondary-dark"
-              onClick={() => {
-                window.open(CONTACT_INFO.redirectLink, "_blank");
-              }}
+              href={CONTACT_INFO.redirectLink}
             >
               Invest Here
             </PrimaryButton>

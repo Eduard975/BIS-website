@@ -1,6 +1,6 @@
 import { HeroHeader } from "./HeroHeader";
 import { PrimaryButton } from "../Universal/PrimaryButton";
-import homeHeader from "../../assets/images/homeHeader.jpg";
+import homeHeader from "../../assets/images/homeHeader.webp";
 import { useNavigate } from "react-router";
 
 const HeaderContent = ({ onJoinClick }: { onJoinClick: () => void }) => (

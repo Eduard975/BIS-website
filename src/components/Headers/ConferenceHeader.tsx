@@ -1,6 +1,6 @@
 import { HeroHeader } from "./HeroHeader";
 import { PrimaryButton } from "../Universal/PrimaryButton";
-import conferenceHeader from "../../assets/images/conferenceHeader.jpg";
+import conferenceHeader from "../../assets/images/conferenceHeader.webp";
 import { TimerDisplay } from "../PageSpecific/Conference/TimerDisplay";
 import { useNavigate } from "react-router";
 
@@ -37,8 +37,8 @@ export const ConferencePageHeader = () => {
           <PrimaryButton
             size="large"
             analyticsLabel="Participate Anchor"
-            onClick={() => navigate("/about#how-to-join")}
-            className="bg-primary hover:bg-[#008f85] 
+            onClick={() => navigate("/conference#participate")}
+            className="bg-primary hover:bg-primary-dark 
             text-white rounded-full px-[5vw] py-[2vh] 
             md:px-[2vw] md:py-[2vh] font-bold text-[4vw] 
             md:text-[1.1vw] transition-colors duration-300"

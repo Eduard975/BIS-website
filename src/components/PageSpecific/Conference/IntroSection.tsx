@@ -1,7 +1,7 @@
 import { CustomSection } from "../../Universal/CustomSection";
 import OverprintTitle from "../../Universal/OverprintTitle";
 import { SectionContent } from "../../Universal/SectionContent";
-import Host from "../../../assets/images/talking-host2.jpg";
+import Host from "../../../assets/images/talking-host2.webp";
 
 export const ConferenceIntroSection = () => {
   return (
