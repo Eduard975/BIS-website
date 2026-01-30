@@ -4,19 +4,18 @@ import CustomContainer from "../Universal/CustomContainer";
 
 type ContentAlignment = "center" | "left" | "bottom-left";
 type ImagePosition = "center" | "top" | "bottom" | "left" | "right";
-// Added object-fit types
 type ObjectFit = "cover" | "contain" | "fill" | "none" | "scale-down";
 
 interface HeroHeaderProps {
   backgroundImageSrc: string;
   imageAlt?: string;
-  children?: React.ReactNode; // Made optional if you're passing undefined
+  children?: React.ReactNode;
   heightClass?: string;
   overlayColorClass?: string;
   overlayOpacityClass?: string;
   alignContent?: ContentAlignment;
   imagePosition?: ImagePosition;
-  objectFit?: ObjectFit; // NEW PROP
+  objectFit?: ObjectFit;
   customImgStyle?: React.CSSProperties;
 }
 

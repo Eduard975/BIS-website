@@ -8,7 +8,7 @@ export const PartnersPageHeader = () => {
       backgroundImageSrc={partnersHeader}
       heightClass="min-h-[55vh] h-fit"
       overlayOpacityClass="opacity-15"
-      objectFit="none" // Disables the auto-stretch
+      objectFit="cover"
     >
       {null}
     </HeroHeader>
