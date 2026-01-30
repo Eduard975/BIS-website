@@ -16,23 +16,20 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
-  // Handle scroll detection
+  // Computed state: Menu is only effectively "open" if we are on mobile
+  const isMenuOpen = isMobile && isOpen;
+
+  // Toggle function using functional update for stability
+  const toggleMenu = () => setIsOpen((prev) => !prev);
+
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Auto-close menu if window resizes to desktop
   useEffect(() => {
-    if (!isMobile) {
-      setIsOpen(false);
-    }
-  }, [isMobile]);
-
-  // Prevent body scroll when menu is open
-  useEffect(() => {
-    if (isOpen) {
+    if (isMenuOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "unset";
@@ -40,8 +37,9 @@ export default function Navbar() {
     return () => {
       document.body.style.overflow = "unset";
     };
-  }, [isOpen]);
+  }, [isMenuOpen]);
 
+  // Restored helper for desktop link styling
   const getNavLinkClass = ({ isActive }: { isActive: boolean }) =>
     `transition-colors duration-200 text-[1.1vw] tracking-wide ${
       isActive
@@ -49,8 +47,7 @@ export default function Navbar() {
         : "text-gray-800 hover:text-secondary active:text-secondary"
     }`;
 
-  // Calculate background classes
-  const navBackgroundClass = isOpen
+  const navBackgroundClass = isMenuOpen
     ? "bg-white shadow-lg border-gray-200"
     : isScrolled
       ? "bg-white/70 backdrop-blur-md border-gray-200/50 shadow-sm"
@@ -64,17 +61,13 @@ export default function Navbar() {
         <CustomContainer
           width="wide"
           paddingX="none"
-          // UPDATED: Now uses the consistent CSS variable for height
           className="flex justify-between items-center h-[--navbar-height] px-[2vw]"
         >
           {/* LOGO */}
           <img
             src={bisLogo}
             alt="Logo"
-            className="
-            w-[25vw] md:w-[8vw] max-w-[150px] 
-            md:max-w-none p-[2vh] object-contain 
-            select-none transition-all duration-300"
+            className="w-[25vw] md:w-[8vw] max-w-[150px] md:max-w-none p-[2vh] object-contain select-none transition-all duration-300"
           />
 
           {/* DESKTOP LINKS */}
@@ -90,27 +83,27 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* BURGER BUTTON */}
+          {/* BURGER BUTTON - Now using toggleMenu */}
           <button
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={toggleMenu}
             className="md:hidden p-[1vh] text-gray-800 focus:outline-none"
             aria-label="Toggle Menu"
-            aria-expanded={isOpen}
+            aria-expanded={isMenuOpen}
           >
             <div className="relative w-[6vw] h-[5vw] max-w-[30px] max-h-[24px]">
               <span
                 className={`absolute left-0 block w-full h-[0.5vh] max-h-[3px] bg-current rounded-full transition-all duration-300 ease-in-out transform ${
-                  isOpen ? "top-[2.2vw] rotate-45" : "top-0"
+                  isMenuOpen ? "top-[2.2vw] rotate-45" : "top-0"
                 }`}
               />
               <span
                 className={`absolute left-0 block w-full h-[0.5vh] max-h-[3px] bg-current rounded-full transition-all duration-300 ease-in-out top-[2.2vw] ${
-                  isOpen ? "opacity-0" : "opacity-100"
+                  isMenuOpen ? "opacity-0" : "opacity-100"
                 }`}
               />
               <span
                 className={`absolute left-0 block w-full h-[0.5vh] max-h-[3px] bg-current rounded-full transition-all duration-300 ease-in-out transform ${
-                  isOpen ? "top-[2.2vw] -rotate-45" : "top-[4.4vw]"
+                  isMenuOpen ? "top-[2.2vw] -rotate-45" : "top-[4.4vw]"
                 }`}
               />
             </div>
@@ -121,7 +114,7 @@ export default function Navbar() {
       {/* MOBILE MENU */}
       <div
         className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-          isOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
+          isMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <CustomContainer

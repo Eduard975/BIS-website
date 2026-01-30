@@ -141,7 +141,11 @@ export const AboutPageHeader = () => {
                 </label>
                 <select
                   value={studentType}
-                  onChange={(e) => setStudentType(e.target.value as any)}
+                  onChange={(e) =>
+                    setStudentType(
+                      e.target.value as "ingenium" | "general" | "",
+                    )
+                  }
                   className="bg-white/10 border border-white/20 rounded-lg px-3 py-1.5 text-base text-primary font-bold focus:outline-none focus:ring-2 focus:ring-primary appearance-none cursor-pointer backdrop-blur-sm"
                 >
                   <option value="" className="text-black">
