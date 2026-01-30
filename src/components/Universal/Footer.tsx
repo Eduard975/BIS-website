@@ -173,8 +173,8 @@ export default function Footer() {
       {/* Background Image - Optimized */}
       <img
         src={gyroscopImg}
-        alt="" // Empty alt is correct for decorative images
-        loading="lazy" // Performance Optimization
+        alt=""
+        loading="lazy"
         className="
           absolute
           bottom-0
