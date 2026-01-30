@@ -1,7 +1,9 @@
 import { useNavigate } from "react-router";
-import { PROMO_VIDEO_URL } from "../../../data/Links";
+import { PROMO_VIDEO_ID } from "../../../data/Links";
 import { CustomSection } from "../../Universal/CustomSection";
 import { SectionContent } from "../../Universal/SectionContent";
+import LiteYouTubeEmbed from "react-lite-youtube-embed";
+import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css";
 
 export const HomeVideoSection = () => {
   const navigate = useNavigate();
@@ -13,13 +15,11 @@ export const HomeVideoSection = () => {
     >
       <div className="w-full md:w-1/2 rounded-xl overflow-hidden shadow-lg border border-gray-100 bg-black">
         <div className="relative w-full aspect-video">
-          <iframe
-            className="absolute top-0 left-0 w-full h-full"
-            src={PROMO_VIDEO_URL}
-            title="Video"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allow="autoplay; encrypted-media; picture-in-picture"
-            allowFullScreen
+          <LiteYouTubeEmbed
+            id={PROMO_VIDEO_ID} // e.g., "dQw4w9WgXcQ" (NOT the full URL)
+            title="BIS 2026 Teaser"
+            poster="maxresdefault" // Uses the high-res thumbnail
+            webp={true} // Uses faster WebP images
           />
         </div>
       </div>

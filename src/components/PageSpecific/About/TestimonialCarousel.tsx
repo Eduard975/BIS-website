@@ -9,12 +9,12 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/effect-fade";
 
-// ✅ 1. Import only the flags you need
-import siFlag from "flag-icons/flags/4x3/si.svg";
-import trFlag from "flag-icons/flags/4x3/tr.svg";
-import esFlag from "flag-icons/flags/4x3/es.svg";
+// Flags sourced from 'flag-icons' (MIT License)
+// https://github.com/lipis/flag-icons
+import siFlag from "../../../assets/flags/si.svg";
+import trFlag from "../../../assets/flags/tr.svg";
+import esFlag from "../../../assets/flags/es.svg";
 
-// ✅ 2. Create a lookup map for the flags
 const flagMap: Record<string, string> = {
   si: siFlag,
   tr: trFlag,

@@ -1,10 +1,11 @@
-// vite.config.ts
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
+import { visualizer } from "rollup-plugin-visualizer";
 
+// https://vite.dev/config/
 export default defineConfig({
-  base: "/BIS-website/", // Your repo name
+  base: "/BIS-website/",
   plugins: [
     tailwindcss(),
     react({
@@ -12,16 +13,11 @@ export default defineConfig({
         plugins: [["babel-plugin-react-compiler"]],
       },
     }),
+    visualizer({
+      open: true,
+      filename: "stats.html",
+      gzipSize: true,
+      brotliSize: true,
+    }),
   ],
-  build: {
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          // Split external libraries into valid chunks
-          vendor: ["react", "react-dom", "react-router", "react-ga4"],
-          ui: ["swiper", "flag-icons", "react-icons"],
-        },
-      },
-    },
-  },
 });

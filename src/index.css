@@ -3,19 +3,22 @@
 @font-face {
   font-family: "LemonMilk-regular";
   src: url("./assets/fonts/LEMONMILK-Regular.otf") format("opentype");
-  font-style: normal;
+  font-style: normal;  
+  font-display: swap;
 }
 
 @font-face {
   font-family: "LemonMilk-medium";
   src: url("./assets/fonts/LEMONMILK-Medium.otf") format("opentype");
-  font-style: normal;
+  font-style: normal;  
+  font-display: swap;
 }
 
 @font-face {
   font-family: "LemonMilk-bold";
   src: url("./assets/fonts/LEMONMILK-Bold.otf") format("opentype");
   font-style: normal;
+  font-display: swap;
 }
 
 @theme {
