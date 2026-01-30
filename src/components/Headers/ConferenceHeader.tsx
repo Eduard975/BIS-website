@@ -2,8 +2,11 @@ import { HeroHeader } from "./HeroHeader";
 import { PrimaryButton } from "../Universal/PrimaryButton";
 import conferenceHeader from "../../assets/images/conferenceHeader.jpg";
 import { TimerDisplay } from "../PageSpecific/Conference/TimerDisplay";
+import { useNavigate } from "react-router";
 
 export const ConferencePageHeader = () => {
+  const navigate = useNavigate();
+
   return (
     <HeroHeader
       backgroundImageSrc={conferenceHeader}
@@ -33,10 +36,8 @@ export const ConferencePageHeader = () => {
         <div className="pt-[2vh]">
           <PrimaryButton
             size="large"
-            /* 1. NAVIGATION: Target the section ID on the current page */
-            href="#participate"
-            /* 2. ANALYTICS: This will now appear in "Page: Conference" > "Click: Participate Anchor" */
             analyticsLabel="Participate Anchor"
+            onClick={() => navigate("/about#how-to-join")}
             className="bg-primary hover:bg-[#008f85] 
             text-white rounded-full px-[5vw] py-[2vh] 
             md:px-[2vw] md:py-[2vh] font-bold text-[4vw] 
