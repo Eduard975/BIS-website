@@ -15,6 +15,7 @@ This repository contains the source code for the **BEST Iasi Symposium 2026**.
 - **Swiper** (`12.0.3`): For high-performance touch sliders and carousels.
 - **React Icons** (`5.5.0`): Extensive UI icon library.
 - **Flag Icons** (`7.5.0`): SVG collection of all world flags for international speakers.
+- **React GA4** (`^2.1.0`): Google Analytics 4 integration for traffic tracking.
 
 ---
 

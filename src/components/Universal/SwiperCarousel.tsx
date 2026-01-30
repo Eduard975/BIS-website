@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
+import ReactGA from "react-ga4";
 
 import "swiper/css";
 
@@ -17,6 +18,7 @@ interface SwiperCarouselProps {
   mobileSlidesPerView?: number;
   desktopSlidesPerView?: number;
   aspect?: string;
+  carouselName?: string;
 }
 
 const SwiperCarousel = ({
@@ -24,14 +26,28 @@ const SwiperCarousel = ({
   mobileSlidesPerView = 1,
   desktopSlidesPerView = 3,
   aspect = "aspect-[4/5] md:aspect-video",
+  carouselName = "General",
 }: SwiperCarouselProps) => {
   const navigate = useNavigate();
 
   const handleItemClick = (item: CarouselItem) => {
+    const pagePath =
+      window.location.pathname === "/"
+        ? "Home"
+        : window.location.pathname.substring(1);
+    const pageCategory = pagePath.charAt(0).toUpperCase() + pagePath.slice(1);
+
+    ReactGA.event({
+      category: `Page: ${pageCategory}`,
+      action: `Carousel (${carouselName}): ${item.altText}`,
+      label: `Target: ${item.Url}`,
+    });
+
+    // 2. NAVIGATION
     if (item.isRedirect) {
       navigate(item.Url);
     } else {
-      window.open(item.Url, "_blank");
+      window.open(item.Url, "_blank", "noopener,noreferrer");
     }
   };
 
@@ -57,12 +73,10 @@ const SwiperCarousel = ({
           <SwiperSlide key={item.id}>
             <div
               className={`
-                relative w-full 
-                ${aspect}
+                relative w-full ${aspect}
                 bg-white rounded-2xl overflow-hidden 
                 border border-gray-100 shadow-md 
-                cursor-pointer 
-                hover:shadow-lg transition-all duration-300
+                cursor-pointer hover:shadow-lg transition-all duration-300
               `}
               onClick={() => handleItemClick(item)}
             >
@@ -71,7 +85,7 @@ const SwiperCarousel = ({
                   src={item.imageSrc}
                   alt={item.altText}
                   className="max-w-full max-h-full object-contain"
-                  loading="lazy" // Lower priority as these are usually below the fold
+                  loading="lazy"
                 />
               </div>
             </div>

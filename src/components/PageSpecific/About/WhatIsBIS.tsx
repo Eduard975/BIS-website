@@ -2,7 +2,7 @@ import { CustomSection } from "../../Universal/CustomSection";
 import { SectionContent } from "../../Universal/SectionContent";
 import planetSvg from "../../../assets/svgs/planet.svg";
 
-export const BridgeGapSection = () => {
+export const WhatIsBisSection = () => {
   return (
     <CustomSection
       bg="bg-whiteBG"
@@ -27,8 +27,8 @@ export const BridgeGapSection = () => {
 
       {/* Content Block */}
       <SectionContent
-        title="Bridge the Gap"
-        subtitle="STEM & Innovation"
+        title="BEST Iasi Symposium"
+        subtitle="What is"
         buttonText="Discover More"
         className="relative z-10 md:flex-1"
       >

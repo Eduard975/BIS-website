@@ -3,13 +3,13 @@ import { MemoryLane } from "../components/PageSpecific/About/MemoryLane";
 import { TestimonialsSection } from "../components/PageSpecific/About/TestimonialSection";
 import { TESTIMONIALS } from "../data/Testimonials";
 import { BehindTheTeam } from "../components/PageSpecific/About/Team";
-import { BridgeGapSection } from "../components/PageSpecific/About/BridgeGap";
+import { WhatIsBisSection } from "../components/PageSpecific/About/WhatIsBIS";
 
 function About() {
   return (
     <>
       <AboutPageHeader />
-      <BridgeGapSection />
+      <WhatIsBisSection />
 
       <MemoryLane />
 

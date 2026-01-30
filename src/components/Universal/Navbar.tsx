@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
-import { NavLink } from "react-router";
+import { NavLink, useLocation, useNavigate } from "react-router"; // Added useLocation & useNavigate
 import CustomContainer from "./CustomContainer";
 import bisLogo from "../../assets/logos/bis.svg";
 import { useWindowSize } from "../../hooks/useWindowSize";
+import { HiOutlineArrowLeft } from "react-icons/hi"; // Using an arrow icon
 
 const NAV_ITEMS = [
   { name: "Home", path: "/" },
@@ -13,13 +14,15 @@ const NAV_ITEMS = [
 
 export default function Navbar() {
   const { isMobile } = useWindowSize();
+  const { pathname } = useLocation(); // Detect current page
+  const navigate = useNavigate();
+
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
-  // Computed state: Menu is only effectively "open" if we are on mobile
+  const isConferencePage = pathname === "/conference";
   const isMenuOpen = isMobile && isOpen;
 
-  // Toggle function using functional update for stability
   const toggleMenu = () => setIsOpen((prev) => !prev);
 
   useEffect(() => {
@@ -28,24 +31,42 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Sync scroll lock with menu state
   useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "unset";
-    }
+    document.body.style.overflow = isMenuOpen ? "hidden" : "unset";
     return () => {
       document.body.style.overflow = "unset";
     };
   }, [isMenuOpen]);
 
-  // Restored helper for desktop link styling
-  const getNavLinkClass = ({ isActive }: { isActive: boolean }) =>
-    `transition-colors duration-200 text-[1.1vw] tracking-wide ${
-      isActive
-        ? "text-secondary font-semibold"
-        : "text-gray-800 hover:text-secondary active:text-secondary"
-    }`;
+  // STYLING LOGIC: Conference Link with Outline
+  const getNavLinkClass = ({
+    isActive,
+    name,
+  }: {
+    isActive: boolean;
+    name: string;
+  }) => {
+    const isConf = name === "Conference";
+
+    // Base styles
+    let classes =
+      "transition-all duration-300 text-[1.1vw] tracking-wide px-4 py-1.5 rounded-full ";
+
+    if (isConf) {
+      // The "Invest Button" style: Blue outline
+      classes += isActive
+        ? "bg-secondary text-white border-2 border-secondary "
+        : "border-2 border-secondary text-darkTxt hover:bg-secondary hover:text-white ";
+    } else {
+      // Standard links
+      classes += isActive
+        ? "text-secondary font-semibold "
+        : "text-gray-800 hover:text-secondary ";
+    }
+
+    return classes;
+  };
 
   const navBackgroundClass = isMenuOpen
     ? "bg-white shadow-lg border-gray-200"
@@ -63,59 +84,80 @@ export default function Navbar() {
           paddingX="none"
           className="flex justify-between items-center h-[--navbar-height] px-[2vw]"
         >
-          {/* LOGO */}
-          <img
-            src={bisLogo}
-            alt="Logo"
-            className="w-[25vw] md:w-[8vw] max-w-[150px] md:max-w-none p-[2vh] object-contain select-none transition-all duration-300"
-          />
+          {/* LOGO (Links to Home) */}
+          <NavLink to="/" onClick={() => setIsOpen(false)}>
+            <img
+              src={bisLogo}
+              alt="Logo"
+              className="w-[25vw] md:w-[8vw] max-w-[150px] md:max-w-none p-[2vh] object-contain select-none transition-all duration-300"
+            />
+          </NavLink>
 
-          {/* DESKTOP LINKS */}
-          <div className="hidden md:flex gap-[2.5vw]">
-            {NAV_ITEMS.map((item) => (
-              <NavLink
-                key={item.path}
-                to={item.path}
-                className={getNavLinkClass}
+          {/* DESKTOP CONTENT */}
+          <div className="hidden md:flex items-center gap-[1.5vw]">
+            {isConferencePage ? (
+              /* BACK BUTTON: Only shown on Conference Page */
+              <button
+                onClick={() => navigate("/")}
+                className="flex items-center gap-2 text-secondary font-bold text-[1.1vw] hover:translate-x-[-5px] transition-transform duration-300 cursor-pointer"
               >
-                {item.name}
-              </NavLink>
-            ))}
+                <HiOutlineArrowLeft className="text-xl" />
+                Back to Home
+              </button>
+            ) : (
+              /* STANDARD MENU: Shown on all other pages */
+              NAV_ITEMS.map((item) => (
+                <NavLink
+                  key={item.path}
+                  to={item.path}
+                  className={({ isActive }) =>
+                    getNavLinkClass({ isActive, name: item.name })
+                  }
+                >
+                  {item.name}
+                </NavLink>
+              ))
+            )}
           </div>
 
-          {/* BURGER BUTTON - Now using toggleMenu */}
-          <button
-            onClick={toggleMenu}
-            className="md:hidden p-[1vh] text-gray-800 focus:outline-none"
-            aria-label="Toggle Menu"
-            aria-expanded={isMenuOpen}
-          >
-            <div className="relative w-[6vw] h-[5vw] max-w-[30px] max-h-[24px]">
-              <span
-                className={`absolute left-0 block w-full h-[0.5vh] max-h-[3px] bg-current rounded-full transition-all duration-300 ease-in-out transform ${
-                  isMenuOpen ? "top-[2.2vw] rotate-45" : "top-0"
-                }`}
-              />
-              <span
-                className={`absolute left-0 block w-full h-[0.5vh] max-h-[3px] bg-current rounded-full transition-all duration-300 ease-in-out top-[2.2vw] ${
-                  isMenuOpen ? "opacity-0" : "opacity-100"
-                }`}
-              />
-              <span
-                className={`absolute left-0 block w-full h-[0.5vh] max-h-[3px] bg-current rounded-full transition-all duration-300 ease-in-out transform ${
-                  isMenuOpen ? "top-[2.2vw] -rotate-45" : "top-[4.4vw]"
-                }`}
-              />
-            </div>
-          </button>
+          {/* BURGER BUTTON (Conditional Logic) */}
+          {!isConferencePage && (
+            <button
+              onClick={toggleMenu}
+              className="md:hidden p-[1vh] text-gray-800 focus:outline-none"
+              aria-label="Toggle Menu"
+            >
+              {/* ... (Burger Icon Spans) ... */}
+              <div className="relative w-[6vw] h-[5vw] max-w-[30px] max-h-[24px]">
+                <span
+                  className={`absolute left-0 block w-full h-[0.5vh] max-h-[3px] bg-current rounded-full transition-all duration-300 ${isMenuOpen ? "top-[2.2vw] rotate-45" : "top-0"}`}
+                />
+                <span
+                  className={`absolute left-0 block w-full h-[0.5vh] max-h-[3px] bg-current rounded-full transition-all duration-300 top-[2.2vw] ${isMenuOpen ? "opacity-0" : "opacity-100"}`}
+                />
+                <span
+                  className={`absolute left-0 block w-full h-[0.5vh] max-h-[3px] bg-current rounded-full transition-all duration-300 ${isMenuOpen ? "top-[2.2vw] -rotate-45" : "top-[4.4vw]"}`}
+                />
+              </div>
+            </button>
+          )}
+
+          {/* MOBILE BACK BUTTON (Shown instead of burger on Conference page) */}
+          {isConferencePage && isMobile && (
+            <button
+              onClick={() => navigate("/")}
+              className="md:hidden flex items-center gap-2 text-secondary font-bold text-lg"
+            >
+              <HiOutlineArrowLeft />
+              Home
+            </button>
+          )}
         </CustomContainer>
       </div>
 
-      {/* MOBILE MENU */}
+      {/* MOBILE MENU (Stays as is) */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-          isMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
-        }`}
+        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${isMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"}`}
       >
         <CustomContainer
           paddingX="none"
@@ -128,11 +170,7 @@ export default function Navbar() {
                 to={item.path}
                 onClick={() => setIsOpen(false)}
                 className={({ isActive }) =>
-                  `text-[4.5vw] py-[1vh] ${
-                    isActive
-                      ? "text-secondary font-semibold pl-[2vw] border-l-[1vw] border-secondary"
-                      : "text-gray-600 hover:text-gray-900"
-                  }`
+                  `text-[4.5vw] py-[1vh] ${isActive ? "text-secondary font-semibold border-l-[1vw] border-secondary pl-2" : "text-gray-600"}`
                 }
               >
                 {item.name}

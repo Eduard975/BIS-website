@@ -2,6 +2,7 @@ import { lazy, memo, Suspense, useState, type CSSProperties } from "react";
 import CustomContainer from "../Universal/CustomContainer";
 import lightbulbSvg from "../../assets/svgs/bec.svg";
 import groupPhotoImg from "../../assets/images/GroupPhotoStatue.jpg";
+import ReactGA from "react-ga4";
 
 const LAYOUT = {
   leftWidth: "w-[45%]",
@@ -41,6 +42,20 @@ export const AboutPageHeader = () => {
 
   const handleMouseEnter = () => {
     revealLoader();
+  };
+
+  const handleSelectionChange = (value: "ingenium" | "general" | "") => {
+    setStudentType(value);
+    const pagePath = window.location.pathname.substring(1) || "Home";
+    const pageCategory = pagePath.charAt(0).toUpperCase() + pagePath.slice(1);
+
+    if (value !== "") {
+      ReactGA.event({
+        category: `Page: ${pageCategory}`,
+        action: "Select Student Origin",
+        label: value === "ingenium" ? "INGENIUM Alliance" : "General STEM/BEST",
+      });
+    }
   };
 
   return (
@@ -120,10 +135,7 @@ export const AboutPageHeader = () => {
         />
 
         <CustomContainer className="relative z-30 pt-48 pb-24 text-white">
-          {" "}
-          {/* UPDATED: Increased pt-32 to pt-48 to lower the title */}
           <div className="flex flex-col gap-10 max-w-2xl mx-auto text-center md:text-left">
-            {/* 1. The Question */}
             <div
               className="space-y-6"
               onMouseEnter={handleMouseEnter}
@@ -135,17 +147,13 @@ export const AboutPageHeader = () => {
 
               <div className="flex flex-col md:flex-row items-center gap-3 text-lg md:text-xl font-medium text-gray-200">
                 <span>I am a student from</span>
-                {/* Selector Refinements: Smaller size and weak blur */}
                 <label htmlFor="student-origin" className="sr-only">
                   Select your university origin
                 </label>
                 <select
                   value={studentType}
-                  onChange={(e) =>
-                    setStudentType(
-                      e.target.value as "ingenium" | "general" | "",
-                    )
-                  }
+                  /* 3. Use the new tracking handler */
+                  onChange={(e) => handleSelectionChange(e.target.value as any)}
                   className="bg-white/10 border border-white/20 rounded-lg px-3 py-1.5 text-base text-primary font-bold focus:outline-none focus:ring-2 focus:ring-primary appearance-none cursor-pointer backdrop-blur-sm"
                 >
                   <option value="" className="text-black">

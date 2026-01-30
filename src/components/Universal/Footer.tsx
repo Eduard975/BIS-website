@@ -1,3 +1,5 @@
+/* UPDATED: Footer.tsx */
+
 import {
   HiOutlineLocationMarker,
   HiOutlineMail,
@@ -10,6 +12,7 @@ import CustomContainer from "./CustomContainer";
 import gyroscopImg from "../../assets/svgs/gyroscop.svg";
 import sigla_best_alba from "../../assets/logos/best.svg";
 import { VOLUNTEER_FORM_URL, GDPR_LINK } from "../../data/Links";
+import { PrimaryButton } from "./PrimaryButton";
 
 const SITE_MAP = [
   { name: "Home", to: "/" },
@@ -18,10 +21,7 @@ const SITE_MAP = [
   { name: "Conference", to: "/conference" },
 ];
 
-const LEGAL_LINKS = [
-  { name: "GDPR BIS 2026", to: GDPR_LINK },
-  // { name: "Cookies Policy", to: "/cookies" },
-];
+const LEGAL_LINKS = [{ name: "GDPR BIS 2026", to: GDPR_LINK }];
 
 const CONTACT_INFO = {
   address: (
@@ -49,7 +49,6 @@ const ContactItem = ({
   Icon,
   children,
 }: {
-  // FIX: Proper typing instead of 'any'
   Icon: React.ElementType;
   children: React.ReactNode;
 }) => (
@@ -62,9 +61,6 @@ const ContactItem = ({
 export default function Footer() {
   return (
     <footer className="w-full bg-primary py-12 border-t border-gray-200/20 text-lightTxt relative overflow-hidden">
-      {/* UPDATED: Added explicit props to delimit left/right space 
-         matching the standard layout (1200px width, px-8 padding) 
-      */}
       <CustomContainer
         width="standard"
         paddingX="normal"
@@ -83,20 +79,18 @@ export default function Footer() {
           </div>
 
           <div className="mt-8 md:mt-4 flex flex-col gap-8 text-lightTxt items-center md:items-start">
-            {/* FIX: Removed text-justify for better readability on mobile */}
             <p className="text-lg text-center md:text-left max-w-sm">
               Invest 3.5% of your tax in BEST Iași. It's free, fast, and fuels
               engineering talent.
             </p>
 
-            <a
+            <PrimaryButton
               href={CONTACT_INFO.redirectLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-secondary px-6 py-2.5 rounded-full font-semibold shadow-md transition-all hover:scale-105 active:scale-95 text-lightTxt text-center"
+              analyticsLabel="Invest 3.5% Tax"
+              className="bg-secondary hover:bg-secondary-dark"
             >
               Invest Here
-            </a>
+            </PrimaryButton>
           </div>
         </div>
 
@@ -114,6 +108,8 @@ export default function Footer() {
                 <ContactItem Icon={HiOutlineMail}>
                   <a
                     href={`mailto:${CONTACT_INFO.email}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="hover:underline transition-colors"
                   >
                     {CONTACT_INFO.email}
@@ -123,6 +119,8 @@ export default function Footer() {
                 <ContactItem Icon={HiOutlinePhone}>
                   <a
                     href={`tel:${CONTACT_INFO.phoneLink}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="hover:underline transition-colors"
                   >
                     {CONTACT_INFO.phone}
@@ -135,17 +133,20 @@ export default function Footer() {
               <FooterHeading>Legal info</FooterHeading>
               <nav className="flex flex-col gap-2 text-sm md:text-base text-lightTxt">
                 {LEGAL_LINKS.map((link) => (
-                  <NavLink
+                  <a
                     key={link.name}
-                    to={link.to}
+                    href={link.to}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="hover:underline w-fit"
                   >
                     {link.name}
-                  </NavLink>
+                  </a>
                 ))}
               </nav>
             </section>
           </div>
+
           {/* Copyright */}
           <div className="flex items-center justify-center md:justify-start gap-2 md:mt-auto pt-4 md:pt-0 text-lightTxt w-full">
             <BiCopyright className="text-lg" />
@@ -153,7 +154,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* --- Right Column (Site Map) - HIDDEN ON MOBILE --- */}
+        {/* --- Right Column (Site Map) --- */}
         <section className="hidden md:block min-w-[150px] w-full md:w-auto">
           <FooterHeading>Site Map</FooterHeading>
           <nav className="flex flex-col gap-1 text-sm md:text-base text-lightTxt">
@@ -175,20 +176,7 @@ export default function Footer() {
         src={gyroscopImg}
         alt=""
         loading="lazy"
-        className="
-          absolute
-          bottom-0
-          right-0
-          top-53
-          h-auto
-          rotate-12
-          w-[50%]
-          max-w-[600px]
-          opacity-40
-          brightness-[0.3]
-          pointer-events-none
-          hidden md:block
-        "
+        className="absolute bottom-0 right-0 top-53 h-auto rotate-12 w-[50%] max-w-[600px] opacity-40 brightness-[0.3] pointer-events-none hidden md:block"
       />
     </footer>
   );

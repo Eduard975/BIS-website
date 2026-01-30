@@ -20,7 +20,11 @@
 
 @theme {
   --color-primary: #16A296;
+  --color-primary-dark: #139187;
+
   --color-secondary: #00AEEF;
+  --color-secondary-dark: #009CD7;
+
   --color-accent:#BF1E2E;
 
   --color-lightTxt: #FFFDFD;

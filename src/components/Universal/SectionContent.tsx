@@ -8,6 +8,8 @@ interface SectionContentProps {
   buttonText?: string;
   onButtonClick?: () => void;
   className?: string;
+  // Add this prop
+  analyticsLabel?: string;
 }
 
 export const SectionContent = ({
@@ -17,6 +19,7 @@ export const SectionContent = ({
   buttonText,
   onButtonClick,
   className = "flex-1 min-w-[300px]",
+  analyticsLabel,
 }: SectionContentProps) => {
   return (
     <div className={`flex flex-col gap-6 ${className}`}>
@@ -32,7 +35,18 @@ export const SectionContent = ({
 
       {buttonText && onButtonClick && (
         <div className="pt-2">
-          <PrimaryButton size="normal" onClick={onButtonClick}>
+          <PrimaryButton
+            size="normal"
+            onClick={onButtonClick}
+            /* PRIORITY: 
+               1. Use the explicit analyticsLabel if provided.
+               2. Fallback to the Section title.
+               3. Final fallback to "Section Button".
+            */
+            analyticsLabel={
+              analyticsLabel || (title ? `Section: ${title}` : "Section Button")
+            }
+          >
             {buttonText}
           </PrimaryButton>
         </div>

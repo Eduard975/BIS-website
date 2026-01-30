@@ -12,7 +12,6 @@ export const ConferencePageHeader = () => {
       overlayOpacityClass="opacity-80 md:opacity-85 mix-blend-multiply"
       heightClass="min-h-[75vh]"
     >
-      {/* 2. RENDER DIRECTLY: Better for performance and state preservation */}
       <div className="flex flex-col gap-[3vh] text-white h-full justify-center">
         <div>
           <h1 className="text-[8vw] md:text-[4vw] font-extrabold tracking-tight leading-[1.1]">
@@ -34,13 +33,14 @@ export const ConferencePageHeader = () => {
         <div className="pt-[2vh]">
           <PrimaryButton
             size="large"
-            /* 3. TAILWIND TIP: Consider moving these complex view-port units 
-               into your PrimaryButton's internal size logic if used often */
+            /* 1. NAVIGATION: Target the section ID on the current page */
+            href="#participate"
+            /* 2. ANALYTICS: This will now appear in "Page: Conference" > "Click: Participate Anchor" */
+            analyticsLabel="Participate Anchor"
             className="bg-primary hover:bg-[#008f85] 
             text-white rounded-full px-[5vw] py-[2vh] 
             md:px-[2vw] md:py-[2vh] font-bold text-[4vw] 
             md:text-[1.1vw] transition-colors duration-300"
-            onClick={() => console.log("Participate clicked")}
           >
             I want to participate
           </PrimaryButton>

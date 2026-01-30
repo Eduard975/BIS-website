@@ -19,6 +19,7 @@ const HeaderContent = ({ onJoinClick }: { onJoinClick: () => void }) => (
       <PrimaryButton
         size="large"
         onMouseEnter={() => import("../../pages/About")}
+        analyticsLabel="Join Us"
         onClick={onJoinClick}
       >
         Join Us

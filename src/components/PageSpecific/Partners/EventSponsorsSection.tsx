@@ -4,7 +4,6 @@ import SwiperCarousel from "../../Universal/SwiperCarousel";
 import { ES_CAROUSEL_ITEMS } from "../../../data/SponsorsCarouselData";
 
 export const EventSponsorsSection = () => {
-  // Check if data exists before rendering the entire section
   if (!ES_CAROUSEL_ITEMS || ES_CAROUSEL_ITEMS.length === 0) return null;
 
   return (
@@ -12,6 +11,7 @@ export const EventSponsorsSection = () => {
       <SectionContent title="Sponsors" subtitle="Event" className="w-full" />
       <SwiperCarousel
         data={ES_CAROUSEL_ITEMS}
+        carouselName="Event Sponsors"
         mobileSlidesPerView={2}
         desktopSlidesPerView={4}
         aspect="aspect-[4/5] md:aspect-square"

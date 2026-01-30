@@ -23,7 +23,11 @@ export const HomePartnersSection = () => {
       />
 
       <div className="w-full flex justify-start">
-        <PrimaryButton size="normal" onClick={() => navigate("/partners")}>
+        <PrimaryButton
+          size="normal"
+          analyticsLabel="Discover More"
+          onClick={() => navigate("/partners")}
+        >
           Discover More
         </PrimaryButton>
       </div>

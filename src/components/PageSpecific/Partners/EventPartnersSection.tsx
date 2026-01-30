@@ -26,6 +26,7 @@ export const EventPartnersSection = () => {
 
           <SectionContent
             buttonText="Learn More"
+            analyticsLabel="Learn More"
             onButtonClick={() => window.open(INGENIUM_LINK, "_blank")}
             className="w-full md:w-1/2 text-justify"
           >
@@ -57,6 +58,7 @@ export const EventPartnersSection = () => {
         <div className="flex flex-col md:flex-row items-start justify-between gap-12 lg:gap-24">
           <SectionContent
             buttonText="Learn More"
+            analyticsLabel="Partner: TUIASI"
             onButtonClick={() => window.open(TUIASI_LINK, "_blank")}
             className="w-full md:w-1/2 text-justify"
           >

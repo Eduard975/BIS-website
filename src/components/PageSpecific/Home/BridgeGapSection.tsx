@@ -29,6 +29,7 @@ export const HomeBridgeGapSection = () => {
         title="Bridge the Gap"
         subtitle="STEM & Innovation"
         buttonText="Discover More"
+        analyticsLabel="Discover More"
         onButtonClick={() => navigate("/conference")}
         className="md:w-[60%]"
       >

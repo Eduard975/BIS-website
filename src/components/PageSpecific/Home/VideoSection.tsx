@@ -28,6 +28,7 @@ export const HomeVideoSection = () => {
         title="BEST Iași Symposium"
         subtitle="Student Mobility"
         buttonText="Discover More"
+        analyticsLabel="Discover More"
         onButtonClick={() => navigate("/about")}
       >
         <p>

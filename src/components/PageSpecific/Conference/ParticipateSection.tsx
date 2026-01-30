@@ -60,7 +60,11 @@ export const ParticipateSection = () => {
                 hasn't started yet
               </p>
             ) : (
-              <PrimaryButton size="normal" onClick={handleJoinClick}>
+              <PrimaryButton
+                size="normal"
+                analyticsLabel="Join Now"
+                onClick={handleJoinClick}
+              >
                 Join Now
               </PrimaryButton>
             )}
