@@ -34,26 +34,10 @@ pnpm install
 
 ### Available Scripts
 
-```bash
-pnpm dev
-```
+`pnpm dev` -- Starts the Vite dev server.
 
-Starts the Vite dev server.
+`pnpm build` -- Compiles TypeScript and builds the production bundle.
 
-```bash
-pnpm build
-```
+`pnpm lint` -- Runs ESLint to find and fix code quality issues.
 
-Compiles TypeScript and builds the production bundle.
-
-```bash
-pnpm lint
-```
-
-Runs ESLint to find and fix code quality issues.
-
-```bash
-pnpm preview
-```
-
-Serves the generated production build for testing.
+`pnpm preview` -- Serves the generated production build for testing.
