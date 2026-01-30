@@ -15,7 +15,7 @@ ReactGA.send({ hitType: "pageview", page: window.location.pathname });
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/BIS-website/">
       <AnalyticsProvider />
       <ScrollToHash />
       <ScrollToTop />
