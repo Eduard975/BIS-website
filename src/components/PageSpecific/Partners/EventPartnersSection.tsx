@@ -63,17 +63,19 @@ export const EventPartnersSection = () => {
             className="w-full md:w-1/2 text-justify"
           >
             <p>
-              TUIAȘI, a local BEST partner, plays a key role in supporting
-              student development and promoting multilateral education. The
-              university actively contributes to initiatives that enhance
-              international experiences and mobility opportunities for students.
+              TUIAȘI, as a local BEST partner, plays an important role in
+              supporting student development and technical education. The
+              university is actively involved in fostering an academic
+              environment focused on innovation, research, and strong
+              collaboration between students and the academic community.
             </p>
             <p>
-              As a strategic partner of INGENIUM, TUIAȘI supports the BEST Iași
-              Symposium by providing essential logistical resources and
-              organizational support, ensuring a successful and well-coordinated
-              event that enables participants to fully engage, connect, and
-              explore new ideas.
+              Within the BEST Iași Symposium, TUIAȘI contributes by providing
+              the necessary infrastructure, logistical support, and academic
+              expertise for the successful organization of the event. Its
+              involvement ensures a well-structured and professional setting
+              that encourages meaningful academic dialogue and the exchange of
+              ideas among participants.
             </p>
           </SectionContent>
 
