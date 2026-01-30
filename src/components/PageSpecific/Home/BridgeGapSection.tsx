@@ -33,14 +33,16 @@ export const HomeBridgeGapSection = () => {
         className="md:w-[60%]"
       >
         <p>
-          Join an international community where multiculturalism drives
-          progress. Connect with talented students, experts, mentors, and
-          industry leaders from across Europe to explore innovative ideas, share
-          experiences, and unlock new career and academic opportunities.
+          Join us for an international opening conference that brings together
+          multicultural perspectives and forward-thinking ideas. Connect with
+          talented students, experts, mentors, and industry leaders from across
+          Europe in a formal yet dynamic setting designed for dialogue,
+          knowledge exchange, and inspiration.
         </p>
         <p>
-          Engage in inspiring discussions and collaborative activities that
-          prepare you for a global future.
+          Through keynote talks, panel discussions, and collaborative sessions,
+          the conference sets the tone for meaningful academic and professional
+          engagement and prepares participants for a global future.
         </p>
       </SectionContent>
     </CustomSection>
