@@ -25,8 +25,6 @@ export const PrimaryButton: React.FC<PrimaryButtonProps> = ({
   onClick,
   ...props
 }) => {
-  const navigate = useNavigate();
-
   const sizeClasses = {
     small: "px-4 py-2 text-sm",
     normal: "px-6 py-2.5 text-base",
