@@ -1,11 +1,8 @@
-import { useNavigate } from "react-router";
 import { CustomSection } from "../../Universal/CustomSection";
 import { SectionContent } from "../../Universal/SectionContent";
 import planetSvg from "../../../assets/svgs/planet.svg";
 
 export const BridgeGapSection = () => {
-  const navigate = useNavigate();
-
   return (
     <CustomSection
       bg="bg-whiteBG"

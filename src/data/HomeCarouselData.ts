@@ -6,12 +6,14 @@ export const CAROUSEL_ITEMS = [
     id: 1,
     imageSrc: INGENIUM,
     altText: "INGENIUM",
-    redirectUrl: "/partners",
+    Url: "/partners",
+    isRedirect: true,
   },
   {
     id: 2,
     imageSrc: TUIASI,
     altText: "TUIASI",
-    redirectUrl: "/partners",
+    Url: "/partners",
+    isRedirect: true,
   },
 ];

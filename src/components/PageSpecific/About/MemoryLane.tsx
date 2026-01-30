@@ -19,7 +19,7 @@ export function MemoryLane() {
           alt=""
           className="absolute right-0 bottom-0 h-[90%] 
           w-auto object-contain pointer-events-none 
-          z-0 select-none translate-x-[20%] md:translate-x-[10%] opacity-40"
+          z-0 select-none translate-x-[20%] md:translate-x-[10%] opacity-25"
         />
       }
       contentClassName="relative z-10 flex flex-col gap-12"

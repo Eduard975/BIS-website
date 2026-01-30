@@ -9,7 +9,7 @@ import SocialLinks from "./SocialLinks";
 import CustomContainer from "./CustomContainer";
 import gyroscopImg from "../../assets/svgs/gyroscop.svg";
 import sigla_best_alba from "../../assets/logos/best.svg";
-import { VOLUNTEER_FORM_URL } from "../../data/Links";
+import { VOLUNTEER_FORM_URL, GDPR_LINK } from "../../data/Links";
 
 const SITE_MAP = [
   { name: "Home", to: "/" },
@@ -19,8 +19,8 @@ const SITE_MAP = [
 ];
 
 const LEGAL_LINKS = [
-  { name: "GDPR BIS 2026", to: "/gdpr" },
-  { name: "Cookies Policy", to: "/cookies" },
+  { name: "GDPR BIS 2026", to: GDPR_LINK },
+  // { name: "Cookies Policy", to: "/cookies" },
 ];
 
 const CONTACT_INFO = {

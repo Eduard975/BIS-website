@@ -1,10 +1,8 @@
-import { memo, type CSSProperties } from "react";
+import { lazy, memo, Suspense, useState, type CSSProperties } from "react";
 import CustomContainer from "../Universal/CustomContainer";
 import lightbulbSvg from "../../assets/svgs/bec.svg";
 import groupPhotoImg from "../../assets/images/GroupPhotoStatue.jpg";
 
-// --- CONFIGURATION ---
-// Kept outside to prevent re-allocation on every render
 const LAYOUT = {
   leftWidth: "w-[45%]",
   rightWidth: "w-[55%]",
@@ -32,9 +30,19 @@ const GeometricShape = memo(({ className, clipPath }: GeometricShapeProps) => (
     aria-hidden="true"
   />
 ));
-GeometricShape.displayName = "GeometricShape";
+
+const revealLoader = () => import("../PageSpecific/About/ConditionalReveal");
+const ConditionalReveal = lazy(revealLoader);
 
 export const AboutPageHeader = () => {
+  const [studentType, setStudentType] = useState<"ingenium" | "general" | "">(
+    "",
+  );
+
+  const handleMouseEnter = () => {
+    revealLoader();
+  };
+
   return (
     <div className="flex flex-col w-full relative">
       {/* ======================= TOP SECTION ======================= */}
@@ -74,9 +82,10 @@ export const AboutPageHeader = () => {
           </div>
         </CustomContainer>
       </section>
-
       {/* ======================= BOTTOM SECTION ======================= */}
+
       <section
+        id="how-to-join"
         className="relative w-full min-h-[500px] 
         md:min-h-[600px] flex items-center bg-gray-900 overflow-hidden z-0 -mt-24"
       >
@@ -110,41 +119,56 @@ export const AboutPageHeader = () => {
           clipPath={LAYOUT.slants.botRightBottom}
         />
 
-        <CustomContainer className="relative z-30 pt-40 pb-24 text-white">
-          <div className="flex flex-col text-left gap-8 max-w-3xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold">How do I join?</h2>
-            <article
-              id="how-to-join"
-              className="text-lg md:text-xl text-gray-100 flex flex-col gap-6 text-justify"
+        <CustomContainer className="relative z-30 pt-48 pb-24 text-white">
+          {" "}
+          {/* UPDATED: Increased pt-32 to pt-48 to lower the title */}
+          <div className="flex flex-col gap-10 max-w-2xl mx-auto text-center md:text-left">
+            {/* 1. The Question */}
+            <div
+              className="space-y-6"
+              onMouseEnter={handleMouseEnter}
+              onFocus={handleMouseEnter}
             >
-              <p>
-                Join the BEST Iași Symposium! You can apply through two simple
-                methods:
-              </p>
-              <ul className="text-left space-y-4 md:pl-10">
-                {[
-                  {
-                    title: "Ingenium universities",
-                    desc: "open to all enrolled at any Ingenium institution.",
-                  },
-                  {
-                    title: "STEM universities",
-                    desc: "outside Ingenium - open to all STEM students from other universities.",
-                  },
-                ].map((item, index) => (
-                  <li key={index} className="flex gap-3">
-                    <span className="font-bold text-primary">{index + 1}.</span>
-                    <span>
-                      For students at{" "}
-                      <span className="font-semibold text-white">
-                        {item.title}
-                      </span>{" "}
-                      - {item.desc}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </article>
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
+                Ready to Join?
+              </h2>
+
+              <div className="flex flex-col md:flex-row items-center gap-3 text-lg md:text-xl font-medium text-gray-200">
+                <span>I am a student from</span>
+                {/* Selector Refinements: Smaller size and weak blur */}
+                <label htmlFor="student-origin" className="sr-only">
+                  Select your university origin
+                </label>
+                <select
+                  value={studentType}
+                  onChange={(e) => setStudentType(e.target.value as any)}
+                  className="bg-white/10 border border-white/20 rounded-lg px-3 py-1.5 text-base text-primary font-bold focus:outline-none focus:ring-2 focus:ring-primary appearance-none cursor-pointer backdrop-blur-sm"
+                >
+                  <option value="" className="text-black">
+                    Select origin
+                  </option>
+                  <option value="ingenium" className="text-black">
+                    INGENIUM Alliance
+                  </option>
+                  <option value="general" className="text-black">
+                    STEM university / member of BEST
+                  </option>
+                </select>
+              </div>
+            </div>
+
+            {/* 2. The Conditional Reveal */}
+            <div
+              className={`text-justify transition-all duration-500 transform ${studentType ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}`}
+            >
+              <div className="min-h-[200px] transition-all duration-500">
+                <Suspense fallback={null}>
+                  {studentType !== "" && (
+                    <ConditionalReveal studentType={studentType} />
+                  )}
+                </Suspense>
+              </div>
+            </div>
           </div>
         </CustomContainer>
       </section>

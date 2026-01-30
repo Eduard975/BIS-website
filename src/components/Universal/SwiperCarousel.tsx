@@ -8,7 +8,8 @@ export interface CarouselItem {
   id: string | number;
   imageSrc: string;
   altText: string;
-  redirectUrl: string;
+  Url: string;
+  isRedirect?: boolean;
 }
 
 interface SwiperCarouselProps {
@@ -26,6 +27,14 @@ const SwiperCarousel = ({
 }: SwiperCarouselProps) => {
   const navigate = useNavigate();
 
+  const handleItemClick = (item: CarouselItem) => {
+    if (item.isRedirect) {
+      navigate(item.Url);
+    } else {
+      window.open(item.Url, "_blank");
+    }
+  };
+
   if (!data || data.length === 0) return null;
 
   return (
@@ -35,20 +44,13 @@ const SwiperCarousel = ({
         spaceBetween={24}
         loop={true}
         autoplay={{
-          delay: 2500, // Slowed down slightly for better UX
+          delay: 2500,
           disableOnInteraction: false,
         }}
         breakpoints={{
-          0: {
-            slidesPerView: mobileSlidesPerView,
-            centeredSlides: true,
-          },
-          768: {
-            slidesPerView: desktopSlidesPerView,
-            centeredSlides: false,
-          },
+          0: { slidesPerView: mobileSlidesPerView, centeredSlides: true },
+          768: { slidesPerView: desktopSlidesPerView, centeredSlides: false },
         }}
-        // REMOVED: h-[250px]
         className="w-full"
       >
         {data.map((item) => (
@@ -62,13 +64,14 @@ const SwiperCarousel = ({
                 cursor-pointer 
                 hover:shadow-lg transition-all duration-300
               `}
-              onClick={() => navigate(item.redirectUrl)}
+              onClick={() => handleItemClick(item)}
             >
               <div className="absolute inset-0 p-6 flex items-center justify-center">
                 <img
                   src={item.imageSrc}
                   alt={item.altText}
                   className="max-w-full max-h-full object-contain"
+                  loading="lazy" // Lower priority as these are usually below the fold
                 />
               </div>
             </div>

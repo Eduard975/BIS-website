@@ -17,8 +17,8 @@ export const HomeVideoSection = () => {
             className="absolute top-0 left-0 w-full h-full"
             src={PROMO_VIDEO_URL}
             title="Video"
-            allow="autoplay; encrypted-media"
             referrerPolicy="strict-origin-when-cross-origin"
+            allow="autoplay; encrypted-media; picture-in-picture"
             allowFullScreen
           />
         </div>

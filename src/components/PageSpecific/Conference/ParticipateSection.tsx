@@ -25,9 +25,14 @@ export const ParticipateSection = () => {
           alt=""
           className="
             absolute bottom-0 right-0 
+
+            left-1/2 -translate-x-1/2 
+            md:left-auto md:translate-x-0 md:right-0
+
             w-[70vw] md:w-[45vw] max-w-[600px] 
-            /* Constraint: Ensures the illustration height never exceeds the section background */
-            max-h-[90%]
+            opacity-15 md:opacity-100
+ 
+            max-h-[80%] md:max-h-[90%]
             object-contain pointer-events-none 
             z-0 select-none
           "
@@ -35,35 +40,33 @@ export const ParticipateSection = () => {
       }
       contentClassName="relative z-10"
     >
-      <div className="max-w-2xl">
-        <SectionContent title="HOW TO PARTICIPATE" subtitle="LET'S FIND OUT">
-          <div className="flex flex-col gap-6 text-lg">
-            <p>
-              Be part of our multicultural conference and engage with passionate
-              participants from across Europe. Discover new ideas, share
-              experiences, build connections, and explore opportunities by
-              following the link below to join us!
-            </p>
+      <SectionContent title="HOW TO PARTICIPATE" subtitle="LET'S FIND OUT">
+        <div className="flex flex-col gap-6 text-lg text-justify md:w-[60%]">
+          <p>
+            Be part of our multicultural conference and engage with passionate
+            participants from across Europe. Discover new ideas, share
+            experiences, build connections, and explore opportunities by
+            following the link below to join us!
+          </p>
 
-            <div className="pt-4">
-              {/* Dynamic CTA that switches automatically when isFinished is true */}
-              {!isFinished ? (
-                <p className="text-darkTxt font-medium">
-                  The{" "}
-                  <span className="text-[#E63946] font-semibold">
-                    joining period
-                  </span>{" "}
-                  hasn't started yet
-                </p>
-              ) : (
-                <PrimaryButton size="normal" onClick={handleJoinClick}>
-                  Join Now
-                </PrimaryButton>
-              )}
-            </div>
+          <div className="pt-4">
+            {/* Dynamic CTA that switches automatically when isFinished is true */}
+            {!isFinished ? (
+              <p className="text-darkTxt font-medium">
+                The{" "}
+                <span className="text-accent font-semibold">
+                  joining period
+                </span>{" "}
+                hasn't started yet
+              </p>
+            ) : (
+              <PrimaryButton size="normal" onClick={handleJoinClick}>
+                Join Now
+              </PrimaryButton>
+            )}
           </div>
-        </SectionContent>
-      </div>
+        </div>
+      </SectionContent>
     </CustomSection>
   );
 };

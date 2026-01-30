@@ -4,6 +4,10 @@ export const OOD_JOIN_FORM_URL = "https://forms.gle/example";
 
 export const VOLUNTEER_FORM_URL = "https://redirectioneaza.ro/best-iasi/";
 export const PROMO_VIDEO_URL = "https://www.youtube.com/embed/dQw4w9WgXcQ";
+export const INGENIUM_APPLICATION_URL = "https://ingenium-university.eu/apply/";
+export const GENERAL_APPLICATION_URL = "";
+
+export const GDPR_LINK = "";
 
 // BEST Socials
 export const FACEBOOK_LINK = "https://www.facebook.com/bestiasi";
