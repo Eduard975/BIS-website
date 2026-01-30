@@ -1,6 +1,5 @@
 import React from "react";
 import ReactGA from "react-ga4";
-import { useNavigate } from "react-router"; //
 
 type ButtonSize = "small" | "normal" | "large" | "mobile";
 
