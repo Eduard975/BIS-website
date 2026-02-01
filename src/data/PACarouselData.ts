@@ -8,6 +8,7 @@ import {
   BURN_LINK,
   IULIUS_LINK,
   MAGNA_LINK,
+  MIGDALIN_LINK,
   NAGARRO_LINK,
   WINK_LINK,
 } from "./Links";
@@ -52,7 +53,7 @@ export const PA_CAROUSEL_ITEMS = [
     id: 6,
     imageSrc: MIGDALIN,
     altText: "MIGDALIN",
-    Url: MIGDALIN,
+    Url: MIGDALIN_LINK,
     isRedirect: false,
   },
 ];

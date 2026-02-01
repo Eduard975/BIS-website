@@ -67,7 +67,7 @@ const SwiperCarousel = ({
           0: { slidesPerView: mobileSlidesPerView, centeredSlides: true },
           768: { slidesPerView: desktopSlidesPerView, centeredSlides: false },
         }}
-        className="w-full"
+        className="w-full !p-4"
       >
         {data.map((item) => (
           <SwiperSlide key={item.id}>
