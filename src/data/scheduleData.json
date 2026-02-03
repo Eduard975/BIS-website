@@ -1,0 +1,599 @@
+[
+  {
+    "id": "day1",
+    "label": "July 11",
+    "events": [
+      {
+        "time": "07:00 - 18:30",
+        "title": "Arrival & Pick up",
+        "description": "Arrival of participants and pickup service."
+      },
+      {
+        "time": "18:30 - 20:00",
+        "title": "Dinner",
+        "description": ""
+      },
+      {
+        "time": "20:00 - 22:00",
+        "title": "Teambuilding",
+        "description": ""
+      },
+      {
+        "time": "22:00 - 00:00",
+        "title": "Social activity",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "id": "day2",
+    "label": "July 12",
+    "events": [
+      {
+        "time": "08:00 - 08:30",
+        "title": "Wake Up",
+        "description": ""
+      },
+      {
+        "time": "08:30 - 09:00",
+        "title": "Breakfast",
+        "description": ""
+      },
+      {
+        "time": "09:00 - 10:00",
+        "title": "Move to place",
+        "description": ""
+      },
+      {
+        "time": "10:00 - 18:30",
+        "title": "Official Open Day - Conference",
+        "description": "At least 3 hours - max 6 hours. Includes free time."
+      },
+      {
+        "time": "18:30 - 19:00",
+        "title": "Move to place",
+        "description": ""
+      },
+      {
+        "time": "19:00 - 21:00",
+        "title": "Dinner",
+        "description": ""
+      },
+      {
+        "time": "21:00 - 23:00",
+        "title": "Free time",
+        "description": ""
+      },
+      {
+        "time": "23:00 - 00:00",
+        "title": "Social activity",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "id": "day3",
+    "label": "July 13",
+    "events": [
+      {
+        "time": "08:00 - 08:30",
+        "title": "Wake Up",
+        "description": ""
+      },
+      {
+        "time": "08:30 - 09:00",
+        "title": "Breakfast",
+        "description": ""
+      },
+      {
+        "time": "09:00 - 09:30",
+        "title": "BIS Official Opening",
+        "description": ""
+      },
+      {
+        "time": "09:30 - 10:00",
+        "title": "Coffee Break",
+        "description": ""
+      },
+      {
+        "time": "10:00 - 11:00",
+        "title": "Introduction",
+        "description": ""
+      },
+      {
+        "time": "11:00 - 13:30",
+        "title": "Symposium",
+        "description": ""
+      },
+      {
+        "time": "13:30 - 14:00",
+        "title": "Move to place",
+        "description": ""
+      },
+      {
+        "time": "14:00 - 15:00",
+        "title": "Lunch",
+        "description": ""
+      },
+      {
+        "time": "15:00 - 18:00",
+        "title": "Symposium (3h)",
+        "description": ""
+      },
+      {
+        "time": "18:00 - 18:30",
+        "title": "TUIASI",
+        "description": ""
+      },
+      {
+        "time": "18:30 - 19:00",
+        "title": "Move to place",
+        "description": ""
+      },
+      {
+        "time": "19:00 - 20:30",
+        "title": "Dinner",
+        "description": ""
+      },
+      {
+        "time": "20:30 - 21:30",
+        "title": "Free time",
+        "description": ""
+      },
+      {
+        "time": "21:30 - 00:00",
+        "title": "Social activity",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "id": "day4",
+    "label": "July 14",
+    "events": [
+      {
+        "time": "08:30 - 09:00",
+        "title": "Wake Up",
+        "description": ""
+      },
+      {
+        "time": "09:00 - 09:30",
+        "title": "Breakfast",
+        "description": ""
+      },
+      {
+        "time": "09:30 - 10:00",
+        "title": "Move to place",
+        "description": ""
+      },
+      {
+        "time": "10:00 - 13:30",
+        "title": "Symposium (3h)",
+        "description": ""
+      },
+      {
+        "time": "13:30 - 14:00",
+        "title": "Move to place",
+        "description": ""
+      },
+      {
+        "time": "14:00 - 15:00",
+        "title": "Lunch",
+        "description": ""
+      },
+      {
+        "time": "15:00 - 15:30",
+        "title": "Move to place",
+        "description": ""
+      },
+      {
+        "time": "15:30 - 18:30",
+        "title": "Symposium (3h)",
+        "description": ""
+      },
+      {
+        "time": "18:30 - 19:00",
+        "title": "Move to place",
+        "description": ""
+      },
+      {
+        "time": "19:00 - 20:30",
+        "title": "Dinner",
+        "description": ""
+      },
+      {
+        "time": "20:30 - 21:30",
+        "title": "Free time",
+        "description": ""
+      },
+      {
+        "time": "21:30 - 00:00",
+        "title": "Social activity",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "id": "day5",
+    "label": "July 15",
+    "events": [
+      {
+        "time": "08:30 - 09:00",
+        "title": "Wake Up",
+        "description": ""
+      },
+      {
+        "time": "09:00 - 09:30",
+        "title": "Breakfast",
+        "description": ""
+      },
+      {
+        "time": "09:30 - 10:00",
+        "title": "Move to place",
+        "description": ""
+      },
+      {
+        "time": "10:00 - 13:30",
+        "title": "Symposium (3h)",
+        "description": ""
+      },
+      {
+        "time": "13:30 - 14:00",
+        "title": "Move to place",
+        "description": ""
+      },
+      {
+        "time": "14:00 - 15:00",
+        "title": "Lunch",
+        "description": ""
+      },
+      {
+        "time": "15:00 - 15:30",
+        "title": "Move to place",
+        "description": ""
+      },
+      {
+        "time": "15:30 - 18:30",
+        "title": "Symposium (3h)",
+        "description": ""
+      },
+      {
+        "time": "18:30 - 19:00",
+        "title": "Move to place",
+        "description": ""
+      },
+      {
+        "time": "19:00 - 20:30",
+        "title": "Dinner",
+        "description": ""
+      },
+      {
+        "time": "20:30 - 21:30",
+        "title": "Free time",
+        "description": ""
+      },
+      {
+        "time": "21:30 - 00:00",
+        "title": "Social activity",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "id": "day6",
+    "label": "July 16",
+    "events": [
+      {
+        "time": "08:30 - 09:00",
+        "title": "Wake Up",
+        "description": ""
+      },
+      {
+        "time": "09:00 - 09:30",
+        "title": "Breakfast",
+        "description": ""
+      },
+      {
+        "time": "09:30 - 10:00",
+        "title": "Move to place",
+        "description": ""
+      },
+      {
+        "time": "10:00 - 13:30",
+        "title": "Symposium (3h)",
+        "description": ""
+      },
+      {
+        "time": "13:30 - 14:00",
+        "title": "Move to place",
+        "description": ""
+      },
+      {
+        "time": "14:00 - 15:00",
+        "title": "Lunch",
+        "description": ""
+      },
+      {
+        "time": "15:00 - 18:00",
+        "title": "TUIASI",
+        "description": ""
+      },
+      {
+        "time": "18:00 - 19:00",
+        "title": "Move to place",
+        "description": ""
+      },
+      {
+        "time": "19:00 - 20:30",
+        "title": "Dinner",
+        "description": ""
+      },
+      {
+        "time": "20:30 - 21:30",
+        "title": "Move to place",
+        "description": ""
+      },
+      {
+        "time": "21:30 - 00:00",
+        "title": "Social activity",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "id": "day7",
+    "label": "July 17",
+    "events": [
+      {
+        "time": "08:30 - 09:00",
+        "title": "Wake Up",
+        "description": ""
+      },
+      {
+        "time": "09:00 - 09:30",
+        "title": "Breakfast",
+        "description": ""
+      },
+      {
+        "time": "09:30 - 10:00",
+        "title": "Move to place",
+        "description": ""
+      },
+      {
+        "time": "10:00 - 13:30",
+        "title": "Symposium (3h)",
+        "description": ""
+      },
+      {
+        "time": "13:30 - 14:00",
+        "title": "Move to place",
+        "description": ""
+      },
+      {
+        "time": "14:00 - 15:00",
+        "title": "Lunch",
+        "description": ""
+      },
+      {
+        "time": "15:00 - 18:30",
+        "title": "Symposium (3h)",
+        "description": ""
+      },
+      {
+        "time": "18:30 - 19:30",
+        "title": "Dinner",
+        "description": ""
+      },
+      {
+        "time": "19:30 - 21:30",
+        "title": "Packing",
+        "description": ""
+      },
+      {
+        "time": "21:30 - 23:30",
+        "title": "BUS",
+        "description": "Transit period"
+      },
+      {
+        "time": "23:30 - 00:00",
+        "title": "Social Activity",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "id": "day8",
+    "label": "July 18",
+    "events": [
+      {
+        "time": "08:30 - 09:00",
+        "title": "Wake Up",
+        "description": ""
+      },
+      {
+        "time": "09:00 - 09:30",
+        "title": "Breakfast",
+        "description": ""
+      },
+      {
+        "time": "09:30 - 14:00",
+        "title": "TRIP",
+        "description": ""
+      },
+      {
+        "time": "14:00 - 15:00",
+        "title": "Lunch",
+        "description": ""
+      },
+      {
+        "time": "15:00 - 20:00",
+        "title": "TRIP",
+        "description": ""
+      },
+      {
+        "time": "20:00 - 21:00",
+        "title": "Dinner",
+        "description": ""
+      },
+      {
+        "time": "21:00 - 23:00",
+        "title": "Free time",
+        "description": ""
+      },
+      {
+        "time": "23:00 - 00:00",
+        "title": "Social Activity",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "id": "day9",
+    "label": "July 19",
+    "events": [
+      {
+        "time": "08:30 - 09:00",
+        "title": "Wake Up",
+        "description": ""
+      },
+      {
+        "time": "09:00 - 09:30",
+        "title": "Breakfast",
+        "description": ""
+      },
+      {
+        "time": "09:30 - 14:00",
+        "title": "Sea Side",
+        "description": "Morning beach activities."
+      },
+      {
+        "time": "14:00 - 15:00",
+        "title": "Lunch",
+        "description": ""
+      },
+      {
+        "time": "15:00 - 20:00",
+        "title": "Sea Side",
+        "description": "Afternoon beach activities."
+      },
+      {
+        "time": "20:00 - 21:00",
+        "title": "Dinner",
+        "description": ""
+      },
+      {
+        "time": "21:00 - 23:00",
+        "title": "Free time",
+        "description": ""
+      },
+      {
+        "time": "23:00 - 00:00",
+        "title": "Social Activity",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "id": "day10",
+    "label": "July 20",
+    "events": [
+      {
+        "time": "08:30 - 09:00",
+        "title": "Wake Up",
+        "description": ""
+      },
+      {
+        "time": "09:00 - 09:30",
+        "title": "Breakfast",
+        "description": ""
+      },
+      {
+        "time": "09:30 - 14:00",
+        "title": "Sea Side",
+        "description": ""
+      },
+      {
+        "time": "14:00 - 15:00",
+        "title": "Lunch",
+        "description": ""
+      },
+      {
+        "time": "15:00 - 20:00",
+        "title": "Sea Side",
+        "description": ""
+      },
+      {
+        "time": "20:00 - 21:00",
+        "title": "Dinner",
+        "description": ""
+      },
+      {
+        "time": "21:00 - 23:00",
+        "title": "Free time",
+        "description": ""
+      },
+      {
+        "time": "23:00 - 00:00",
+        "title": "Social Activity",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "id": "day11",
+    "label": "July 21",
+    "events": [
+      {
+        "time": "08:30 - 09:00",
+        "title": "Wake Up",
+        "description": ""
+      },
+      {
+        "time": "09:00 - 09:30",
+        "title": "Breakfast",
+        "description": ""
+      },
+      {
+        "time": "09:30 - 14:00",
+        "title": "Sea Side",
+        "description": ""
+      },
+      {
+        "time": "14:00 - 15:00",
+        "title": "Lunch",
+        "description": ""
+      },
+      {
+        "time": "15:00 - 19:00",
+        "title": "Sea Side",
+        "description": ""
+      },
+      {
+        "time": "19:00 - 20:30",
+        "title": "Dinner",
+        "description": ""
+      },
+      {
+        "time": "20:30 - 21:30",
+        "title": "Packing",
+        "description": "Preparing for departure."
+      },
+      {
+        "time": "21:30 - 00:00",
+        "title": "Social Activity",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "id": "day12",
+    "label": "July 22",
+    "events": [
+      {
+        "time": "09:00 - 16:30",
+        "title": "DEPARTURE",
+        "description": "Participants check-out and departure."
+      }
+    ]
+  }
+]

@@ -4,13 +4,14 @@ import { TestimonialsSection } from "../components/PageSpecific/About/Testimonia
 import { TESTIMONIALS } from "../data/Testimonials";
 import { BehindTheTeam } from "../components/PageSpecific/About/Team";
 import { WhatIsBisSection } from "../components/PageSpecific/About/WhatIsBIS";
+import { ScheduleSection } from "../components/PageSpecific/About/SceduleSection";
 
 function About() {
   return (
     <>
       <AboutPageHeader />
       <WhatIsBisSection />
-
+      <ScheduleSection />
       <MemoryLane />
 
       <TestimonialsSection data={TESTIMONIALS} />

@@ -7,7 +7,8 @@ export const PROMO_VIDEO_ID = "dQw4w9WgXcQ";
 export const INGENIUM_APPLICATION_URL = "https://ingenium-university.eu/apply/";
 export const GENERAL_APPLICATION_URL = "";
 
-export const GDPR_LINK = "";
+export const GDPR_OOD_LINK = "";
+export const GDPR_BIS_LINK = "";
 
 // BEST Socials
 export const FACEBOOK_LINK = "https://www.facebook.com/bestiasi";

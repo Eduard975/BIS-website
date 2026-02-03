@@ -12,7 +12,7 @@ export const BehindTheTeam = () => {
   });
 
   return (
-    <CustomSection bg="bg-whiteBG" id="team">
+    <CustomSection bg="bg-colorBG" id="team">
       <OverprintTitle
         title="THE TEAM"
         subtitle="BEHIND BIS"

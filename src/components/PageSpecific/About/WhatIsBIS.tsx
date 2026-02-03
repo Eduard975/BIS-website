@@ -5,7 +5,7 @@ import planetSvg from "../../../assets/svgs/planet.svg";
 export const WhatIsBisSection = () => {
   return (
     <CustomSection
-      bg="bg-whiteBG"
+      bg="bg-colorBG"
       className="overflow-hidden"
       contentClassName="relative flex flex-col md:flex-row items-center gap-[5vw]"
     >

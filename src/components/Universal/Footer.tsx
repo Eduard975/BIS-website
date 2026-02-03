@@ -1,5 +1,3 @@
-/* UPDATED: Footer.tsx */
-
 import {
   HiOutlineLocationMarker,
   HiOutlineMail,
@@ -11,7 +9,11 @@ import SocialLinks from "./SocialLinks";
 import CustomContainer from "./CustomContainer";
 import gyroscopImg from "../../assets/svgs/gyroscop.svg";
 import sigla_best_alba from "../../assets/logos/best.svg";
-import { VOLUNTEER_FORM_URL, GDPR_LINK } from "../../data/Links";
+import {
+  VOLUNTEER_FORM_URL,
+  GDPR_BIS_LINK,
+  GDPR_OOD_LINK,
+} from "../../data/Links";
 import { PrimaryButton } from "./PrimaryButton";
 
 const SITE_MAP = [
@@ -21,7 +23,10 @@ const SITE_MAP = [
   { name: "Conference", to: "/conference" },
 ];
 
-const LEGAL_LINKS = [{ name: "GDPR BIS 2026", to: GDPR_LINK }];
+const LEGAL_LINKS = [
+  { name: "GDPR BIS 2026", to: GDPR_BIS_LINK },
+  { name: "GDPR OOD 2026", to: GDPR_OOD_LINK },
+];
 
 const CONTACT_INFO = {
   address: (
@@ -33,6 +38,7 @@ const CONTACT_INFO = {
       Cod 700560, Iași, România
     </>
   ),
+  addressLink: "https://maps.app.goo.gl/VYWU1uaq9msnWYFY8",
   email: "contact@bestis.ro",
   phone: "+40 754 665 038",
   phoneLink: "+40754665038",
@@ -69,12 +75,20 @@ export default function Footer() {
         {/* --- Left Column (Logo, CTA) --- */}
         <div className="w-full max-w-[220px] md:max-w-[280px] flex flex-col justify-between items-center md:items-start">
           <div className="flex flex-col gap-6 items-center md:items-start w-full">
-            <img
-              src={sigla_best_alba}
-              alt="BEST Iași Logo"
-              className="w-full h-auto"
-              loading="lazy"
-            />
+            {/* Added Link to Logo */}
+            <a
+              href="https://bestis.ro"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full transition-opacity hover:opacity-80"
+            >
+              <img
+                src={sigla_best_alba}
+                alt="BEST Iași Logo"
+                className="w-full h-auto"
+                loading="lazy"
+              />
+            </a>
             <SocialLinks />
           </div>
 
@@ -102,7 +116,15 @@ export default function Footer() {
 
               <div className="flex flex-col gap-4">
                 <ContactItem Icon={HiOutlineLocationMarker}>
-                  {CONTACT_INFO.address}
+                  {/* Added Link to Address */}
+                  <a
+                    href={CONTACT_INFO.addressLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline transition-colors"
+                  >
+                    {CONTACT_INFO.address}
+                  </a>
                 </ContactItem>
 
                 <ContactItem Icon={HiOutlineMail}>
