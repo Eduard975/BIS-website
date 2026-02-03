@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Mousewheel, Navigation } from "swiper/modules";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi2";
 
-import data from "../../../data/ScheduleData.json";
+import data from "../../../data/scheduleData.json";
 import { CustomSection } from "../../Universal/CustomSection";
 import OverprintTitle from "../../Universal/OverprintTitle";
 
