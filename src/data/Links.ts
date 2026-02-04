@@ -4,7 +4,7 @@ export const OOD_JOIN_FORM_URL = "https://forms.gle/example";
 
 export const VOLUNTEER_FORM_URL = "https://redirectioneaza.ro/best-iasi/";
 export const PROMO_VIDEO_ID = "dQw4w9WgXcQ";
-export const INGENIUM_APPLICATION_URL = "https://ingenium-university.eu/apply/";
+export const BEST_APPLICATION_URL = "";
 export const GENERAL_APPLICATION_URL = "";
 
 export const GDPR_OOD_LINK = "";

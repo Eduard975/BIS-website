@@ -36,7 +36,7 @@ export default function OverprintTitle({
             pushes the subtitle UP relative to the Title.
             The container grows UPWARDS to accommodate this, keeping the bottom clean.
           */
-          mb-1 md:mb-3
+          mb-3 md:mb-3
           
         "
       >

@@ -1,56 +1,65 @@
 import {
   GENERAL_APPLICATION_URL,
-  INGENIUM_APPLICATION_URL,
+  BEST_APPLICATION_URL,
 } from "../../../data/Links";
 import { PrimaryButton } from "../../Universal/PrimaryButton";
 
 interface ConditionalRevealProps {
-  studentType: "ingenium" | "general";
+  studentType: "ingenium/stem" | "best";
 }
 
 const ConditionalReveal = ({ studentType }: ConditionalRevealProps) => {
-  if (studentType === "ingenium") {
+  if (studentType === "ingenium/stem") {
     return (
       <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 md:p-8 rounded-3xl space-y-6 text-justify">
         <div className="flex items-center gap-3">
-          <span className="text-primary text-xs font-black tracking-widest uppercase">
-            PARTNER PATH
+          <span className="text-primary text-sm font-black tracking-widest uppercase">
+            General Path
           </span>
         </div>
         <p className="text-gray-300 text-lg leading-relaxed">
-          Since your university is part of the{" "}
-          <strong>INGENIUM European University Alliance</strong>, you have a
-          dedicated application portal.
+          This registration path is open to{" "}
+          <strong className="text-white">everyone</strong> from{" "}
+          <strong className="text-white">STEM universities</strong> and the{" "}
+          <strong className="text-white">
+            INGENIUM European University Alliance
+          </strong>
+          . Please complete your application via our dedicated Form.
         </p>
         <PrimaryButton
           fullWidth
           size="normal"
-          onClick={() => window.open(INGENIUM_APPLICATION_URL, "_blank")}
+          href={GENERAL_APPLICATION_URL}
+          target="_blank"
+          analyticsLabel="Apply: Google Form"
         >
-          Apply via INGENIUM
+          Open Application Form
         </PrimaryButton>
       </div>
     );
   }
 
-  if (studentType === "general") {
+  if (studentType === "best") {
     return (
       <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 md:p-8 rounded-3xl space-y-6 text-justify">
         <div className="flex items-center gap-3">
-          <span className="text-primary text-xs font-black tracking-widest uppercase">
-            GENERAL PATH
+          <span className="text-primary text-sm font-black tracking-widest uppercase">
+            BAS Path
           </span>
         </div>
         <p className="text-gray-300 text-lg leading-relaxed">
-          For students from all other <strong>STEM universities</strong> or
-          active members of the <strong>BEST network</strong>.
+          For active members of the BEST network, please complete your
+          registration via the{" "}
+          <strong className="text-white">BEST Application System</strong>.
         </p>
         <PrimaryButton
           fullWidth
           size="normal"
-          onClick={() => window.open(GENERAL_APPLICATION_URL, "_blank")}
+          href={BEST_APPLICATION_URL}
+          target="_blank"
+          analyticsLabel="Apply: BAS System"
         >
-          General Application
+          Apply via BAS
         </PrimaryButton>
       </div>
     );

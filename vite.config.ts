@@ -3,10 +3,10 @@ import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 // import { visualizer } from "rollup-plugin-visualizer";
 import { beasties } from "vite-plugin-beasties";
+import { BASE_PATH } from "./basepath";
 
-// https://vite.dev/config/
 export default defineConfig({
-  base: "/BIS-website/",
+  base: BASE_PATH,
   plugins: [
     tailwindcss(),
     react({
@@ -17,6 +17,7 @@ export default defineConfig({
     beasties({
       options: {
         pruneSource: true,
+        reduceInlineStyles: true,
       },
     }),
     // visualizer({

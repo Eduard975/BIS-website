@@ -1,4 +1,3 @@
-/* src/hooks/AnalyticsProvider.tsx */
 import { useEffect } from "react";
 import { useLocation } from "react-router";
 import ReactGA from "react-ga4";

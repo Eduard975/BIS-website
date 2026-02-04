@@ -38,11 +38,6 @@ export const SectionContent = ({
           <PrimaryButton
             size="normal"
             onClick={onButtonClick}
-            /* PRIORITY: 
-               1. Use the explicit analyticsLabel if provided.
-               2. Fallback to the Section title.
-               3. Final fallback to "Section Button".
-            */
             analyticsLabel={
               analyticsLabel || (title ? `Section: ${title}` : "Section Button")
             }

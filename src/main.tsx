@@ -8,6 +8,7 @@ import { ScrollToHash } from "./hooks/ScrollToHash";
 
 import ReactGA from "react-ga4";
 import { AnalyticsProvider } from "./hooks/AnalyticsProvider";
+import { BASE_PATH } from "../basepath";
 
 ReactGA.initialize("G-57JENFM8BM");
 
@@ -15,7 +16,7 @@ ReactGA.send({ hitType: "pageview", page: window.location.pathname });
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <BrowserRouter basename="/BIS-website/">
+    <BrowserRouter basename={BASE_PATH}>
       <AnalyticsProvider />
       <ScrollToHash />
       <ScrollToTop />

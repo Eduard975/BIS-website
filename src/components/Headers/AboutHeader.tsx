@@ -23,7 +23,6 @@ interface GeometricShapeProps {
   clipPath: string;
 }
 
-// Memoized to optimize heavy CSS clip-path painting
 const GeometricShape = memo(({ className, clipPath }: GeometricShapeProps) => (
   <div
     className={`absolute h-full pointer-events-none ${className}`}
@@ -36,7 +35,7 @@ const revealLoader = () => import("../PageSpecific/About/ConditionalReveal");
 const ConditionalReveal = lazy(revealLoader);
 
 export const AboutPageHeader = () => {
-  const [studentType, setStudentType] = useState<"ingenium" | "general" | "">(
+  const [studentType, setStudentType] = useState<"ingenium/stem" | "best" | "">(
     "",
   );
 
@@ -44,7 +43,7 @@ export const AboutPageHeader = () => {
     revealLoader();
   };
 
-  const handleSelectionChange = (value: "ingenium" | "general" | "") => {
+  const handleSelectionChange = (value: "ingenium/stem" | "best" | "") => {
     setStudentType(value);
     const pagePath = window.location.pathname.substring(1) || "Home";
     const pageCategory = pagePath.charAt(0).toUpperCase() + pagePath.slice(1);
@@ -53,7 +52,10 @@ export const AboutPageHeader = () => {
       ReactGA.event({
         category: `Page: ${pageCategory}`,
         action: "Select Student Origin",
-        label: value === "ingenium" ? "INGENIUM Alliance" : "General STEM/BEST",
+        label:
+          value === "ingenium/stem"
+            ? "INGENIUM Alliance/STEM Student"
+            : "BEST Member",
       });
     }
   };
@@ -158,11 +160,11 @@ export const AboutPageHeader = () => {
                   <option value="" className="text-black">
                     Select origin
                   </option>
-                  <option value="ingenium" className="text-black">
-                    INGENIUM Alliance
+                  <option value="ingenium/stem" className="text-black">
+                    INGENIUM Alliance / STEM Student
                   </option>
-                  <option value="general" className="text-black">
-                    STEM university / member of BEST
+                  <option value="best" className="text-black">
+                    Member of BEST
                   </option>
                 </select>
               </div>
