@@ -16,7 +16,7 @@ export const WhatIsBisSection = () => {
           alt="Globe Decoration"
           className="
             absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
-            w-[80vw] max-w-[400px] opacity-20 pointer-events-none z-0
+            w-[60vw] md:w-[80vw] max-w-[400px] opacity-20 pointer-events-none z-0
             md:static md:translate-x-0 md:translate-y-0 
             md:w-full md:max-w-[450px] md:opacity-100 md:z-auto 
             md:pointer-events-auto
