@@ -16,7 +16,7 @@ export default defineConfig({
     }),
     beasties({
       options: {
-        pruneSource: true,
+        pruneSource: false,
         reduceInlineStyles: true,
       },
     }),

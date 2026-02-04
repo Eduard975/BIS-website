@@ -4,6 +4,7 @@ import About from "./pages/About";
 import Partners from "./pages/Partners";
 import Home from "./pages/Home";
 import Conference from "./pages/Conference";
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/partners" element={<Partners />} />
         <Route path="/conference" element={<Conference />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Route>
     </Routes>
   );
