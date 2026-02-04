@@ -11,7 +11,7 @@ export const GENERAL_APPLICATION_URL = "";
 export const GDPR_OOD_LINK = "";
 export const GDPR_BIS_LINK = "";
 export const GDPR_BEST_LINK =
-  "https://drive.google.com/file/d/1GBIcmbcuzqLLUGj6syPVYGU-jty9yxuT/view?usp=sharing";
+  "https://drive.google.com/file/d/1BEBt_6w1Z32VtJWPkfijUcNPW4xDXSgd/view?usp=sharing";
 
 //Team Linkedins
 export const ANA_LINKEDIN = "";
