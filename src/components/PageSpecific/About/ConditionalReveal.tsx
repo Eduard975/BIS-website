@@ -20,7 +20,7 @@ const ConditionalReveal = ({ studentType }: ConditionalRevealProps) => {
         <p className="text-gray-300 text-lg leading-relaxed">
           This registration path is open to{" "}
           <strong className="text-white">everyone</strong> from{" "}
-          <strong className="text-white">STEM universities</strong> and the{" "}
+          <strong className="text-white">STEM universities</strong> or the{" "}
           <strong className="text-white">
             INGENIUM European University Alliance
           </strong>
