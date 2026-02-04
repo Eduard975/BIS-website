@@ -45,55 +45,11 @@ export const ScheduleSection: React.FC = () => {
       />
 
       <div className="flex flex-col items-center w-full">
-        <div className="w-full relative max-w-[60vw] px-12 mb-16">
-          <Swiper
-            modules={[Navigation, FreeMode, Mousewheel]}
-            navigation={{
-              prevEl: ".prev-day",
-              nextEl: ".next-day",
-            }}
-            mousewheel={{ forceToAxis: true }}
-            spaceBetween={16}
-            breakpoints={{
-              320: {
-                slidesPerView: 2,
-                slidesPerGroup: 2,
-              },
-              640: {
-                slidesPerView: 4,
-                slidesPerGroup: 4,
-              },
-              1024: {
-                slidesPerView: 6,
-                slidesPerGroup: 6,
-              },
-            }}
-            className="px-2"
-          >
-            {scheduleData.map((day: ScheduleDay) => (
-              <SwiperSlide key={day.id}>
-                <button
-                  onClick={() => setActiveDayId(day.id)}
-                  aria-pressed={activeDayId === day.id}
-                  className={`min-w-[100px] px-4 py-2 
-                    rounded-full border transition-all
-                     duration-300 font-semibold text-sm 
-                     md:text-base outline-none ${
-                       activeDayId === day.id
-                         ? "bg-primary text-white border-primary shadow-md"
-                         : "bg-white text-gray-400 border-gray-200 hover:border-primary/40 hover:text-primary"
-                     }`}
-                >
-                  {day.label}
-                </button>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-
-          {/* Navigation Arrows */}
+        {/* Main Container: Flex row, centered, with gap for spacing */}
+        <div className="w-full flex items-center justify-center gap-6 relative max-w-[80vw] lg:max-w-[60vw] mb-16">
+          {/* LEFT ARROW */}
           <button
-            className="prev-day absolute
-           left-0 top-1/2 -translate-y-1/2 z-20
+            className="prev-day shrink-0 z-20
             bg-white shadow-sm rounded-full p-2 
             text-primary border border-gray-100 
             disabled:opacity-20 hover:bg-gray-50
@@ -101,10 +57,60 @@ export const ScheduleSection: React.FC = () => {
           >
             <HiChevronLeft size={20} />
           </button>
+
+          {/* MIDDLE SECTION: Swiper Wrapper */}
+          {/* flex-1: Takes up all available space between arrows */}
+          {/* min-w-0: Critical for Swiper to calculate width correctly in a flex container */}
+          <div className="flex-1 min-w-0 relative">
+            <Swiper
+              modules={[Navigation, FreeMode, Mousewheel]}
+              navigation={{
+                prevEl: ".prev-day",
+                nextEl: ".next-day",
+              }}
+              mousewheel={{ forceToAxis: true }}
+              spaceBetween={16}
+              breakpoints={{
+                320: {
+                  slidesPerView: 3,
+                  slidesPerGroup: 3,
+                },
+                640: {
+                  slidesPerView: 4,
+                  slidesPerGroup: 4,
+                },
+                1024: {
+                  slidesPerView: 6,
+                  slidesPerGroup: 6,
+                },
+              }}
+              // px-2 adds a little internal breathing room so slides don't get cut off at the very edge
+              className="px-2 w-full"
+            >
+              {scheduleData.map((day: ScheduleDay) => (
+                <SwiperSlide key={day.id}>
+                  <button
+                    onClick={() => setActiveDayId(day.id)}
+                    aria-pressed={activeDayId === day.id}
+                    className={`w-full px-4 py-2 
+                    rounded-full border transition-all
+                    duration-300 font-semibold text-sm 
+                    md:text-base outline-none whitespace-nowrap ${
+                      activeDayId === day.id
+                        ? "bg-primary text-white border-primary shadow-md"
+                        : "bg-white text-gray-400 border-gray-200 hover:border-primary/40 hover:text-primary"
+                    }`}
+                  >
+                    {day.label}
+                  </button>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+
+          {/* RIGHT ARROW */}
           <button
-            className="next-day absolute
-           right-0 top-1/2 -translate-y-1/2 
-           z-20 bg-white shadow-sm rounded-full
+            className="next-day shrink-0 bg-white shadow-sm rounded-full
             p-2 text-primary border border-gray-100
              disabled:opacity-20 hover:bg-gray-50 
              hover:scale-110 transition-all cursor-pointer"

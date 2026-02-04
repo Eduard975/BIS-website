@@ -4,11 +4,21 @@ export const OOD_JOIN_FORM_URL = "https://forms.gle/example";
 
 export const VOLUNTEER_FORM_URL = "https://redirectioneaza.ro/best-iasi/";
 export const PROMO_VIDEO_ID = "dQw4w9WgXcQ";
+
 export const BEST_APPLICATION_URL = "";
 export const GENERAL_APPLICATION_URL = "";
 
 export const GDPR_OOD_LINK = "";
 export const GDPR_BIS_LINK = "";
+export const GDPR_BEST_LINK =
+  "https://drive.google.com/file/d/1GBIcmbcuzqLLUGj6syPVYGU-jty9yxuT/view?usp=sharing";
+
+//Team Linkedins
+export const ANA_LINKEDIN = "";
+export const SIMINA_LINKEDIN = "";
+export const EDI_LINKEDIN = "https://www.linkedin.com/in/petrisor-edi/";
+export const DIANA_LINKEDIN = "";
+export const OVIDIU_LINKEDIN = "";
 
 // BEST Socials
 export const FACEBOOK_LINK = "https://www.facebook.com/bestiasi";

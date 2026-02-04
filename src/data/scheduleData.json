@@ -30,7 +30,7 @@
     "label": "July 12",
     "events": [
       {
-        "time": "08:00 - 08:30",
+        "time": "07:30 - 08:30",
         "title": "Wake Up",
         "description": ""
       },
@@ -39,33 +39,29 @@
         "title": "Breakfast",
         "description": ""
       },
+
       {
-        "time": "09:00 - 10:00",
-        "title": "Move to place",
-        "description": ""
-      },
-      {
-        "time": "10:00 - 18:30",
+        "time": "10:00 - 16:30",
         "title": "Official Open Day - Conference",
-        "description": "At least 3 hours - max 6 hours. Includes free time."
+        "description": "At least 3 hours - max 6 hours."
       },
       {
-        "time": "18:30 - 19:00",
-        "title": "Move to place",
-        "description": ""
-      },
-      {
-        "time": "19:00 - 21:00",
-        "title": "Dinner",
-        "description": ""
-      },
-      {
-        "time": "21:00 - 23:00",
+        "time": "16:30 - 18:30",
         "title": "Free time",
         "description": ""
       },
       {
-        "time": "23:00 - 00:00",
+        "time": "19:00 - 20:00",
+        "title": "Dinner",
+        "description": ""
+      },
+      {
+        "time": "20:00 - 22:00",
+        "title": "Free time",
+        "description": ""
+      },
+      {
+        "time": "22:00 - 00:00",
         "title": "Social activity",
         "description": ""
       }
@@ -106,37 +102,22 @@
         "description": ""
       },
       {
-        "time": "13:30 - 14:00",
-        "title": "Move to place",
-        "description": ""
-      },
-      {
         "time": "14:00 - 15:00",
         "title": "Lunch",
         "description": ""
       },
       {
-        "time": "15:00 - 18:00",
-        "title": "Symposium (3h)",
+        "time": "15:30 - 19:00",
+        "title": "TUIASI Activity",
         "description": ""
       },
       {
-        "time": "18:00 - 18:30",
-        "title": "TUIASI",
-        "description": ""
-      },
-      {
-        "time": "18:30 - 19:00",
-        "title": "Move to place",
-        "description": ""
-      },
-      {
-        "time": "19:00 - 20:30",
+        "time": "19:30 - 20:30",
         "title": "Dinner",
         "description": ""
       },
       {
-        "time": "20:30 - 21:30",
+        "time": "20:30 - 21:00",
         "title": "Free time",
         "description": ""
       },
@@ -162,18 +143,8 @@
         "description": ""
       },
       {
-        "time": "09:30 - 10:00",
-        "title": "Move to place",
-        "description": ""
-      },
-      {
         "time": "10:00 - 13:30",
-        "title": "Symposium (3h)",
-        "description": ""
-      },
-      {
-        "time": "13:30 - 14:00",
-        "title": "Move to place",
+        "title": "Symposium",
         "description": ""
       },
       {
@@ -182,27 +153,17 @@
         "description": ""
       },
       {
-        "time": "15:00 - 15:30",
-        "title": "Move to place",
+        "time": "15:30 - 19:00",
+        "title": "Symposium",
         "description": ""
       },
       {
-        "time": "15:30 - 18:30",
-        "title": "Symposium (3h)",
-        "description": ""
-      },
-      {
-        "time": "18:30 - 19:00",
-        "title": "Move to place",
-        "description": ""
-      },
-      {
-        "time": "19:00 - 20:30",
+        "time": "19:30 - 20:30",
         "title": "Dinner",
         "description": ""
       },
       {
-        "time": "20:30 - 21:30",
+        "time": "20:30 - 21:00",
         "title": "Free time",
         "description": ""
       },
@@ -228,18 +189,8 @@
         "description": ""
       },
       {
-        "time": "09:30 - 10:00",
-        "title": "Move to place",
-        "description": ""
-      },
-      {
         "time": "10:00 - 13:30",
-        "title": "Symposium (3h)",
-        "description": ""
-      },
-      {
-        "time": "13:30 - 14:00",
-        "title": "Move to place",
+        "title": "Symposium",
         "description": ""
       },
       {
@@ -248,27 +199,17 @@
         "description": ""
       },
       {
-        "time": "15:00 - 15:30",
-        "title": "Move to place",
+        "time": "15:30 - 19:00",
+        "title": "Symposium",
         "description": ""
       },
       {
-        "time": "15:30 - 18:30",
-        "title": "Symposium (3h)",
-        "description": ""
-      },
-      {
-        "time": "18:30 - 19:00",
-        "title": "Move to place",
-        "description": ""
-      },
-      {
-        "time": "19:00 - 20:30",
+        "time": "19:30 - 20:30",
         "title": "Dinner",
         "description": ""
       },
       {
-        "time": "20:30 - 21:30",
+        "time": "20:30 - 21:00",
         "title": "Free time",
         "description": ""
       },
@@ -294,18 +235,8 @@
         "description": ""
       },
       {
-        "time": "09:30 - 10:00",
-        "title": "Move to place",
-        "description": ""
-      },
-      {
         "time": "10:00 - 13:30",
-        "title": "Symposium (3h)",
-        "description": ""
-      },
-      {
-        "time": "13:30 - 14:00",
-        "title": "Move to place",
+        "title": "Symposium",
         "description": ""
       },
       {
@@ -314,23 +245,18 @@
         "description": ""
       },
       {
-        "time": "15:00 - 18:00",
-        "title": "TUIASI",
+        "time": "15:30 - 19:00",
+        "title": "TUIASI Activity",
         "description": ""
       },
       {
-        "time": "18:00 - 19:00",
-        "title": "Move to place",
-        "description": ""
-      },
-      {
-        "time": "19:00 - 20:30",
+        "time": "19:30 - 20:30",
         "title": "Dinner",
         "description": ""
       },
       {
-        "time": "20:30 - 21:30",
-        "title": "Move to place",
+        "time": "20:30 - 21:00",
+        "title": "Free time",
         "description": ""
       },
       {
@@ -355,18 +281,8 @@
         "description": ""
       },
       {
-        "time": "09:30 - 10:00",
-        "title": "Move to place",
-        "description": ""
-      },
-      {
         "time": "10:00 - 13:30",
-        "title": "Symposium (3h)",
-        "description": ""
-      },
-      {
-        "time": "13:30 - 14:00",
-        "title": "Move to place",
+        "title": "Symposium",
         "description": ""
       },
       {
@@ -375,27 +291,27 @@
         "description": ""
       },
       {
-        "time": "15:00 - 18:30",
-        "title": "Symposium (3h)",
+        "time": "15:30 - 19:00",
+        "title": "Symposium",
         "description": ""
       },
       {
-        "time": "18:30 - 19:30",
+        "time": "19:30 - 20:30",
         "title": "Dinner",
         "description": ""
       },
       {
-        "time": "19:30 - 21:30",
+        "time": "20:30 - 21:30",
         "title": "Packing",
-        "description": ""
+        "description": "Preparing for departure."
       },
       {
-        "time": "21:30 - 23:30",
+        "time": "21:30 - 22:30",
         "title": "BUS",
         "description": "Transit period"
       },
       {
-        "time": "23:30 - 00:00",
+        "time": "23:00 - 00:00",
         "title": "Social Activity",
         "description": ""
       }
@@ -411,37 +327,17 @@
         "description": ""
       },
       {
-        "time": "09:00 - 09:30",
-        "title": "Breakfast",
+        "time": "09:00 - 20:30",
+        "title": "Trip",
         "description": ""
       },
       {
-        "time": "09:30 - 14:00",
-        "title": "TRIP",
-        "description": ""
-      },
-      {
-        "time": "14:00 - 15:00",
-        "title": "Lunch",
-        "description": ""
-      },
-      {
-        "time": "15:00 - 20:00",
-        "title": "TRIP",
-        "description": ""
-      },
-      {
-        "time": "20:00 - 21:00",
-        "title": "Dinner",
-        "description": ""
-      },
-      {
-        "time": "21:00 - 23:00",
+        "time": "20:30 - 21:30",
         "title": "Free time",
         "description": ""
       },
       {
-        "time": "23:00 - 00:00",
+        "time": "21:30 - 00:00",
         "title": "Social Activity",
         "description": ""
       }
@@ -457,38 +353,13 @@
         "description": ""
       },
       {
-        "time": "09:00 - 09:30",
-        "title": "Breakfast",
+        "time": "09:00 - 19:00",
+        "title": "Trip",
         "description": ""
       },
       {
-        "time": "09:30 - 14:00",
-        "title": "Sea Side",
-        "description": "Morning beach activities."
-      },
-      {
-        "time": "14:00 - 15:00",
-        "title": "Lunch",
-        "description": ""
-      },
-      {
-        "time": "15:00 - 20:00",
-        "title": "Sea Side",
-        "description": "Afternoon beach activities."
-      },
-      {
-        "time": "20:00 - 21:00",
-        "title": "Dinner",
-        "description": ""
-      },
-      {
-        "time": "21:00 - 23:00",
+        "time": "19:00 - 23:00",
         "title": "Free time",
-        "description": ""
-      },
-      {
-        "time": "23:00 - 00:00",
-        "title": "Social Activity",
         "description": ""
       }
     ]
@@ -508,8 +379,8 @@
         "description": ""
       },
       {
-        "time": "09:30 - 14:00",
-        "title": "Sea Side",
+        "time": "10:00 - 13:30",
+        "title": "Symposium",
         "description": ""
       },
       {
@@ -518,23 +389,23 @@
         "description": ""
       },
       {
-        "time": "15:00 - 20:00",
-        "title": "Sea Side",
+        "time": "15:30 - 19:00",
+        "title": "Symposium",
         "description": ""
       },
       {
-        "time": "20:00 - 21:00",
+        "time": "19:30 - 20:30",
         "title": "Dinner",
         "description": ""
       },
       {
-        "time": "21:00 - 23:00",
+        "time": "20:30 - 21:00",
         "title": "Free time",
         "description": ""
       },
       {
-        "time": "23:00 - 00:00",
-        "title": "Social Activity",
+        "time": "21:30 - 00:00",
+        "title": "Social activity",
         "description": ""
       }
     ]
@@ -554,8 +425,8 @@
         "description": ""
       },
       {
-        "time": "09:30 - 14:00",
-        "title": "Sea Side",
+        "time": "10:00 - 13:30",
+        "title": "Final Presentation",
         "description": ""
       },
       {
@@ -564,23 +435,23 @@
         "description": ""
       },
       {
-        "time": "15:00 - 19:00",
-        "title": "Sea Side",
+        "time": "15:30 - 19:00",
+        "title": "TUIASI Activity",
         "description": ""
       },
       {
-        "time": "19:00 - 20:30",
+        "time": "19:30 - 20:30",
         "title": "Dinner",
         "description": ""
       },
       {
-        "time": "20:30 - 21:30",
-        "title": "Packing",
-        "description": "Preparing for departure."
+        "time": "20:30 - 21:00",
+        "title": "Free time",
+        "description": ""
       },
       {
         "time": "21:30 - 00:00",
-        "title": "Social Activity",
+        "title": "Social activity",
         "description": ""
       }
     ]
@@ -590,9 +461,19 @@
     "label": "July 22",
     "events": [
       {
-        "time": "09:00 - 16:30",
-        "title": "DEPARTURE",
-        "description": "Participants check-out and departure."
+        "time": "08:30 - 09:00",
+        "title": "Wake Up",
+        "description": ""
+      },
+      {
+        "time": "09:00 - 09:30",
+        "title": "Breakfast",
+        "description": ""
+      },
+      {
+        "time": "09:30 - 16:00",
+        "title": "Departure",
+        "description": ""
       }
     ]
   }

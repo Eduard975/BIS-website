@@ -13,6 +13,7 @@ import {
   VOLUNTEER_FORM_URL,
   GDPR_BIS_LINK,
   GDPR_OOD_LINK,
+  GDPR_BEST_LINK,
 } from "../../data/Links";
 import { PrimaryButton } from "./PrimaryButton";
 
@@ -26,12 +27,13 @@ const SITE_MAP = [
 const LEGAL_LINKS = [
   { name: "GDPR BIS 2026", to: GDPR_BIS_LINK },
   { name: "GDPR OOD 2026", to: GDPR_OOD_LINK },
+  { name: "GDPR BEST Iasi", to: GDPR_BEST_LINK },
 ];
 
 const CONTACT_INFO = {
   address: (
     <>
-      Cămin T19, et.3, cam. 16A
+      Cămin T19, et.1, cam. 16A
       <br />
       Aleea Prof. Vasile Petrescu nr. 1A,
       <br />

@@ -3,6 +3,13 @@ import Edi from "../assets/team/edi.jpg";
 import Diana from "../assets/team/diana.png";
 import Ovidiu from "../assets/team/ovidiu.png";
 import Simina from "../assets/team/simina.png";
+import {
+  ANA_LINKEDIN,
+  DIANA_LINKEDIN,
+  EDI_LINKEDIN,
+  OVIDIU_LINKEDIN,
+  SIMINA_LINKEDIN,
+} from "./Links";
 
 export const TEAM_MEMBERS = [
   {
@@ -11,6 +18,7 @@ export const TEAM_MEMBERS = [
     name: "Simina-Ana",
     role: "HR Organiser",
     image: Simina,
+    linkedin: SIMINA_LINKEDIN,
   },
   {
     id: 2,
@@ -18,6 +26,7 @@ export const TEAM_MEMBERS = [
     name: "Ana-Maria",
     role: "Main Organizer",
     image: Ana,
+    linkedin: ANA_LINKEDIN,
   },
   {
     id: 3,
@@ -25,6 +34,7 @@ export const TEAM_MEMBERS = [
     name: "Eduard-Gabriel",
     role: "IT & Logistics",
     image: Edi,
+    linkedin: EDI_LINKEDIN,
   },
   {
     id: 4,
@@ -32,6 +42,7 @@ export const TEAM_MEMBERS = [
     name: "Diana",
     role: "Design",
     image: Diana,
+    linkedin: DIANA_LINKEDIN,
   },
   {
     id: 5,
@@ -39,5 +50,6 @@ export const TEAM_MEMBERS = [
     name: "Ovidiu",
     role: "Marketing",
     image: Ovidiu,
+    linkedin: OVIDIU_LINKEDIN,
   },
 ];
