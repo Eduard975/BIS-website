@@ -5,8 +5,8 @@
     "events": [
       {
         "time": "07:00 - 18:30",
-        "title": "Arrival & Pick up",
-        "description": "Arrival of participants and pickup service."
+        "title": "Arrival",
+        "description": "Arrival of participants and accommodation."
       },
       {
         "time": "18:30 - 20:00",
@@ -303,12 +303,12 @@
       {
         "time": "20:30 - 21:30",
         "title": "Packing",
-        "description": "Preparing for departure."
+        "description": "Preparing for the trip."
       },
       {
         "time": "21:30 - 22:30",
         "title": "BUS",
-        "description": "Transit period"
+        "description": "Group transfer to the trip venue"
       },
       {
         "time": "23:00 - 00:00",
