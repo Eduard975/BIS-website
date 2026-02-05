@@ -9,20 +9,26 @@ export const MetaManager = () => {
   const currentMeta =
     seoConfig[pathname as keyof typeof seoConfig] || seoConfig["404"];
 
+  const siteUrl = "https://eduard975.github.io/BIS-website/";
+  const previewImage = `${siteUrl}/preview-thumbnail.svg`;
+
   return (
     <Helmet>
       <title>{currentMeta.title}</title>
       <meta name="description" content={currentMeta.description} />
 
-      {/* Open Graph / Facebook (Good for social sharing) */}
+      {/* Open Graph / Facebook / LinkedIn */}
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content={siteUrl + pathname} />
       <meta property="og:title" content={currentMeta.title} />
       <meta property="og:description" content={currentMeta.description} />
-      <meta property="og:type" content="website" />
+      <meta property="og:image" content={previewImage} />
 
-      {/* Optional: Add NoIndex for 404 pages */}
-      {pathname === "/404" || !seoConfig[pathname as keyof typeof seoConfig] ? (
-        <meta name="robots" content="noindex" />
-      ) : null}
+      {/* Twitter / X / Discord */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={currentMeta.title} />
+      <meta name="twitter:description" content={currentMeta.description} />
+      <meta name="twitter:image" content={previewImage} />
     </Helmet>
   );
 };
