@@ -95,9 +95,18 @@ export default function Footer() {
           </div>
 
           <div className="mt-8 md:mt-4 flex flex-col gap-8 text-lightTxt items-center md:items-start">
-            <p className="text-lg text-center md:text-left max-w-sm">
-              Invest 3.5% of your tax in BEST Iași. It's free, fast, and fuels
-              engineering talent.
+            <p className="text-md text-justify max-w-sm leading-relaxed">
+              <strong className="text-white">
+                Are you employed in Romania?
+              </strong>{" "}
+              You can choose to{" "}
+              <strong className="text-white">
+                redirect 3.5% of your income tax
+              </strong>{" "}
+              to BEST Iași and help us empower the next generation of engineers.
+              This <strong className="text-white">process</strong> is{" "}
+              <strong className="text-white">entirely free</strong> and ensures
+              your taxes support a cause you value.
             </p>
 
             <PrimaryButton
@@ -105,7 +114,7 @@ export default function Footer() {
               className="bg-secondary hover:bg-secondary-dark"
               href={CONTACT_INFO.redirectLink}
             >
-              Invest Here
+              Redirect 3.5% to BEST
             </PrimaryButton>
           </div>
         </div>
