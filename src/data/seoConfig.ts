@@ -2,22 +2,22 @@ export const seoConfig = {
   "/": {
     title: "Home | BEST Iași Symposium",
     description:
-      "International conference bringing together students, academics, and experts to explore multicultural perspectives and student mobility, with a dedicated symposium.",
+      "Join the BEST Iași Symposium for STEM students, featuring an international conference on multicultural exchange and student mobility open to all. Explore innovation and academic growth.",
   },
   "/conference": {
     title: "Conference | Empower STEM",
     description:
-      "Join Empower STEM: Mobility Conference! Participate in expert talks, panel discussions, and collaborative sessions designed to inspire and connect participants.",
+      "Participate in expert talks, panel discussions, and collaborative sessions at the Empower STEM: Mobility Conference, a key highlight of the BEST Iași Symposium.",
   },
   "/about": {
     title: "About Us | BEST Iași Symposium",
     description:
-      "Join the BEST Iași Symposium, an academic program for STEM students. Participate in workshops on student mobility and multicultural exchange. Apply now!",
+      "An academic program for STEM students involving workshops on student mobility and multicultural exchange. Learn more about the BEST Iași Symposium and apply now!",
   },
   "/sponsors": {
     title: "Our Partners | BEST Iași Symposium",
     description:
-      "Explore the sponsors and partners making the BEST Iași Symposium possible, connecting students, universities, and the STEM community internationally.",
+      "Explore the partners making the BEST Iași Symposium possible, connecting students, universities, and the international STEM community.",
   },
   "404": {
     title: "Page Not Found | BEST Iași Symposium",
