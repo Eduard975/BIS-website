@@ -9,7 +9,7 @@ import { ScrollToHash } from "./hooks/ScrollToHash";
 import ReactGA from "react-ga4";
 import { AnalyticsProvider } from "./hooks/AnalyticsProvider";
 import { BASE_PATH } from "../basepath";
-import HelmetProvider from "react-helmet-async/lib/Provider";
+import { HelmetProvider } from "react-helmet-async";
 import { MetaManager } from "./components/Universal/MetaManager";
 
 ReactGA.initialize("G-57JENFM8BM");
