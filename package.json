@@ -40,5 +40,8 @@
     "typescript-eslint": "^8.46.4",
     "vite": "^7.2.4",
     "vite-plugin-beasties": "^0.4.1"
+  },
+  "peerDependencies": {
+    "react-helmet-async": "^2.0.5"
   }
 }
