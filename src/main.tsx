@@ -9,6 +9,8 @@ import { ScrollToHash } from "./hooks/ScrollToHash";
 import ReactGA from "react-ga4";
 import { AnalyticsProvider } from "./hooks/AnalyticsProvider";
 import { BASE_PATH } from "../basepath";
+import HelmetProvider from "react-helmet-async/lib/Provider";
+import { MetaManager } from "./components/Universal/MetaManager";
 
 ReactGA.initialize("G-57JENFM8BM");
 
@@ -16,11 +18,14 @@ ReactGA.send({ hitType: "pageview", page: window.location.pathname });
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <BrowserRouter basename={BASE_PATH}>
-      <AnalyticsProvider />
-      <ScrollToHash />
-      <ScrollToTop />
-      <App />
-    </BrowserRouter>
+    <HelmetProvider>
+      <BrowserRouter basename={BASE_PATH}>
+        <MetaManager />
+        <AnalyticsProvider />
+        <ScrollToHash />
+        <ScrollToTop />
+        <App />
+      </BrowserRouter>
+    </HelmetProvider>
   </React.StrictMode>,
 );
