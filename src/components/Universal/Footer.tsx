@@ -103,7 +103,7 @@ export default function Footer() {
               <strong className="text-white">
                 redirect 3.5% of your income tax
               </strong>{" "}
-              to BEST Iași and help us empower the next generation of engineers.
+              to BEST Iași and help us empower the next generation of students.
               This <strong className="text-white">process</strong> is{" "}
               <strong className="text-white">entirely free</strong> and ensures
               your taxes support a cause you value.
