@@ -45,22 +45,12 @@ export const ScheduleSection: React.FC = () => {
       />
 
       <div className="flex flex-col items-center w-full">
-        {/* Main Container: Flex row, centered, with gap for spacing */}
+        {/* Swiper Header - Fully Restored */}
         <div className="w-full flex items-center justify-center gap-6 relative max-w-[80vw] lg:max-w-[60vw] mb-16">
-          {/* LEFT ARROW */}
-          <button
-            className="prev-day shrink-0 z-20
-            bg-white shadow-sm rounded-full p-2 
-            text-primary border border-gray-100 
-            disabled:opacity-20 hover:bg-gray-50
-             hover:scale-110 transition-all cursor-pointer"
-          >
+          <button className="prev-day shrink-0 z-20 bg-white shadow-sm rounded-full p-2 text-primary border border-gray-100 disabled:opacity-20 hover:bg-gray-50 hover:scale-110 transition-all cursor-pointer">
             <HiChevronLeft size={20} />
           </button>
 
-          {/* MIDDLE SECTION: Swiper Wrapper */}
-          {/* flex-1: Takes up all available space between arrows */}
-          {/* min-w-0: Critical for Swiper to calculate width correctly in a flex container */}
           <div className="flex-1 min-w-0 relative">
             <Swiper
               modules={[Navigation, FreeMode, Mousewheel]}
@@ -71,31 +61,17 @@ export const ScheduleSection: React.FC = () => {
               mousewheel={{ forceToAxis: true }}
               spaceBetween={16}
               breakpoints={{
-                320: {
-                  slidesPerView: 3,
-                  slidesPerGroup: 3,
-                },
-                640: {
-                  slidesPerView: 4,
-                  slidesPerGroup: 4,
-                },
-                1024: {
-                  slidesPerView: 6,
-                  slidesPerGroup: 6,
-                },
+                320: { slidesPerView: 3, slidesPerGroup: 3 },
+                640: { slidesPerView: 4, slidesPerGroup: 4 },
+                1024: { slidesPerView: 6, slidesPerGroup: 6 },
               }}
-              // px-2 adds a little internal breathing room so slides don't get cut off at the very edge
               className="px-2 w-full"
             >
               {scheduleData.map((day: ScheduleDay) => (
                 <SwiperSlide key={day.id}>
                   <button
                     onClick={() => setActiveDayId(day.id)}
-                    aria-pressed={activeDayId === day.id}
-                    className={`w-full px-4 py-2 
-                    rounded-full border transition-all
-                    duration-300 font-semibold text-sm 
-                    md:text-base outline-none whitespace-nowrap ${
+                    className={`w-full px-4 py-2 rounded-full border transition-all duration-300 font-semibold text-sm md:text-base outline-none whitespace-nowrap ${
                       activeDayId === day.id
                         ? "bg-primary text-white border-primary shadow-md"
                         : "bg-white text-gray-400 border-gray-200 hover:border-primary/40 hover:text-primary"
@@ -108,62 +84,76 @@ export const ScheduleSection: React.FC = () => {
             </Swiper>
           </div>
 
-          {/* RIGHT ARROW */}
-          <button
-            className="next-day shrink-0 bg-white shadow-sm rounded-full
-            p-2 text-primary border border-gray-100
-             disabled:opacity-20 hover:bg-gray-50 
-             hover:scale-110 transition-all cursor-pointer"
-          >
+          <button className="next-day shrink-0 bg-white shadow-sm rounded-full p-2 text-primary border border-gray-100 disabled:opacity-20 hover:bg-gray-50 hover:scale-110 transition-all cursor-pointer">
             <HiChevronRight size={20} />
           </button>
         </div>
 
-        {/* Timeline Content */}
-        <div className="w-full max-w-4xl space-y-8">
-          {activeDay.events.map((event, index) => (
-            <article
-              key={`${activeDayId}-${index}`}
-              className="flex gap-4 md:gap-10 animate-in fade-in slide-in-from-bottom-2 duration-500"
-            >
-              <div className="min-w-[75px] pt-4">
-                <time className="bg-gray-100 text-primary font-bold px-3 py-1.5 rounded text-sm md:text-base">
-                  {event.time}
-                </time>
-              </div>
+        {/* Timeline Content - Slimmed Down Version */}
+        <div className="w-full max-w-4xl space-y-4">
+          {" "}
+          {/* Reduced from space-y-8 */}
+          {activeDay.events.map((event, index) => {
+            const hasExtra = !!(
+              event.description ||
+              (event.details && event.details.length > 0)
+            );
 
-              <div className="flex-1 bg-white border border-gray-100 rounded-2xl p-6 md:p-8 shadow-sm transition-all duration-300 hover:shadow-md border-l-4 border-l-transparent hover:border-l-primary">
-                <h4 className="text-2xl font-bold text-primary mb-3">
-                  {event.title}
-                </h4>
+            return (
+              <article
+                key={`${activeDayId}-${index}`}
+                className="flex gap-4 md:gap-6 animate-in fade-in slide-in-from-bottom-2 duration-500"
+              >
+                <div className="min-w-[75px] pt-3">
+                  {" "}
+                  {/* Slightly less top padding */}
+                  <time className="bg-gray-100 text-primary font-bold px-3 py-1.5 rounded text-sm md:text-base">
+                    {event.time}
+                  </time>
+                </div>
 
-                {event.description && (
-                  <p className="text-gray-600 leading-relaxed italic">
-                    {event.description}
-                  </p>
-                )}
+                <div
+                  className={`
+                  flex-1 bg-white border border-gray-100 rounded-2xl shadow-sm 
+                  transition-all duration-300 hover:shadow-md border-l-4 border-l-transparent 
+                  hover:border-l-primary flex flex-col justify-center
+                  ${hasExtra ? "p-5 md:p-6" : "p-3 md:p-4"} 
+                `}
+                >
+                  <h4
+                    className={`text-xl md:text-2xl font-bold text-primary ${hasExtra ? "mb-2" : "mb-0"}`}
+                  >
+                    {event.title}
+                  </h4>
 
-                {event.details && (
-                  <ul className="mt-4 space-y-3">
-                    {event.details.map((detail, idx) => (
-                      <li
-                        key={idx}
-                        className="flex items-start gap-3 text-gray-600"
-                      >
-                        <span
-                          className="text-primary mt-1.5 text-[8px]"
-                          aria-hidden="true"
+                  {event.description && (
+                    <p className="text-gray-600 leading-relaxed italic text-sm md:text-base">
+                      {event.description}
+                    </p>
+                  )}
+
+                  {event.details && (
+                    <ul className="mt-3 space-y-2">
+                      {event.details.map((detail, idx) => (
+                        <li
+                          key={idx}
+                          className="flex items-start gap-3 text-gray-600"
                         >
-                          ●
-                        </span>
-                        <span className="text-sm md:text-base">{detail}</span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            </article>
-          ))}
+                          <span
+                            className="text-primary mt-1.5 text-[8px]"
+                            aria-hidden="true"
+                          >
+                            ●
+                          </span>
+                          <span className="text-sm md:text-base">{detail}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+              </article>
+            );
+          })}
         </div>
       </div>
     </CustomSection>
