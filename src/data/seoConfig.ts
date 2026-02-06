@@ -14,8 +14,8 @@ export const seoConfig = {
     description:
       "An academic program for STEM students involving workshops on student mobility and multicultural exchange. Learn more about the BEST Iași Symposium and apply now!",
   },
-  "/sponsors": {
-    title: "Our Partners | BEST Iași Symposium",
+  "/partners": {
+    title: "Partners | BEST Iași Symposium",
     description:
       "Explore the partners making the BEST Iași Symposium possible, connecting students, universities, and the international STEM community.",
   },
