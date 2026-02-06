@@ -76,7 +76,7 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 inset-x-0 z-[1000] transition-all duration-300 border-b ${navBackgroundClass}`}
+      className={`fixed top-0 inset-x-0 z-[1000] h-[--navbar-height] transition-all duration-300 border-b ${navBackgroundClass}`}
     >
       <div className="relative z-50">
         <CustomContainer

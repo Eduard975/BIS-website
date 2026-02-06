@@ -42,12 +42,12 @@ export const HeroHeader: React.FC<HeroHeaderProps> = ({
   overlayOpacityClass = "opacity-60",
   alignContent = "left",
   imagePosition = "center",
-  objectFit = "cover", // Defaulting to your original style
+  objectFit = "cover",
   customImgStyle,
 }) => {
   return (
     <header
-      className={`relative w-full ${heightClass} flex overflow-hidden group`}
+      className={`relative w-full ${heightClass} flex overflow-hidden group pt-[--navbar-height]`}
     >
       <img
         src={backgroundImageSrc}

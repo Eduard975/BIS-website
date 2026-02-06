@@ -17,7 +17,8 @@ export const GDPR_BEST_LINK =
 export const ANA_LINKEDIN = "";
 export const SIMINA_LINKEDIN = "";
 export const EDI_LINKEDIN = "https://www.linkedin.com/in/petrisor-edi/";
-export const DIANA_LINKEDIN = "";
+export const DIANA_LINKEDIN =
+  "https://www.linkedin.com/in/diana-ciobotaru-694649392/";
 export const OVIDIU_LINKEDIN =
   "https://www.linkedin.com/in/zoicas-ovidiu-74a09635b/";
 
