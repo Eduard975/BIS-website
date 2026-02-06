@@ -82,14 +82,14 @@ export default function Navbar() {
         <CustomContainer
           width="wide"
           paddingX="none"
-          className="flex justify-between items-center h-[--navbar-height] px-[2vw]"
+          className="flex justify-between items-center h-[--navbar-height] px-[2vw] py-[2vh]"
         >
           {/* LOGO (Links to Home) */}
           <NavLink to="/" onClick={() => setIsOpen(false)}>
             <img
               src={bisLogo}
               alt="Logo"
-              className="w-[20vw] md:w-[8vw] max-w-[150px] md:max-w-none p-[3vh] md:p-[2vh] object-contain select-none transition-all duration-300"
+              className="h-[6vh] w-full min-w-[100px] max-w-none object-contain select-none transition-all duration-300"
             />
           </NavLink>
 
