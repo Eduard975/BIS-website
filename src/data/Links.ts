@@ -14,9 +14,11 @@ export const GDPR_BEST_LINK =
   "https://drive.google.com/file/d/1BEBt_6w1Z32VtJWPkfijUcNPW4xDXSgd/view?usp=sharing";
 
 //Team Linkedins
-export const ANA_LINKEDIN = "";
 export const SIMINA_LINKEDIN = "www.linkedin.com/in/simina-ana-ifrim-519778336";
 export const EDI_LINKEDIN = "https://www.linkedin.com/in/petrisor-edi/";
+
+export const ANA_LINKEDIN =
+  "https://www.linkedin.com/in/ana-maria-ciobanu-b0b1a939b/";
 export const DIANA_LINKEDIN =
   "https://www.linkedin.com/in/diana-ciobotaru-694649392/";
 export const OVIDIU_LINKEDIN =
