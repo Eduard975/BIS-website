@@ -121,19 +121,19 @@ export const AboutPageHeader = () => {
         />
 
         <GeometricShape
-          className={`top-0 left-0 ${LAYOUT.leftWidth} bg-secondary/50 z-10 mt-24`}
+          className={`top-0 left-0 ${LAYOUT.leftWidth} bg-secondary/50 z-10 mt-24 origin-top-left`}
           clipPath={LAYOUT.slants.botLeftTop}
         />
         <GeometricShape
-          className={`top-0 right-0 ${LAYOUT.rightWidth} bg-secondary/50 z-10 mt-24`}
+          className={`top-0 right-0 ${LAYOUT.rightWidth} bg-secondary/50 z-10 mt-24 origin-top-right`}
           clipPath={LAYOUT.slants.botRightTop}
         />
         <GeometricShape
-          className={`top-0 left-0 ${LAYOUT.leftWidth} bg-colorBG/50 z-20`}
+          className={`top-0 left-0 ${LAYOUT.leftWidth} bg-colorBG/50 z-20 origin-bottom-left`}
           clipPath={LAYOUT.slants.botLeftBottom}
         />
         <GeometricShape
-          className={`top-0 right-0 ${LAYOUT.rightWidth} bg-colorBG/50 z-20`}
+          className={`top-0 right-0 ${LAYOUT.rightWidth} bg-colorBG/50 z-20 origin-bottom-right`}
           clipPath={LAYOUT.slants.botRightBottom}
         />
 
