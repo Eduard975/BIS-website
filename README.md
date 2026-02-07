@@ -39,6 +39,6 @@ pnpm install
 
 `pnpm build` -- Compiles TypeScript and builds the production bundle.
 
-`pnpm lint` -- Runs ESLint to find and fix code quality issues.
+`pnpm lint` -- Runs ESLint to find code quality issues.
 
 `pnpm preview` -- Serves the generated production build for testing.

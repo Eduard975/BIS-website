@@ -38,6 +38,7 @@ export const AboutPageHeader = () => {
   const [studentType, setStudentType] = useState<"ingenium/stem" | "best" | "">(
     "",
   );
+  const isJoinPeriodActive = false;
 
   const handleMouseEnter = () => {
     revealLoader();
@@ -144,44 +145,64 @@ export const AboutPageHeader = () => {
               onFocus={handleMouseEnter}
             >
               <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
-                Ready to Join?
+                {isJoinPeriodActive ? "Ready to Join?" : "Coming Soon!"}
               </h2>
 
-              <div className="flex flex-col md:flex-row items-center gap-3 text-lg md:text-xl font-medium text-gray-200">
-                <span>I am a student from</span>
-                <label htmlFor="student-origin" className="sr-only">
-                  Select your university origin
-                </label>
-                <select
-                  value={studentType}
-                  onChange={(e) => handleSelectionChange(e.target.value as any)}
-                  className="bg-white/10 border border-white/20 rounded-lg px-3 py-1.5 text-base text-primary font-bold focus:outline-none focus:ring-2 focus:ring-primary appearance-none cursor-pointer backdrop-blur-sm"
-                >
-                  <option value="" className="text-black">
-                    Select origin
-                  </option>
-                  <option value="ingenium/stem" className="text-black">
-                    INGENIUM Alliance / STEM Student
-                  </option>
-                  <option value="best" className="text-black">
-                    Member of BEST
-                  </option>
-                </select>
-              </div>
+              {isJoinPeriodActive ? (
+                /* ======================= ACTIVE JOIN PERIOD ======================= */
+                <div className="flex flex-col md:flex-row items-center gap-3 text-lg md:text-xl font-medium text-gray-200">
+                  <span>I am a student from</span>
+                  <label htmlFor="student-origin" className="sr-only">
+                    Select your university origin
+                  </label>
+                  <select
+                    value={studentType}
+                    onChange={(e) =>
+                      handleSelectionChange(e.target.value as any)
+                    }
+                    className="bg-white/10 border border-white/20 rounded-lg px-3 py-1.5 text-base text-primary font-bold focus:outline-none focus:ring-2 focus:ring-primary appearance-none cursor-pointer backdrop-blur-sm"
+                  >
+                    <option value="" className="text-black">
+                      Select origin
+                    </option>
+                    <option value="ingenium/stem" className="text-black">
+                      INGENIUM Alliance / STEM Student
+                    </option>
+                    <option value="best" className="text-black">
+                      Member of BEST
+                    </option>
+                  </select>
+                </div>
+              ) : (
+                /* ======================= PERIOD NOT STARTED ======================= */
+                <div className="space-y-4">
+                  <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
+                    Excitement is building! The application period for the
+                    <strong> BEST Iași Symposium</strong> hasn't opened just
+                    yet.
+                  </p>
+                  <p className="text-md md:text-lg text-secondary font-medium italic">
+                    Stay tuned, we'll be ready to welcome your ideas and energy
+                    very soon.
+                  </p>
+                </div>
+              )}
             </div>
 
-            {/* 2. The Conditional Reveal */}
-            <div
-              className={`text-justify transition-all duration-500 transform ${studentType ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}`}
-            >
-              <div className="min-h-[200px] transition-all duration-500">
-                <Suspense fallback={null}>
-                  {studentType !== "" && (
-                    <ConditionalReveal studentType={studentType} />
-                  )}
-                </Suspense>
+            {/* Only show the reveal section if the join period is actually active */}
+            {isJoinPeriodActive && (
+              <div
+                className={`text-justify transition-all duration-500 transform ${studentType ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"}`}
+              >
+                <div className="min-h-[200px] transition-all duration-500">
+                  <Suspense fallback={null}>
+                    {studentType !== "" && (
+                      <ConditionalReveal studentType={studentType} />
+                    )}
+                  </Suspense>
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </CustomContainer>
       </section>

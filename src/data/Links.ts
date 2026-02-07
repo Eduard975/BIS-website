@@ -9,7 +9,8 @@ export const BEST_APPLICATION_URL = "";
 export const GENERAL_APPLICATION_URL = "";
 
 export const GDPR_OOD_LINK = "";
-export const GDPR_BIS_LINK = "";
+export const GDPR_BIS_LINK =
+  "https://drive.google.com/file/d/1GswSRj8luyB_E-CSb2itYRKiVds2w255/view?usp=sharing";
 export const GDPR_BEST_LINK =
   "https://drive.google.com/file/d/1BEBt_6w1Z32VtJWPkfijUcNPW4xDXSgd/view?usp=sharing";
 

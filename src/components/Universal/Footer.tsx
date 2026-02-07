@@ -12,7 +12,7 @@ import sigla_best_alba from "../../assets/logos/best.svg";
 import {
   VOLUNTEER_FORM_URL,
   GDPR_BIS_LINK,
-  GDPR_OOD_LINK,
+  // GDPR_OOD_LINK,
   GDPR_BEST_LINK,
 } from "../../data/Links";
 import { PrimaryButton } from "./PrimaryButton";
@@ -24,9 +24,10 @@ const SITE_MAP = [
   { name: "Conference", to: "/conference" },
 ];
 
+// { name: "GDPR OOD 2026", to: GDPR_OOD_LINK },
+
 const LEGAL_LINKS = [
   { name: "GDPR BIS 2026", to: GDPR_BIS_LINK },
-  { name: "GDPR OOD 2026", to: GDPR_OOD_LINK },
   { name: "GDPR BEST Iasi", to: GDPR_BEST_LINK },
 ];
 
