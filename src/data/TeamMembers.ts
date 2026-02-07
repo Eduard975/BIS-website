@@ -1,8 +1,8 @@
-import Ana from "../assets/team/ana.png";
+import Ana from "../assets/team/ana.jpg";
 import Edi from "../assets/team/edi.jpg";
-import Diana from "../assets/team/diana.png";
-import Ovidiu from "../assets/team/ovidiu.png";
-import Simina from "../assets/team/simina.png";
+import Diana from "../assets/team/diana.jpg";
+import Ovidiu from "../assets/team/ovidiu.jpg";
+import Simina from "../assets/team/simina.jpg";
 import {
   ANA_LINKEDIN,
   DIANA_LINKEDIN,

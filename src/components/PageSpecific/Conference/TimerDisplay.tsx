@@ -3,7 +3,7 @@ import { memo } from "react";
 
 // --- CONFIGURATION ---
 // [!] SET THE END DATE HERE (Format: YYYY-MM-DDTHH:MM:SS)
-export const CONFERENCE_DATE = "2026-07-13T09:00:00";
+export const CONFERENCE_DATE = "2026-05-01T09:00:00";
 
 // 1. ISOLATED COMPONENT
 export const TimerDisplay = () => {
