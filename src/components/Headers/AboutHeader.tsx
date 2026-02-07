@@ -5,8 +5,8 @@ import groupPhotoImg from "../../assets/images/group-statue.webp";
 import ReactGA from "react-ga4";
 
 const LAYOUT = {
-  leftWidth: "w-[45%]",
-  rightWidth: "w-[55%]",
+  leftWidth: "w-[45.1%]",
+  rightWidth: "w-[55.1%]",
   slants: {
     topLeftCut: "polygon(0 0, 100% 0, 100% 100%, 0 85%)",
     topLeftFill: "polygon(0 85%, 100% 100%, 0 100%)",
@@ -121,19 +121,19 @@ export const AboutPageHeader = () => {
         />
 
         <GeometricShape
-          className={`top-0 left-0 ${LAYOUT.leftWidth} bg-secondary/50 z-10 mt-24 origin-top-left`}
+          className={`top-0 left-0 ${LAYOUT.leftWidth} bg-secondary/50 z-10 mt-24`}
           clipPath={LAYOUT.slants.botLeftTop}
         />
         <GeometricShape
-          className={`top-0 right-0 ${LAYOUT.rightWidth} bg-secondary/50 z-10 mt-24 origin-top-right`}
+          className={`top-0 right-0 ${LAYOUT.rightWidth} bg-secondary/50 z-10 mt-24`}
           clipPath={LAYOUT.slants.botRightTop}
         />
         <GeometricShape
-          className={`top-0 left-0 ${LAYOUT.leftWidth} bg-colorBG/50 z-20 origin-bottom-left`}
+          className={`top-0 left-0 ${LAYOUT.leftWidth} bg-colorBG/50 z-20`}
           clipPath={LAYOUT.slants.botLeftBottom}
         />
         <GeometricShape
-          className={`top-0 right-0 ${LAYOUT.rightWidth} bg-colorBG/50 z-20 origin-bottom-right`}
+          className={`top-0 right-0 ${LAYOUT.rightWidth} bg-colorBG/50 z-20`}
           clipPath={LAYOUT.slants.botRightBottom}
         />
 
