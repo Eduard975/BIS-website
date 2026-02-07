@@ -34,11 +34,11 @@ export const HomeBridgeGapSection = () => {
         className="md:w-[60%]"
       >
         <p>
-          Join us for an international opening conference that brings together
-          multicultural perspectives and forward-thinking ideas. Connect with
-          talented students, experts, mentors, and industry leaders from across
-          Europe in a formal yet dynamic setting designed for dialogue,
-          knowledge exchange, and inspiration.
+          Join us for an <strong>international conference</strong> that brings
+          together multicultural perspectives and forward-thinking ideas.
+          Connect with talented students, experts, mentors, and industry leaders
+          from across Europe in a formal yet dynamic setting designed for
+          dialogue, knowledge exchange, and inspiration.
         </p>
         <p>
           Through keynote talks, panel discussions, and collaborative sessions,

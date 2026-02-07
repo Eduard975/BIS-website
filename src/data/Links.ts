@@ -3,7 +3,7 @@ export const SPEAKER_FORM_URL = "https://forms.gle/example";
 export const OOD_JOIN_FORM_URL = "https://forms.gle/example";
 
 export const VOLUNTEER_FORM_URL = "https://redirectioneaza.ro/best-iasi/";
-export const PROMO_VIDEO_ID = "dQw4w9WgXcQ";
+export const PROMO_VIDEO_ID = "_5ZfjVWw2l8";
 
 export const BEST_APPLICATION_URL = "";
 export const GENERAL_APPLICATION_URL = "";
