@@ -66,11 +66,11 @@ export const AboutPageHeader = () => {
       {/* ======================= TOP SECTION ======================= */}
       <section className="relative w-full bg-white">
         <GeometricShape
-          className={`top-0 left-0 ${LAYOUT.leftWidth} bg-white z-20 shadow-sm`}
+          className={`top-0 left-0 ${LAYOUT.leftWidth} bg-white z-20`}
           clipPath={LAYOUT.slants.topLeftCut}
         />
         <GeometricShape
-          className={`top-0 right-0 ${LAYOUT.rightWidth} bg-white z-20 shadow-sm`}
+          className={`top-0 right-0 ${LAYOUT.rightWidth} bg-white z-20`}
           clipPath={LAYOUT.slants.topRight}
         />
         <GeometricShape
