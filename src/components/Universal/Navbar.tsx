@@ -57,7 +57,7 @@ export default function Navbar() {
       // The "Invest Button" style: Blue outline
       classes += isActive
         ? "bg-secondary text-white border-2 border-secondary "
-        : "border-2 border-secondary text-darkTxt hover:bg-secondary hover:text-white ";
+        : "bg-secondary text-white hover:bg-white hover:text-secondary hover:border-2 hover:border-secondary  ";
     } else {
       // Standard links
       classes += isActive
@@ -82,7 +82,7 @@ export default function Navbar() {
         <CustomContainer
           width="wide"
           paddingX="none"
-          className="flex justify-between items-center h-[--navbar-height] px-[2vw] py-[2vh]"
+          className="flex justify-between items-center h-[--navbar-height] px-[2vw] py-[1vh]"
         >
           {/* LOGO (Links to Home) */}
           <NavLink to="/" onClick={() => setIsOpen(false)}>
