@@ -32,7 +32,9 @@ export const HomeVideoSection = () => {
         onButtonClick={() => navigate("/about")}
       >
         <p>
-          Experience a week-long intensive program in Iași, bringing together
+          Experience an intensive academic forum in Iași from{" "}
+          <strong>July 11th to 22nd</strong>, with the first and last days
+          dedicated to arrival and departure. The event brings together
           international students for dynamic workshops on multiculturalism and
           global exchange.
         </p>
