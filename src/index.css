@@ -38,7 +38,9 @@
 
   --container-padding: 5vw;
   --container-padding-tight: 5vw;
-  --navbar-height: 8vh;
+
+  --navbar-height: 54px;         
+  --navbar-mobile-height: 64px;  
 
   --font-title: "LemonMilk-medium", sans-serif;
   --font-subtitle: "LemonMilk-regular", sans-serif;

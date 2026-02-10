@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
-import { NavLink, useLocation, useNavigate } from "react-router"; // Added useLocation & useNavigate
+import { NavLink, useLocation, useNavigate } from "react-router";
+import { HiOutlineArrowLeft, HiBars3, HiXMark } from "react-icons/hi2";
 import CustomContainer from "./CustomContainer";
 import bisLogo from "../../assets/logos/bis.svg";
 import { useWindowSize } from "../../hooks/useWindowSize";
-import { HiOutlineArrowLeft } from "react-icons/hi"; // Using an arrow icon
 
 const NAV_ITEMS = [
   { name: "Home", path: "/" },
@@ -14,7 +14,7 @@ const NAV_ITEMS = [
 
 export default function Navbar() {
   const { isMobile } = useWindowSize();
-  const { pathname } = useLocation(); // Detect current page
+  const { pathname } = useLocation();
   const navigate = useNavigate();
 
   const [isScrolled, setIsScrolled] = useState(false);
@@ -31,7 +31,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Sync scroll lock with menu state
   useEffect(() => {
     document.body.style.overflow = isMenuOpen ? "hidden" : "unset";
     return () => {
@@ -39,7 +38,6 @@ export default function Navbar() {
     };
   }, [isMenuOpen]);
 
-  // STYLING LOGIC: Conference Link with Outline
   const getNavLinkClass = ({
     isActive,
     name,
@@ -49,27 +47,23 @@ export default function Navbar() {
   }) => {
     const isConf = name === "Conference";
 
-    // Base styles
     let classes =
-      "transition-all duration-300 text-[1.1vw] tracking-wide px-4 py-1.5 rounded-full ";
+      "transition-all duration-300 text-sm md:text-base tracking-wide px-4 py-2 rounded-full whitespace-nowrap ";
 
     if (isConf) {
-      // The "Invest Button" style: Blue outline
       classes += isActive
         ? "bg-secondary text-white border-2 border-secondary "
-        : "bg-secondary text-white hover:bg-white hover:text-secondary hover:border-2 hover:border-secondary  ";
+        : "bg-secondary text-white hover:bg-white hover:text-secondary hover:border-2 hover:border-secondary";
     } else {
-      // Standard links
       classes += isActive
         ? "text-secondary font-semibold "
         : "text-gray-800 hover:text-secondary ";
     }
-
     return classes;
   };
 
   const navBackgroundClass = isMenuOpen
-    ? "bg-white shadow-lg border-gray-200"
+    ? "bg-white" // Removed shadow here so the dropdown shadow takes precedence
     : isScrolled
       ? "bg-white/70 backdrop-blur-md border-gray-200/50 shadow-sm"
       : "bg-white border-transparent shadow-sm";
@@ -82,30 +76,32 @@ export default function Navbar() {
         <CustomContainer
           width="wide"
           paddingX="none"
-          className="flex justify-between items-center h-[--navbar-height] px-[2vw] py-[1vh]"
+          className="flex justify-between items-center px-4 md:px-8 h-[var(--navbar-mobile-height)] md:h-[var(--navbar-height)]"
         >
-          {/* LOGO (Links to Home) */}
-          <NavLink to="/" onClick={() => setIsOpen(false)}>
+          {/* LOGO */}
+          <NavLink
+            to="/"
+            onClick={() => setIsOpen(false)}
+            className="h-full flex items-center shrink-0"
+          >
             <img
               src={bisLogo}
               alt="Logo"
-              className="h-[6vh] w-full min-w-[100px] max-w-none object-contain select-none transition-all duration-300"
+              className="h-[60%] md:h-[70%] w-auto object-contain select-none transition-all duration-300"
             />
           </NavLink>
 
-          {/* DESKTOP CONTENT */}
-          <div className="hidden md:flex items-center gap-[1.5vw]">
+          {/* DESKTOP MENU - Compact Gap */}
+          <div className="hidden md:flex items-center gap-5">
             {isConferencePage ? (
-              /* BACK BUTTON: Only shown on Conference Page */
               <button
                 onClick={() => navigate("/")}
-                className="flex items-center gap-2 text-secondary font-bold text-[1.1vw] hover:translate-x-[-5px] transition-transform duration-300 cursor-pointer"
+                className="flex items-center gap-2 text-secondary font-bold hover:translate-x-[-5px] transition-transform duration-300 cursor-pointer text-base"
               >
                 <HiOutlineArrowLeft className="text-xl" />
                 Back to Home
               </button>
             ) : (
-              /* STANDARD MENU: Shown on all other pages */
               NAV_ITEMS.map((item) => (
                 <NavLink
                   key={item.path}
@@ -120,57 +116,56 @@ export default function Navbar() {
             )}
           </div>
 
-          {/* BURGER BUTTON (Conditional Logic) */}
-          {!isConferencePage && (
-            <button
-              onClick={toggleMenu}
-              className="md:hidden p-[1vh] text-gray-800 focus:outline-none"
-              aria-label="Toggle Menu"
-            >
-              {/* ... (Burger Icon Spans) ... */}
-              <div className="relative w-[6vw] h-[5vw] max-w-[30px] max-h-[24px]">
-                <span
-                  className={`absolute left-0 block w-full h-[0.5vh] max-h-[3px] bg-current rounded-full transition-all duration-300 ${isMenuOpen ? "top-[2.2vw] rotate-45" : "top-0"}`}
-                />
-                <span
-                  className={`absolute left-0 block w-full h-[0.5vh] max-h-[3px] bg-current rounded-full transition-all duration-300 top-[2.2vw] ${isMenuOpen ? "opacity-0" : "opacity-100"}`}
-                />
-                <span
-                  className={`absolute left-0 block w-full h-[0.5vh] max-h-[3px] bg-current rounded-full transition-all duration-300 ${isMenuOpen ? "top-[2.2vw] -rotate-45" : "top-[4.4vw]"}`}
-                />
-              </div>
-            </button>
-          )}
-
-          {/* MOBILE BACK BUTTON (Shown instead of burger on Conference page) */}
-          {isConferencePage && isMobile && (
-            <button
-              onClick={() => navigate("/")}
-              className="md:hidden flex items-center gap-2 text-secondary font-bold text-lg"
-            >
-              <HiOutlineArrowLeft />
-              Home
-            </button>
-          )}
+          {/* MOBILE CONTROLS */}
+          <div className="md:hidden flex items-center">
+            {isConferencePage ? (
+              <button
+                onClick={() => navigate("/")}
+                className="flex items-center gap-2 text-secondary font-bold text-sm"
+              >
+                <HiOutlineArrowLeft className="text-lg" />
+                Home
+              </button>
+            ) : (
+              <button
+                onClick={toggleMenu}
+                className="p-2 text-gray-800 focus:outline-none"
+                aria-label="Toggle Menu"
+              >
+                {isOpen ? (
+                  <HiXMark className="w-8 h-8" />
+                ) : (
+                  <HiBars3 className="w-8 h-8" />
+                )}
+              </button>
+            )}
+          </div>
         </CustomContainer>
       </div>
 
-      {/* MOBILE MENU (Stays as is) */}
+      {/* MOBILE MENU DROPDOWN - Auto Height + Shadow */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${isMenuOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"}`}
+        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out bg-white shadow-xl ${
+          isMenuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+        }`}
       >
         <CustomContainer
           paddingX="none"
-          className="px-[4vw] border-t border-gray-100"
+          // Removed 'h-screen' logic. Now it's just padding vertical (py-6)
+          className="px-6 border-t border-gray-100"
         >
-          <div className="flex flex-col py-[3vh] gap-[3vh]">
+          <div className="flex flex-col py-6 gap-6">
             {NAV_ITEMS.map((item) => (
               <NavLink
                 key={item.path}
                 to={item.path}
                 onClick={() => setIsOpen(false)}
                 className={({ isActive }) =>
-                  `text-[4.5vw] py-[1vh] ${isActive ? "text-secondary font-semibold border-l-[1vw] border-secondary pl-2" : "text-gray-600"}`
+                  `text-xl py-2 ${
+                    isActive
+                      ? "text-secondary font-semibold border-l-4 border-secondary pl-3"
+                      : "text-gray-600 pl-4"
+                  }`
                 }
               >
                 {item.name}

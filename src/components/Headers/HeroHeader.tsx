@@ -47,7 +47,8 @@ export const HeroHeader: React.FC<HeroHeaderProps> = ({
 }) => {
   return (
     <header
-      className={`relative w-full ${heightClass} flex overflow-hidden group pt-[--navbar-height]`}
+      className={`relative w-full ${heightClass} flex overflow-hidden group 
+        pt-[var(--navbar-mobile-height)] md:pt-[var(--navbar-height)]`}
     >
       <img
         src={backgroundImageSrc}
