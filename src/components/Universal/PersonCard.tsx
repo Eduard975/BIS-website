@@ -5,8 +5,8 @@ export const PersonCard = ({
   image = "",
   isMain = false,
   index = 0,
-  isAdd = false, // New prop for the placeholder state
-  onClick, // Function to handle the external link
+  isAdd = false,
+  onClick,
 }: {
   lastName?: string;
   name?: string;
@@ -17,7 +17,7 @@ export const PersonCard = ({
   isAdd?: boolean;
   onClick?: () => void;
 }) => {
-  // Logic to ensure the "Add" card is always last, regardless of index
+  // Logic to ensure the "Add" card is always last
   const orderClasses = isAdd
     ? "order-last"
     : isMain
@@ -29,7 +29,9 @@ export const PersonCard = ({
   return (
     <div
       onClick={onClick}
-      className={`flex flex-col items-center w-full transition-transform duration-300 hover:scale-105 ${orderClasses} ${isAdd ? "cursor-pointer" : ""}`}
+      className={`flex flex-col items-center w-full transition-transform duration-300 hover:scale-105 ${orderClasses} ${
+        isAdd ? "cursor-pointer" : ""
+      }`}
     >
       {/* Circle Container */}
       <div
@@ -41,7 +43,6 @@ export const PersonCard = ({
       `}
       >
         {isAdd ? (
-          /* Plus icon for the "Add New" state */
           <span className="text-primary text-6xl font-light mb-1">+</span>
         ) : (
           <img
@@ -52,22 +53,16 @@ export const PersonCard = ({
         )}
       </div>
 
-      {/* Name/Label Area */}
-      <div className="w-full max-w-[130px] md:max-w-[175px] border-b-2 border-primary text-center pb-1 mb-2">
-        <h3 className="text-accent text-base md:text-lg font-bold uppercase tracking-tight leading-tight flex flex-col justify-center">
+      {/* Name/Label Area - Red Bar */}
+      {/* Removed whitespace-nowrap and <br/> hacks. 
+          The text will now naturally center and wrap if it exceeds the max-width. */}
+      <div className="w-full max-w-[160px] md:max-w-[175px] border-b-2 border-primary text-center pb-2 mb-2">
+        <h3 className="text-accent text-base md:text-lg font-bold uppercase tracking-tight leading-tight flex flex-col justify-center min-h-[2.5rem]">
           {isAdd ? (
-            <span className="whitespace-nowrap">
-              <br />
-              Become a Speaker
-            </span>
-          ) : name.includes("-") ? (
-            <>
-              <span className="whitespace-nowrap">{lastName}</span>
-              <span className="whitespace-nowrap">{name}</span>
-            </>
+            <span>Become a Speaker</span>
           ) : (
-            <span className="whitespace-nowrap">
-              <br />
+            /* By rendering distinct spans or just allowing wrap, we get the stack effect */
+            <span className="px-1">
               {lastName} {name}
             </span>
           )}
@@ -75,7 +70,7 @@ export const PersonCard = ({
       </div>
 
       {/* Role/Instruction Area */}
-      <p className="text-darkTxt text-xs md:text-sm font-medium text-center">
+      <p className="text-darkTxt text-xs md:text-sm font-medium text-center w-full px-2">
         {role}
       </p>
     </div>

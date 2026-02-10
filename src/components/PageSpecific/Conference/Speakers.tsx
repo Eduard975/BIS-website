@@ -17,20 +17,22 @@ export const SpeakersSection = () => {
         className="mb-12 md:mb-16"
       />
 
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-x-4 gap-y-10 md:gap-x-12 md:gap-y-16 justify-items-center">
-        {SPEAKERS_DATA.map((speaker, index) => (
-          <PersonCard
-            key={speaker.id}
-            index={index}
-            lastName={speaker.lastName}
-            name={speaker.name}
-            role={speaker.role}
-            image={speaker.image}
-          />
+      {/* CHANGED: Grid -> Flex with justify-center to handle orphan items */}
+      <div className="flex flex-wrap justify-center gap-x-8 gap-y-12 md:gap-x-12 md:gap-y-16">
+        {SPEAKERS_DATA.map((speaker) => (
+          <div key={speaker.id} className="w-[160px] md:w-[220px]">
+            <PersonCard
+              lastName={speaker.lastName}
+              name={speaker.name}
+              role={speaker.role}
+              image={speaker.image}
+            />
+          </div>
         ))}
 
-        {/* The persistent "Add New" card */}
-        <PersonCard isAdd role="Join BIS 2026" onClick={handleApplyClick} />
+        <div className="w-[160px] md:w-[220px]">
+          <PersonCard isAdd role="Join BIS 2026" onClick={handleApplyClick} />
+        </div>
       </div>
     </CustomSection>
   );

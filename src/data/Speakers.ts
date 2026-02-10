@@ -7,7 +7,7 @@
 // },
 
 export interface Speaker {
-  id: number;
+  id?: number;
   lastName: string;
   name: string;
   role: string;
