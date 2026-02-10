@@ -17,10 +17,12 @@ export const SpeakersSection = () => {
         className="mb-12 md:mb-16"
       />
 
-      {/* CHANGED: Grid -> Flex with justify-center to handle orphan items */}
-      <div className="flex flex-wrap justify-center gap-x-8 gap-y-12 md:gap-x-12 md:gap-y-16">
+      <div
+        className="grid grid-cols-1 md:grid-cols-3 
+      gap-x-8 gap-y-12 md:gap-x-12 md:gap-y-16 justify-items-center"
+      >
         {SPEAKERS_DATA.map((speaker) => (
-          <div key={speaker.id} className="w-[160px] md:w-[220px]">
+          <div key={speaker.id}>
             <PersonCard
               lastName={speaker.lastName}
               name={speaker.name}
@@ -30,9 +32,7 @@ export const SpeakersSection = () => {
           </div>
         ))}
 
-        <div className="w-[160px] md:w-[220px]">
-          <PersonCard isAdd role="Join BIS 2026" onClick={handleApplyClick} />
-        </div>
+        <PersonCard isAdd role="Join BIS 2026" onClick={handleApplyClick} />
       </div>
     </CustomSection>
   );
