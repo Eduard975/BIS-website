@@ -20,7 +20,7 @@ export const ConferenceIntroSection = () => {
               international <strong>conference</strong> exploring how{" "}
               <strong>multiculturalism</strong> in <strong>STEM</strong>{" "}
               empowers diversity and drives innovation. Taking place on{" "}
-              <strong>July 13th, 2026, in Iași, Romania</strong>, this event
+              <strong>July 12th, 2026, in Iași, Romania</strong>, this event
               brings together students, academic mentors, and{" "}
               <strong>STEM industry leaders</strong> from across Europe to shape
               the future of <strong>international student mobility</strong>.

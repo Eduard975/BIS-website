@@ -46,7 +46,7 @@ export const TEAM_MEMBERS = [
   },
   {
     id: 5,
-    lastName: "Zoicas",
+    lastName: "Zoicaș",
     name: "Ovidiu",
     role: "Marketing",
     image: Ovidiu,

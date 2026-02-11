@@ -1,5 +1,5 @@
 // BEST Related
-export const SPEAKER_FORM_URL = "https://forms.gle/example";
+export const SPEAKER_FORM_URL = "https://forms.gle/xfcS3T41dW4UpfCX9";
 export const OOD_JOIN_FORM_URL = "https://forms.gle/example";
 
 export const VOLUNTEER_FORM_URL = "https://redirectioneaza.ro/best-iasi/";
@@ -8,14 +8,12 @@ export const PROMO_VIDEO_ID = "_5ZfjVWw2l8";
 export const BEST_APPLICATION_URL = "";
 export const GENERAL_APPLICATION_URL = "";
 
-export const GDPR_OOD_LINK = "";
 export const GDPR_BIS_LINK =
-  "https://drive.google.com/file/d/1GswSRj8luyB_E-CSb2itYRKiVds2w255/view?usp=sharing";
+  "https://drive.google.com/file/d/1YLEI5FHHASorHcjkGQ5--JfZj57mstIy/view?usp=sharing";
 export const GDPR_BEST_LINK =
-  "https://drive.google.com/file/d/1BEBt_6w1Z32VtJWPkfijUcNPW4xDXSgd/view?usp=sharing";
+  "https://drive.google.com/file/d/1eWu-GXhv1RISK5xyh8QP4FA4x5miRXb2/view?usp=sharing";
 
 //Team Linkedins
-
 export const EDI_LINKEDIN = "https://www.linkedin.com/in/petrisor-edi/";
 
 export const SIMINA_LINKEDIN =

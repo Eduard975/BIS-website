@@ -27,7 +27,7 @@ const SITE_MAP = [
 // { name: "GDPR OOD 2026", to: GDPR_OOD_LINK },
 
 const LEGAL_LINKS = [
-  { name: "GDPR BIS 2026", to: GDPR_BIS_LINK },
+  { name: "GDPR BIS/OOD 2026", to: GDPR_BIS_LINK },
   { name: "GDPR BEST Iasi", to: GDPR_BEST_LINK },
 ];
 
