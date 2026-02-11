@@ -17,10 +17,10 @@
     </script>
     <title>BEST Iași Symposium</title>
 
-    <meta name="description" content="Join the BEST Iași Symposium for STEM students, featuring an international conference on multicultural exchange and student mobility open to all.">
+    <meta name="description" content="Discover BEST Iași Symposium: an international STEM event by TUIASI and INGENIUM. Join workshops on student mobility and cultural exchange in Romania. Connect with peers!">
 
     <meta property="og:title" content="BEST Iași Symposium">
-    <meta property="og:description" content="Join the BEST Iași Symposium for STEM students, featuring an international conference on multicultural exchange and student mobility.">
+    <meta property="og:description" content="Discover BEST Iași Symposium: an international STEM event by TUIASI and INGENIUM. Join workshops on student mobility and cultural exchange in Romania. Connect with peers!">
     
     <meta property="og:image" content="https://symposium.bestis.ro/preview.png">
     <meta property="og:type" content="website">
@@ -28,9 +28,60 @@
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://symposium.bestis.ro/preview.png">
+    <style>
+  /* This CSS creates the loader layout */
+  .app-loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    /* Using your variables with fallbacks */
+    background-color: var(--color-whiteBG, #fffcf7);
+    color: var(--color-primary, #16a296);
+    font-family: var(--font-title, sans-serif); 
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+  }
+
+  .app-loader h1 {
+    font-size: 2rem; /* Adjustable size */
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  /* The 3-dot animation */
+  .dot {
+    animation: blink 1.4s infinite both;
+    margin-left: 2px;
+  }
+  
+  .dot:nth-child(1) { animation-delay: 0s; }
+  .dot:nth-child(2) { animation-delay: 0.2s; }
+  .dot:nth-child(3) { animation-delay: 0.4s; }
+
+  @keyframes blink {
+    0% { opacity: 0.2; }
+    20% { opacity: 1; }
+    100% { opacity: 0.2; }
+  }
+</style>
 </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div class="app-loader">
+          <h1>Loading BEST Iași Symposium
+            <span class="dot">.</span>
+            <span class="dot">.</span>
+            <span class="dot">.</span>
+          </h1>
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

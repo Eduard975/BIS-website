@@ -2,22 +2,22 @@ export const seoConfig = {
   "/": {
     title: "Home | BEST Iași Symposium",
     description:
-      "Join the BEST Iași Symposium for STEM students, featuring an international conference on multicultural exchange and student mobility open to all. Explore innovation and academic growth.",
+      "Discover BEST Iași Symposium: an international STEM event by TUIASI and INGENIUM. Join workshops on student mobility and cultural exchange in Romania. Connect with peers!",
   },
   "/conference": {
     title: "Conference | Empower STEM",
     description:
-      "Participate in expert talks, panel discussions, and collaborative sessions at the Empower STEM: Mobility Conference, a key highlight of the BEST Iași Symposium.",
+      "Take part in the BEST Iași mobility conference! Experience expert keynotes and networking sessions designed to inspire your academic and professional growth. Register now!",
   },
   "/about": {
     title: "About Us | BEST Iași Symposium",
     description:
-      "An academic program for STEM students involving workshops on student mobility and multicultural exchange. Learn more about the BEST Iași Symposium and apply now!",
+      "Apply for the BEST Iași STEM symposium! Join workshops on student mobility and multicultural exchange to enhance your skills. Don't miss this great opportunity in Iași!",
   },
   "/partners": {
     title: "Partners | BEST Iași Symposium",
     description:
-      "Explore the partners making the BEST Iași Symposium possible, connecting students, universities, and the international STEM community.",
+      "Meet the sponsors of BEST Iași Symposium. Discover partners connecting STEM students with European universities and global industry leaders through innovation and tech.",
   },
   "404": {
     title: "Page Not Found | BEST Iași Symposium",
