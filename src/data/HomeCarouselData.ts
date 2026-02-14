@@ -1,4 +1,3 @@
-import TUIASI from "../assets/logos/partners/event/TUIASI.png";
 import INGENIUM from "../assets/logos/partners/event/ingenium.svg";
 import IULIUS from "../assets/logos/partners/pa/iulius.svg";
 import WINK from "../assets/logos/partners/pa/wink.svg";
@@ -24,13 +23,13 @@ export const CAROUSEL_ITEMS = [
     Url: "/partners",
     isRedirect: true,
   },
-  {
-    id: 2,
-    imageSrc: TUIASI,
-    altText: "TUIASI",
-    Url: "/partners",
-    isRedirect: true,
-  },
+  // {
+  //   id: 2,
+  //   imageSrc: TUIASI,
+  //   altText: "TUIASI",
+  //   Url: "/partners",
+  //   isRedirect: true,
+  // },
   {
     id: 3,
     imageSrc: WINK,

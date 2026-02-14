@@ -58,7 +58,7 @@ export const AboutPageHeader = () => {
   const [studentType, setStudentType] = useState<"ingenium/stem" | "best" | "">(
     "",
   );
-  const isJoinPeriodActive = false;
+  const isJoinPeriodActive = false; // Set to true when the application period starts
 
   const handleMouseEnter = () => revealLoader();
 
@@ -76,10 +76,7 @@ export const AboutPageHeader = () => {
 
   return (
     <div className="flex flex-col w-full relative">
-      {/* ======================= TOP SECTION ======================= */}
-      {/* Removed bg-white here because the SVG inside provides the white color now */}
       <section className="relative w-full z-10">
-        {/* The "Cut Corner" Background Logic */}
         <TopSectionBackground />
 
         <CustomContainer className="relative z-30 pt-12 pb-24 flex flex-row items-center justify-between gap-4 md:gap-8">
@@ -151,10 +148,10 @@ export const AboutPageHeader = () => {
                       Select origin
                     </option>
                     <option value="ingenium/stem" className="text-black">
-                      INGENIUM Alliance / STEM Student
+                      INGENIUM Alliance / A city without a Local BEST Group
                     </option>
                     <option value="best" className="text-black">
-                      Member of BEST
+                      BEST Member / A city with a Local BEST Group
                     </option>
                   </select>
                 </div>

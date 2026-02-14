@@ -18,13 +18,10 @@ const ConditionalReveal = ({ studentType }: ConditionalRevealProps) => {
           </span>
         </div>
         <p className="text-gray-300 text-lg leading-relaxed">
-          This registration path is open to{" "}
-          <strong className="text-white">everyone</strong> from{" "}
-          <strong className="text-white">STEM universities</strong> or the{" "}
-          <strong className="text-white">
-            INGENIUM European University Alliance
-          </strong>
-          . Please complete your application via our dedicated Form.
+          Choose this option if you study at a university that is part of the{" "}
+          <strong className="text-white">INGENIUM Alliance</strong>, or if you
+          are a <strong className="text-white">STEM student</strong> in a city{" "}
+          <strong className="text-white">without</strong> a local BEST group.
         </p>
         <PrimaryButton
           fullWidth
@@ -48,18 +45,20 @@ const ConditionalReveal = ({ studentType }: ConditionalRevealProps) => {
           </span>
         </div>
         <p className="text-gray-300 text-lg leading-relaxed">
-          For active members of the BEST network, please complete your
-          registration via the{" "}
-          <strong className="text-white">BEST Application System</strong>.
+          This option is for students who are{" "}
+          <strong className="text-white">members of a local BEST group</strong>,
+          or <strong className="text-white">STEM students</strong> studying in a
+          city where a{" "}
+          <strong className="text-white">BEST group is active</strong>.
         </p>
         <PrimaryButton
           fullWidth
           size="normal"
           href={BEST_APPLICATION_URL}
           target="_blank"
-          analyticsLabel="Apply: BAS System"
+          analyticsLabel="Apply: BEST Application System"
         >
-          Apply via BAS
+          Apply via BEST Application System
         </PrimaryButton>
       </div>
     );

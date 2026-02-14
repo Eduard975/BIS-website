@@ -40,7 +40,7 @@ export const ScheduleSection: React.FC = () => {
     <CustomSection id="schedule" bg="bg-whiteBG">
       <OverprintTitle
         title="July 11 — July 22"
-        subtitle="Event Schedule"
+        subtitle="Symposium Schedule"
         className="mb-16"
       />
 
@@ -71,12 +71,10 @@ export const ScheduleSection: React.FC = () => {
                   <button
                     onClick={() => setActiveDayId(day.id)}
                     className={`
-                      /* CHANGED: w-auto instead of w-full stops the stretching */
                       w-auto h-10 rounded-full border transition-all duration-300 
                       flex items-center justify-center
                       outline-none whitespace-nowrap
                       
-                      /* CHANGED: Fixed padding (px-4/6) creates the consistent pill shape */
                       px-4 lg:px-6
                       
                       text-xs sm:text-sm lg:text-base font-bold
