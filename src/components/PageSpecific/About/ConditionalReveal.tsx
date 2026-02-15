@@ -41,7 +41,7 @@ const ConditionalReveal = ({ studentType }: ConditionalRevealProps) => {
       <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 md:p-8 rounded-3xl space-y-6 text-justify">
         <div className="flex items-center gap-3">
           <span className="text-primary text-sm font-black tracking-widest uppercase">
-            BAS Path
+            BEST Application System Path
           </span>
         </div>
         <p className="text-gray-300 text-lg leading-relaxed">

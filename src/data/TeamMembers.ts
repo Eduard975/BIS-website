@@ -3,8 +3,10 @@ import Edi from "../assets/team/edi.jpg";
 import Diana from "../assets/team/diana.jpg";
 import Ovidiu from "../assets/team/ovidiu.jpg";
 import Simina from "../assets/team/simina.jpg";
+import Diana_Ch from "../assets/team/diana_ch.jpg";
 import {
   ANA_LINKEDIN,
+  DIANA_CH_LINKEDIN,
   DIANA_LINKEDIN,
   EDI_LINKEDIN,
   OVIDIU_LINKEDIN,
@@ -51,5 +53,13 @@ export const TEAM_MEMBERS = [
     role: "Marketing",
     image: Ovidiu,
     linkedin: OVIDIU_LINKEDIN,
+  },
+  {
+    id: 6,
+    lastName: "Chelea",
+    name: "Diana",
+    role: "Official Open Day",
+    image: Diana_Ch,
+    linkedin: DIANA_CH_LINKEDIN,
   },
 ];

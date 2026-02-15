@@ -58,7 +58,7 @@ export const AboutPageHeader = () => {
   const [studentType, setStudentType] = useState<"ingenium/stem" | "best" | "">(
     "",
   );
-  const isJoinPeriodActive = false; // Set to true when the application period starts
+  const isJoinPeriodActive = true; // Set to true when the application period starts
 
   const handleMouseEnter = () => revealLoader();
 

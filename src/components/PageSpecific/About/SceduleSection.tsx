@@ -45,11 +45,18 @@ export const ScheduleSection: React.FC = () => {
       />
 
       <div className="flex flex-col items-center w-full">
-        <div className="w-full flex items-center justify-center gap-4 md:gap-8 relative max-w-full md:max-w-4xl lg:max-w-6xl mb-16">
-          <button className="prev-day shrink-0 z-20 bg-white shadow-sm rounded-full p-2 text-primary border border-gray-100 disabled:opacity-20 hover:bg-gray-50 transition-all cursor-pointer">
-            <HiChevronLeft className="w-4 h-4 md:w-5 md:h-5" />
+        <div className="w-full flex items-center justify-center gap-6 md:gap-8 relative max-w-xs sm:max-w-xl md:max-w-3xl lg:max-w-5xl mb-16">
+          <button
+            className="prev-day shrink-0 z-20
+            bg-white shadow-sm rounded-full p-2 
+            text-primary border border-gray-100 
+            disabled:opacity-20 hover:bg-gray-50
+            hover:scale-110 transition-all cursor-pointer"
+          >
+            <HiChevronLeft size={20} />
           </button>
 
+          {/* SWIPER WRAPPER */}
           <div className="flex-1 min-w-0 relative">
             <Swiper
               modules={[Navigation, FreeMode, Mousewheel]}
@@ -59,32 +66,38 @@ export const ScheduleSection: React.FC = () => {
               }}
               mousewheel={{ forceToAxis: true }}
               breakpoints={{
-                320: { slidesPerView: 3, slidesPerGroup: 3, spaceBetween: 12 },
-                640: { slidesPerView: 4, slidesPerGroup: 4, spaceBetween: 14 },
-                960: { slidesPerView: 6, slidesPerGroup: 6, spaceBetween: 16 },
+                // I kept your original breakpoints logic
+                320: {
+                  slidesPerView: 3,
+                  slidesPerGroup: 3,
+                  spaceBetween: 12,
+                },
+                640: {
+                  slidesPerView: 4,
+                  slidesPerGroup: 4,
+                  spaceBetween: 14,
+                },
+                960: {
+                  slidesPerView: 6,
+                  slidesPerGroup: 6,
+                  spaceBetween: 16,
+                },
               }}
-              className="px-1 w-full"
+              className="px-2 w-full"
             >
               {scheduleData.map((day: ScheduleDay) => (
-                // ADDED: flex justify-center to center the button in its slot
                 <SwiperSlide key={day.id} className="flex justify-center">
                   <button
                     onClick={() => setActiveDayId(day.id)}
-                    className={`
-                      w-auto h-10 rounded-full border transition-all duration-300 
-                      flex items-center justify-center
-                      outline-none whitespace-nowrap
-                      
-                      px-4 lg:px-6
-                      
-                      text-xs sm:text-sm lg:text-base font-bold
-                      
-                      ${
-                        activeDayId === day.id
-                          ? "bg-primary text-white border-primary shadow-md"
-                          : "bg-white text-gray-400 border-gray-200 hover:border-primary/40 hover:text-primary"
-                      }
-                    `}
+                    aria-pressed={activeDayId === day.id}
+                    className={`w-full px-2 lg:px-4 py-2 
+                    rounded-full border transition-all
+                    duration-300 font-semibold text-xs 
+                    sm:text-sm lg:text-base outline-none whitespace-nowrap ${
+                      activeDayId === day.id
+                        ? "bg-primary text-white border-primary shadow-md"
+                        : "bg-white text-gray-400 border-gray-200 hover:border-primary/40 hover:text-primary"
+                    }`}
                   >
                     {day.label}
                   </button>
@@ -93,8 +106,14 @@ export const ScheduleSection: React.FC = () => {
             </Swiper>
           </div>
 
-          <button className="next-day shrink-0 bg-white shadow-sm rounded-full p-2 text-primary border border-gray-100 disabled:opacity-20 hover:bg-gray-50 transition-all cursor-pointer">
-            <HiChevronRight className="w-4 h-4 md:w-5 md:h-5" />
+          {/* RIGHT ARROW */}
+          <button
+            className="next-day shrink-0 bg-white shadow-sm rounded-full
+            p-2 text-primary border border-gray-100
+             disabled:opacity-20 hover:bg-gray-50 
+             hover:scale-110 transition-all cursor-pointer"
+          >
+            <HiChevronRight size={20} />
           </button>
         </div>
 

@@ -25,6 +25,8 @@ export const DIANA_LINKEDIN =
   "https://www.linkedin.com/in/diana-ciobotaru-694649392/";
 export const OVIDIU_LINKEDIN =
   "https://www.linkedin.com/in/zoicas-ovidiu-74a09635b/";
+export const DIANA_CH_LINKEDIN =
+  "https://www.linkedin.com/in/diana-chelea-14a37237b/";
 
 // BEST Socials
 export const FACEBOOK_LINK = "https://www.facebook.com/bestiasi";
