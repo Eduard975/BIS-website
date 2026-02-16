@@ -4,6 +4,8 @@ import Diana from "../assets/team/diana.jpg";
 import Ovidiu from "../assets/team/ovidiu.jpg";
 import Simina from "../assets/team/simina.jpg";
 import Diana_Ch from "../assets/team/diana_ch.jpg";
+import Teo from "../assets/team/teo.jpg";
+
 import {
   ANA_LINKEDIN,
   DIANA_CH_LINKEDIN,
@@ -11,6 +13,7 @@ import {
   EDI_LINKEDIN,
   OVIDIU_LINKEDIN,
   SIMINA_LINKEDIN,
+  TEO_LINKEDIN,
 } from "./Links";
 
 export const TEAM_MEMBERS = [
@@ -61,5 +64,13 @@ export const TEAM_MEMBERS = [
     role: "Official Open Day",
     image: Diana_Ch,
     linkedin: DIANA_CH_LINKEDIN,
+  },
+  {
+    id: 7,
+    lastName: "Ștefură",
+    name: "Teodora-Gabriela",
+    role: "Fundraising Technic",
+    image: Teo,
+    linkedin: TEO_LINKEDIN,
   },
 ];

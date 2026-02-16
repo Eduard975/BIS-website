@@ -53,9 +53,10 @@ export const PersonCard = ({
   return (
     <div
       onClick={onClick}
-      className={`flex flex-col items-center w-full transition-transform duration-300 hover:scale-105 ${orderClasses} ${
-        isAdd ? "cursor-pointer" : ""
-      }`}
+      className={`flex flex-col items-center w-full 
+        transition-transform duration-300 hover:scale-105 ${orderClasses} ${
+          isAdd ? "cursor-pointer" : ""
+        }`}
     >
       {linkedinUrl && !isAdd ? (
         <a
@@ -72,7 +73,7 @@ export const PersonCard = ({
       )}
 
       {/* Name/Label Area */}
-      <div className="w-full max-w-[150px] md:max-w-[175px] border-b-2 border-primary text-center pb-1 mb-2">
+      <div className="w-full max-w-[160px] md:max-w-[190px] border-b-2 border-primary text-center pb-1 mb-2">
         <h3 className="text-accent text-md md:text-lg font-bold uppercase tracking-tight leading-tight flex flex-col justify-center">
           {isAdd ? (
             <span className="whitespace-nowrap">

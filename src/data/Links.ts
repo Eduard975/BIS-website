@@ -5,7 +5,8 @@ export const OOD_JOIN_FORM_URL = "https://forms.gle/example";
 export const VOLUNTEER_FORM_URL = "https://redirectioneaza.ro/best-iasi/";
 export const PROMO_VIDEO_ID = "_5ZfjVWw2l8";
 
-export const BEST_APPLICATION_URL = "";
+export const BEST_APPLICATION_URL =
+  "https://www.best.eu.org/event/details.jsp?activity=g59bx2x";
 export const GENERAL_APPLICATION_URL = "https://forms.gle/TTYep1p32Rs8wVDC7";
 
 export const GDPR_BIS_LINK =
@@ -27,6 +28,8 @@ export const OVIDIU_LINKEDIN =
   "https://www.linkedin.com/in/zoicas-ovidiu-74a09635b/";
 export const DIANA_CH_LINKEDIN =
   "https://www.linkedin.com/in/diana-chelea-14a37237b/";
+export const TEO_LINKEDIN =
+  "https://www.linkedin.com/in/teodora-stefura-3aa4b2232/";
 
 // BEST Socials
 export const FACEBOOK_LINK = "https://www.facebook.com/bestiasi";
