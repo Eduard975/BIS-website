@@ -1,19 +1,11 @@
 import INGENIUM from "../assets/logos/partners/event/ingenium.svg";
-import IULIUS from "../assets/logos/partners/pa/iulius.svg";
-import WINK from "../assets/logos/partners/pa/wink.svg";
+
 import NAGARRO from "../assets/logos/partners/pa/nagarro.svg";
 import BURN from "../assets/logos/partners/pa/burn.png";
 import MAGNA from "../assets/logos/partners/pa/magna.svg";
 import MIGDALIN from "../assets/logos/partners/pa/migdalin.png";
 
-import {
-  BURN_LINK,
-  IULIUS_LINK,
-  MAGNA_LINK,
-  MIGDALIN_LINK,
-  NAGARRO_LINK,
-  WINK_LINK,
-} from "./Links";
+import { BURN_LINK, MAGNA_LINK, MIGDALIN_LINK, NAGARRO_LINK } from "./Links";
 
 export const CAROUSEL_ITEMS = [
   {
@@ -30,13 +22,13 @@ export const CAROUSEL_ITEMS = [
   //   Url: "/partners",
   //   isRedirect: true,
   // },
-  {
-    id: 3,
-    imageSrc: WINK,
-    altText: "WINK",
-    Url: WINK_LINK,
-    isRedirect: false,
-  },
+  // {
+  //   id: 3,
+  //   imageSrc: WINK,
+  //   altText: "WINK",
+  //   Url: WINK_LINK,
+  //   isRedirect: false,
+  // },
   {
     id: 4,
     imageSrc: NAGARRO,
@@ -44,13 +36,13 @@ export const CAROUSEL_ITEMS = [
     Url: NAGARRO_LINK,
     isRedirect: false,
   },
-  {
-    id: 5,
-    imageSrc: IULIUS,
-    altText: "IULIUS MALL IASI",
-    Url: IULIUS_LINK,
-    isRedirect: false,
-  },
+  // {
+  //   id: 5,
+  //   imageSrc: IULIUS,
+  //   altText: "IULIUS MALL IASI",
+  //   Url: IULIUS_LINK,
+  //   isRedirect: false,
+  // },
   {
     id: 6,
     imageSrc: BURN,

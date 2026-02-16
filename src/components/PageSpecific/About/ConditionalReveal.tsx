@@ -58,7 +58,7 @@ const ConditionalReveal = ({ studentType }: ConditionalRevealProps) => {
           target="_blank"
           analyticsLabel="Apply: BEST Application System"
         >
-          Apply via BEST Application System
+          Apply via BAS
         </PrimaryButton>
       </div>
     );

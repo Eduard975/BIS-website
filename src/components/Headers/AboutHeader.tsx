@@ -142,7 +142,7 @@ export const AboutPageHeader = () => {
                     onChange={(e) =>
                       handleSelectionChange(e.target.value as any)
                     }
-                    className="bg-white/10 border border-white/20 rounded-lg px-3 py-1.5 text-base text-primary font-bold focus:outline-none focus:ring-2 focus:ring-primary appearance-none cursor-pointer backdrop-blur-sm"
+                    className="w-full max-w-md md:w-auto bg-white/10 border border-white/20 rounded-lg px-3 py-1.5 text-base text-primary font-bold focus:outline-none focus:ring-2 focus:ring-primary appearance-none cursor-pointer backdrop-blur-sm"
                   >
                     <option value="" className="text-black">
                       Select origin
