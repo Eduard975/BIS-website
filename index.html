@@ -29,57 +29,114 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://symposium.bestis.ro/preview.png">
     <style>
-  /* This CSS creates the loader layout */
-  .app-loader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-    /* Using your variables with fallbacks */
-    background-color: var(--color-whiteBG, #fffcf7);
-    color: var(--color-primary, #16a296);
-    font-family: var(--font-title, sans-serif); 
-    margin: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-  }
+      :root {
+        --color-whiteBG: #FFFCF7;
+        --color-primary: #16A296;
+        --color-secondary: #00AEEF;
+        --color-darkTxt: #1E1E1E;
+      }
 
-  .app-loader h1 {
-    font-size: 2rem; /* Adjustable size */
-    margin: 0;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
+      body {
+        margin: 0;
+        background-color: var(--color-whiteBG);
+      }
 
-  /* The 3-dot animation */
-  .dot {
-    animation: blink 1.4s infinite both;
-    margin-left: 2px;
-  }
-  
-  .dot:nth-child(1) { animation-delay: 0s; }
-  .dot:nth-child(2) { animation-delay: 0.2s; }
-  .dot:nth-child(3) { animation-delay: 0.4s; }
+      .app-loader {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100dvh; 
+        width: 100vw;
+        background-color: var(--color-whiteBG);
+        color: var(--color-primary);
+        font-family: "LemonMilk-regular", sans-serif;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        padding: 24px;
+        box-sizing: border-box;
+        text-align: center;
+      }
 
-  @keyframes blink {
-    0% { opacity: 0.2; }
-    20% { opacity: 1; }
-    100% { opacity: 0.2; }
-  }
-</style>
+      .loader-circle {
+        width: 50px;
+        height: 50px;
+        border: 4px solid rgba(0, 174, 239, 0.1);
+        border-top-color: var(--color-secondary);
+        border-radius: 50%;
+        margin-bottom: 32px;
+        animation: spin 0.8s linear infinite;
+      }
+
+      .app-loader h1 {
+        font-family: "LemonMilk-bold", sans-serif;
+        font-size: clamp(1.4rem, 6vw, 2.4rem); 
+        margin: 0;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        line-height: 1.1;
+        max-width: 800px;
+        color: var(--color-primary);
+      }
+
+      .loader-subtext {
+        margin-top: 12px;
+        font-size: 0.9rem;
+        color: var(--color-darkTxt);
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        opacity: 0.8;
+      }
+
+      .dot-container {
+        display: inline-block;
+        min-width: 20px;
+        text-align: left;
+      }
+
+      .dot {
+        animation: blink 1.4s infinite both;
+      }
+      
+      .dot:nth-child(2) { animation-delay: 0.2s; }
+      .dot:nth-child(3) { animation-delay: 0.4s; }
+
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+
+      @keyframes blink {
+        0%, 100% { opacity: 0.2; }
+        20% { opacity: 1; }
+      }
+
+      /* Responsive Line Break Helper */
+      @media (min-width: 768px) {
+        .mobile-only { display: none; }
+      }
+
+      .loader-fade-out {
+        opacity: 0;
+        transition: opacity 0.5s ease-out;
+        pointer-events: none;
+      }
+    </style>
 </head>
   <body>
     <div id="root">
       <div class="app-loader">
-          <h1>Loading BEST Iași Symposium
-            <span class="dot">.</span>
-            <span class="dot">.</span>
-            <span class="dot">.</span>
-          </h1>
+          <div class="loader-circle"></div>
+          
+          <h1>BEST Iași <br class="mobile-only"> Symposium</h1>
+          
+          <div class="loader-subtext">
+            Connecting ideas
+            <span class="dot-container">
+                <span class="dot">.</span><span class="dot">.</span><span class="dot">.</span>
+            </span>
+          </div>
       </div>
     </div>
     <script type="module" src="/src/main.tsx"></script>
