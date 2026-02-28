@@ -1,0 +1,18 @@
+# 1. Ensure index.html is the default landing page
+DirectoryIndex index.html
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # 2. Set the base to the root of your subdomain
+    RewriteBase /
+
+    # 3. If the requested resource exists as a file or directory, serve it normally
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # 4. Otherwise, send everything else to index.html
+    # This handles the "Refresh" on /about or /conference
+    RewriteRule ^ index.html [L]
+</IfModule>

@@ -14,7 +14,7 @@ export const HomeBridgeGapSection = () => {
       decoration={
         <img
           src={atomSvg}
-          alt=""
+          alt="atom background"
           className="
             absolute pointer-events-none select-none transition-transform duration-500
             right-0 -translate-y-1/2 origin-center object-contain
