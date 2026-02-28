@@ -69,7 +69,7 @@ export const TEAM_MEMBERS = [
     id: 7,
     lastName: "Ștefură",
     name: "Teodora-Gabriela",
-    role: "Fundraising Technic",
+    role: "FR Corporate",
     image: Teo,
     linkedin: TEO_LINKEDIN,
   },

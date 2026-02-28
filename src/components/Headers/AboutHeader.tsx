@@ -3,6 +3,7 @@ import CustomContainer from "../Universal/CustomContainer";
 import lightbulbSvg from "../../assets/svgs/bec.svg";
 import groupPhotoImg from "../../assets/images/group-statue.webp";
 import ReactGA from "react-ga4";
+import { LBG_MAP } from "../../data/Links";
 
 const revealLoader = () => import("../PageSpecific/About/ConditionalReveal");
 const ConditionalReveal = lazy(revealLoader);
@@ -135,25 +136,47 @@ export const AboutPageHeader = () => {
               </h2>
 
               {isJoinPeriodActive ? (
-                <div className="flex flex-col md:flex-row items-center gap-3 text-lg md:text-xl font-medium text-gray-200">
-                  <span>I am a student from</span>
-                  <select
-                    value={studentType}
-                    onChange={(e) =>
-                      handleSelectionChange(e.target.value as any)
-                    }
-                    className="w-full max-w-md md:w-auto bg-white/10 border border-white/20 rounded-lg px-3 py-1.5 text-base text-primary font-bold focus:outline-none focus:ring-2 focus:ring-primary appearance-none cursor-pointer backdrop-blur-sm"
-                  >
-                    <option value="" className="text-black">
-                      Select origin
-                    </option>
-                    <option value="ingenium/stem" className="text-black">
-                      INGENIUM Alliance / A city without a Local BEST Group
-                    </option>
-                    <option value="best" className="text-black">
-                      BEST Member / A city with a Local BEST Group
-                    </option>
-                  </select>
+                <div className="flex flex-col gap-3 items-center md:items-start">
+                  {/* Row 1: Label + Select */}
+                  <div className="flex flex-col md:flex-row items-center gap-3 text-lg md:text-xl font-medium text-gray-200">
+                    <span>I am a student from</span>
+                    <select
+                      value={studentType}
+                      onChange={(e) =>
+                        handleSelectionChange(e.target.value as any)
+                      }
+                      className="w-full max-w-md md:w-auto bg-white/10 border border-white/20 rounded-lg px-3 py-1.5 text-base text-primary font-bold focus:outline-none focus:ring-2 focus:ring-primary appearance-none cursor-pointer backdrop-blur-sm"
+                    >
+                      <option value="" className="text-black">
+                        Select origin
+                      </option>
+                      <option value="ingenium/stem" className="text-black">
+                        INGENIUM Alliance / A city without a Local BEST Group
+                      </option>
+                      <option value="best" className="text-black">
+                        BEST Member / A city with a Local BEST Group
+                      </option>
+                    </select>
+                  </div>
+
+                  {/* Row 2: Highlighted Helper Link Underneath */}
+                  <div className="group relative">
+                    <a
+                      href={LBG_MAP}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center 
+                      gap-2 rounded-full text-sm md:text-base 
+                      text-secondary font-bold hover:bg-secondary/20
+                       transition-all duration-300"
+                    >
+                      <span className="text-lg">📍</span>
+                      <span className="underline decoration-secondary/40 underline-offset-4">
+                        Click here to check if there is a Local BEST Group in
+                        your city
+                      </span>
+                    </a>
+                  </div>
                 </div>
               ) : (
                 <div className="space-y-4">

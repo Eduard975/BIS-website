@@ -4,6 +4,8 @@ export const OOD_JOIN_FORM_URL = "https://forms.gle/example";
 
 export const VOLUNTEER_FORM_URL = "https://redirectioneaza.ro/best-iasi/";
 export const PROMO_VIDEO_ID = "_5ZfjVWw2l8";
+export const LBG_MAP =
+  "https://www.best.eu.org/aboutBEST/structure/lbgList.jsp#map";
 
 export const BEST_APPLICATION_URL =
   "https://www.best.eu.org/event/details.jsp?activity=g59bx2x";
