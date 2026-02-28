@@ -14,7 +14,7 @@ export const EventPartnersSection = () => {
       >
         <OverprintTitle title="PARTNERS" subtitle="EVENT" />
 
-        {/* Ingenium Block */}
+        {/* TUIASI Block */}
         <div className="flex flex-col md:flex-row items-start justify-between gap-12 lg:gap-24">
           <div className="w-full md:w-1/2 self-stretch flex">
             <img
@@ -49,12 +49,12 @@ export const EventPartnersSection = () => {
         </div>
       </CustomSection>
 
-      {/* TUIASI Block */}
+      {/* INGENIUM Block */}
       <CustomSection
         bg="bg-whiteBG"
         contentClassName="flex flex-col gap-10 md:gap-16 pt-8 md:pt-12"
       >
-        <div className="flex flex-col md:flex-row items-start justify-between gap-12 lg:gap-24">
+        <div className="flex flex-col-reverse md:flex-row items-start justify-between gap-12 lg:gap-24">
           <SectionContent
             buttonText="Learn More"
             analyticsLabel="Learn More"

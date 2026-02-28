@@ -10,7 +10,7 @@ export const AnnualPartnersSection = () => {
       <SwiperCarousel
         data={PA_CAROUSEL_ITEMS}
         carouselName="Annual Partners"
-        mobileSlidesPerView={2}
+        mobileSlidesPerView={1}
         desktopSlidesPerView={4}
         aspect="aspect-[4/5] md:aspect-square"
       />

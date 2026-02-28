@@ -12,7 +12,7 @@ export const EventSponsorsSection = () => {
       <SwiperCarousel
         data={ES_CAROUSEL_ITEMS}
         carouselName="Event Sponsors"
-        mobileSlidesPerView={2}
+        mobileSlidesPerView={1}
         desktopSlidesPerView={4}
         aspect="aspect-[4/5] md:aspect-square"
       />
