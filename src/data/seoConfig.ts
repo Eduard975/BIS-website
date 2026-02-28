@@ -2,7 +2,7 @@ export const seoConfig = {
   "/": {
     title: "Home | BEST Iași Symposium",
     description:
-      "Discover BEST Iași Symposium: an international STEM event by TUIASI and INGENIUM. Join workshops on student mobility and cultural exchange in Romania. Connect with peers!",
+      "BEST Iași Symposium: International STEM workshops and student mobility in Romania. Proudly partnering with TUIASI and INGENIUM. Expand your horizons!",
   },
   "/conference": {
     title: "Conference | Empower STEM",

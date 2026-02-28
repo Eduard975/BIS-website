@@ -82,7 +82,7 @@ export const EventPartnersSection = () => {
             <img
               src={INGENIUM}
               alt="Ingenium European University logo"
-              className="w-full h-full object-contain object-top md:object-left-top"
+              className="w-full h-full object-contain object-top md:object-right-top"
             />
           </div>
         </div>
