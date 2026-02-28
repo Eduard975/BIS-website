@@ -10,7 +10,7 @@ export const MetaManager = () => {
     seoConfig[pathname as keyof typeof seoConfig] || seoConfig["404"];
 
   const siteUrl = "https://symposium.bestis.ro";
-  const previewImage = `${siteUrl}/preview.png`;
+  const previewImage = `${siteUrl}/preview.svg`;
 
   return (
     <Helmet>
