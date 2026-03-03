@@ -5,7 +5,6 @@ import { seoConfig } from "../../data/seoConfig";
 export const MetaManager = () => {
   const { pathname } = useLocation();
 
-  // Find the config for the current path, or fallback to 404
   const currentMeta =
     seoConfig[pathname as keyof typeof seoConfig] || seoConfig["404"];
 
