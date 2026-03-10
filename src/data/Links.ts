@@ -49,3 +49,6 @@ export const MIGDALIN_LINK = "https://www.migdalin.ro/";
 export const NAGARRO_LINK = "https://www.nagarro.com/en/";
 export const IULIUS_LINK = "https://iasi.iuliusmall.com/en";
 export const WINK_LINK = "https://wink.ro/";
+export const BRD_LINK = "https://www.brd.ro/";
+export const FFFF_LINK = "https://www.ffff.ro/";
+export const FDSC_LINK = "https://www.fdsc.ro/en/home//";
