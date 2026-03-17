@@ -21,17 +21,24 @@ export const EDI_LINKEDIN = "https://www.linkedin.com/in/petrisor-edi/";
 
 export const SIMINA_LINKEDIN =
   "https://www.linkedin.com/in/simina-ana-ifrim-519778336";
+
 export const ANA_LINKEDIN =
   "https://www.linkedin.com/in/ana-maria-ciobanu-b0b1a939b/";
 
 export const DIANA_LINKEDIN =
   "https://www.linkedin.com/in/diana-ciobotaru-694649392/";
+
 export const OVIDIU_LINKEDIN =
   "https://www.linkedin.com/in/zoicas-ovidiu-74a09635b/";
+
 export const DIANA_CH_LINKEDIN =
   "https://www.linkedin.com/in/diana-chelea-14a37237b/";
+
 export const TEO_LINKEDIN =
   "https://www.linkedin.com/in/teodora-stefura-3aa4b2232/";
+
+export const VALENTINA_LINKEDIN =
+  "https://www.linkedin.com/in/elisabetta-valentina-eftimie-4a49463a7";
 
 // BEST Socials
 export const FACEBOOK_LINK = "https://www.facebook.com/bestiasi";

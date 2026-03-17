@@ -7,6 +7,7 @@ export const PersonCard = ({
   isMain = false,
   index = 0,
   isAdd = false,
+  splitName = false,
   onClick,
 }: {
   lastName?: string;
@@ -17,6 +18,7 @@ export const PersonCard = ({
   isMain?: boolean;
   index?: number;
   isAdd?: boolean;
+  splitName?: boolean;
   onClick?: () => void;
 }) => {
   const orderClasses = isAdd
@@ -73,14 +75,22 @@ export const PersonCard = ({
       )}
 
       {/* Name/Label Area */}
-      <div className="w-full max-w-[160px] md:max-w-[190px] border-b-2 border-primary text-center pb-1 mb-2">
-        <h3 className="text-accent text-md md:text-lg font-bold uppercase tracking-tight leading-tight flex flex-col justify-center">
+      <div
+        className="w-full max-w-[160px] 
+      md:max-w-[220px] border-b-2 
+      border-primary text-center pb-1 mb-2"
+      >
+        <h3
+          className="text-accent 
+        text-md md:text-lg font-bold 
+        uppercase tracking-tight leading-tight flex flex-col justify-center"
+        >
           {isAdd ? (
             <span className="whitespace-nowrap">
               <br />
               Become a Speaker
             </span>
-          ) : name.includes("-") ? (
+          ) : splitName ? (
             <>
               <span className="whitespace-nowrap">{lastName}</span>
               <span className="whitespace-nowrap">{name}</span>

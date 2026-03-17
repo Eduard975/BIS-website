@@ -59,7 +59,7 @@ export const AboutPageHeader = () => {
   const [studentType, setStudentType] = useState<"ingenium/stem" | "best" | "">(
     "",
   );
-  const isJoinPeriodActive = true; // Set to true when the application period starts
+  const isJoinPeriodActive = false; // Set to true when the application period starts
 
   const handleMouseEnter = () => revealLoader();
 
@@ -132,7 +132,9 @@ export const AboutPageHeader = () => {
               onFocus={handleMouseEnter}
             >
               <h2 className="text-3xl md:text-5xl font-bold tracking-tight">
-                {isJoinPeriodActive ? "Ready to Join?" : "Coming Soon!"}
+                {isJoinPeriodActive
+                  ? "Ready to Join?"
+                  : "This year's joining period is over!"}
               </h2>
 
               {isJoinPeriodActive ? (
@@ -181,13 +183,12 @@ export const AboutPageHeader = () => {
               ) : (
                 <div className="space-y-4">
                   <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
-                    Excitement is building! The application period for the
-                    <strong> BEST Iași Symposium</strong> hasn't opened just
-                    yet.
+                    Thank you for your interest! The application period for the
+                    <strong> BEST Iași Symposium</strong> has officially closed.
                   </p>
                   <p className="text-md md:text-lg text-secondary font-medium italic">
-                    Stay tuned, we'll be ready to welcome your ideas and energy
-                    very soon.
+                    Stay tuned for future editions, and a huge thank you to
+                    everyone who applied!
                   </p>
                 </div>
               )}

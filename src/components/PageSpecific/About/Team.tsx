@@ -10,6 +10,7 @@ interface TeamMember {
   role: string;
   image: string;
   linkedin?: string;
+  shouldSplitName?: boolean;
 }
 
 export const BehindTheTeam = () => {
@@ -41,6 +42,7 @@ export const BehindTheTeam = () => {
             image={member.image}
             linkedinUrl={member.linkedin}
             isMain={member.role === "Main Organizer"}
+            splitName={member.shouldSplitName}
           />
         ))}
       </div>
