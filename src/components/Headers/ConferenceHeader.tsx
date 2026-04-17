@@ -18,9 +18,7 @@ export const ConferencePageHeader = () => {
       <div className="flex flex-col gap-[3vh] text-white h-full justify-center">
         <div>
           <h1 className="text-[8vw] md:text-[4vw] font-extrabold tracking-tight leading-[1.1]">
-            Empower STEM:
-            <br />
-            Mobility Conference
+            Best Intercultural Conference
           </h1>
         </div>
 

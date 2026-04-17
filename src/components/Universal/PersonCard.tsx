@@ -82,7 +82,7 @@ export const PersonCard = ({
       >
         <h3
           className="text-accent 
-        text-md md:text-lg font-bold 
+        text-sm md:text-lg font-bold 
         uppercase tracking-tight leading-tight flex flex-col justify-center"
         >
           {isAdd ? (

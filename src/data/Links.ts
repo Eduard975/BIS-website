@@ -59,3 +59,5 @@ export const WINK_LINK = "https://wink.ro/";
 export const BRD_LINK = "https://www.brd.ro/";
 export const FFFF_LINK = "https://www.ffff.ro/";
 export const FDSC_LINK = "https://www.fdsc.ro/en/home//";
+export const JUMPY_LINK = "https://jumpyfun.ro/";
+export const VIVAFM_LINK = "https://vivafm.ro/";

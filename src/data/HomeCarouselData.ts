@@ -2,12 +2,14 @@ import INGENIUM from "../assets/logos/partners/event/ingenium.svg";
 import NAGARRO from "../assets/logos/partners/pa/nagarro.svg";
 import BURN from "../assets/logos/partners/pa/burn.png";
 import MAGNA from "../assets/logos/partners/pa/magna.svg";
-import MIGDALIN from "../assets/logos/partners/pa/migdalin.png";
+import MIGDALIN from "../assets/logos/partners/pa/migdalin.svg";
 import IULIUS from "../assets/logos/partners/pa/iulius.svg";
 import WINK from "../assets/logos/partners/pa/wink.svg";
 import BRD from "../assets/logos/partners/pa/brd.svg";
 import FFFF from "../assets/logos/partners/pa/fff.png";
 import FDSC from "../assets/logos/partners/pa/fdsc.png";
+import JUMPY from "../assets/logos/partners/pa/jumpy.webp";
+import VIVAFM from "../assets/logos/partners/pa/vivafm.webp";
 
 import {
   IULIUS_LINK,
@@ -19,6 +21,8 @@ import {
   BRD_LINK,
   FFFF_LINK,
   FDSC_LINK,
+  JUMPY_LINK,
+  VIVAFM_LINK,
 } from "./Links";
 
 export const CAROUSEL_ITEMS = [
@@ -90,6 +94,20 @@ export const CAROUSEL_ITEMS = [
     imageSrc: FDSC,
     altText: "Civil Society Development Foundation",
     Url: FDSC_LINK,
+    isRedirect: false,
+  },
+  {
+    id: 11,
+    imageSrc: JUMPY,
+    altText: "JUMPY",
+    Url: JUMPY_LINK,
+    isRedirect: false,
+  },
+  {
+    id: 12,
+    imageSrc: VIVAFM,
+    altText: "VIVA FM",
+    Url: VIVAFM_LINK,
     isRedirect: false,
   },
 ];
