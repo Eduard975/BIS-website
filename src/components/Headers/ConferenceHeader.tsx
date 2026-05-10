@@ -18,14 +18,14 @@ export const ConferencePageHeader = () => {
       <div className="flex flex-col gap-[3vh] text-white h-full justify-center">
         <div>
           <h1 className="text-[8vw] md:text-[4vw] font-extrabold tracking-tight leading-[1.1]">
-            Best Intercultural Conference
+            BEST Intercultural Conference
           </h1>
         </div>
 
         {/* Countdown Section */}
         <div className="flex flex-col gap-[1.5vh]">
           <p className="text-[4vw] md:text-[1.2vw] font-medium text-gray-100">
-            Time until the joining period starts
+            Time left to join the conference:
           </p>
           <TimerDisplay />
         </div>

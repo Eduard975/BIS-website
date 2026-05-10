@@ -6,15 +6,23 @@ import Simina from "../assets/team/simina.jpg";
 import Diana_Ch from "../assets/team/diana_ch.jpg";
 import Teo from "../assets/team/teo.jpg";
 import Valentina from "../assets/team/valentina.jpg";
+import Dana from "../assets/team/dana.jpg";
+import Ioana from "../assets/team/ioana.jpg";
+import TeoB from "../assets/team/teob.jpg";
+import Ancuta from "../assets/team/ancuta.jpg";
 
 import {
   ANA_LINKEDIN,
+  ANCUTA_LINKEDIN,
+  DANA_LINKEDIN,
   DIANA_CH_LINKEDIN,
   DIANA_LINKEDIN,
   EDI_LINKEDIN,
+  IOANA_LINKEDIN,
   OVIDIU_LINKEDIN,
   SIMINA_LINKEDIN,
   TEO_LINKEDIN,
+  TEODOR_LINKEDIN,
   VALENTINA_LINKEDIN,
 } from "./Links";
 
@@ -90,5 +98,41 @@ export const TEAM_MEMBERS = [
     image: Valentina,
     linkedin: VALENTINA_LINKEDIN,
     shouldSplitName: true,
+  },
+  {
+    id: 9,
+    lastName: "Flutur",
+    name: "Ancuta Ana-Maria",
+    role: "Location, Transport & Accommodation",
+    image: Ancuta,
+    linkedin: ANCUTA_LINKEDIN,
+    shouldSplitName: true,
+  },
+  {
+    id: 10,
+    lastName: "Buhati",
+    name: "Dana",
+    role: "Food",
+    image: Dana,
+    linkedin: DANA_LINKEDIN,
+    shouldSplitName: false,
+  },
+  {
+    id: 11,
+    lastName: "Moldovanu",
+    name: "Ioana",
+    role: "HR Participants",
+    image: Ioana,
+    linkedin: IOANA_LINKEDIN,
+    shouldSplitName: false,
+  },
+  {
+    id: 12,
+    lastName: "Brebu",
+    name: "Teodor",
+    role: "Activities",
+    image: TeoB,
+    linkedin: TEODOR_LINKEDIN,
+    shouldSplitName: false,
   },
 ];

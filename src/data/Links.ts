@@ -1,6 +1,7 @@
 // BEST Related
 export const SPEAKER_FORM_URL = "https://forms.gle/vcDqGja1SNgGNSnE6";
-export const OOD_JOIN_FORM_URL = "https://forms.gle/example";
+export const OOD_JOIN_FORM_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLSfHOH-8axDXjkP8yDZhNFGWyJDAYMhAPTcF8UPRE4Kt0Ff_DA/viewform?usp=dialog";
 
 export const VOLUNTEER_FORM_URL = "https://redirectioneaza.ro/best-iasi/";
 export const PROMO_VIDEO_ID = "_5ZfjVWw2l8";
@@ -40,6 +41,18 @@ export const TEO_LINKEDIN =
 export const VALENTINA_LINKEDIN =
   "https://www.linkedin.com/in/elisabetta-valentina-eftimie-4a49463a7";
 
+export const DANA_LINKEDIN =
+  "https://www.linkedin.com/in/dana-buhati-27086b394/";
+
+export const IOANA_LINKEDIN =
+  "https://www.linkedin.com/in/ioana-moldovanu-79006938b/";
+
+export const TEODOR_LINKEDIN =
+  "https://www.linkedin.com/in/teodor-brebu-476474406/";
+
+export const ANCUTA_LINKEDIN =
+  "https://www.linkedin.com/in/ancuta-ana-maria-flutur-9342a0394/";
+
 // BEST Socials
 export const FACEBOOK_LINK = "https://www.facebook.com/bestiasi";
 export const INSTAGRAM_LINK = "https://www.instagram.com/bestiasi";
@@ -58,6 +71,17 @@ export const IULIUS_LINK = "https://iasi.iuliusmall.com/en";
 export const WINK_LINK = "https://wink.ro/";
 export const BRD_LINK = "https://www.brd.ro/";
 export const FFFF_LINK = "https://www.ffff.ro/";
-export const FDSC_LINK = "https://www.fdsc.ro/en/home//";
+export const FDSC_LINK = "https://www.fdsc.ro/en/home/";
 export const JUMPY_LINK = "https://jumpyfun.ro/";
 export const VIVAFM_LINK = "https://vivafm.ro/";
+
+export const CARMANGERIA_GUST_LINK = "https://carmangeriacugust.ro/";
+export const COSUL_CU_PAINI_LINK = "https://cosulcupaini.ro/";
+export const FERMADOR_LINK = "https://fermador.ro/";
+export const GADAL_TEA_LINK = "https://gadaltea.com/";
+export const GRADINITA_CU_LEGUME_LINK = "https://www.gradinitaculegume.ro";
+export const KOSAROM_LINK = "https://kosarom.ro/";
+export const MERILN_AQUA_LINK =
+  "https://merlinsbeverages.com/ro/brand/vitamin-aqua/";
+export const NOIR_LINK = "https://noircoffee.ro/";
+export const SERELE_AGRODAV_LINK = "https://www.facebook.com/cristian.caramb";

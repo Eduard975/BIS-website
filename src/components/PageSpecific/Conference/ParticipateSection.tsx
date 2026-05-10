@@ -51,7 +51,7 @@ export const ParticipateSection = () => {
 
           <div className="pt-4">
             {/* Dynamic CTA that switches automatically when isFinished is true */}
-            {!isFinished ? (
+            {isFinished ? (
               <p className="text-darkTxt font-medium">
                 The{" "}
                 <span className="text-accent font-semibold">
